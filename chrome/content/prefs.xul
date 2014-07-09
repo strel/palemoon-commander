@@ -736,10 +736,14 @@
 			<preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-DES"			name="security.ssl3.ecdhe_rsa_des_ede3_sha"			type="bool" />
 			<preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-RC4-128"		name="security.ssl3.ecdhe_rsa_rc4_128_sha"			type="bool" />
 			
-			<preference id="pmcommander-pref-sec-priv-cache-ssl"			name="browser.cache.disk_cache_ssl"						type="bool" inverted="true" />
-			<preference id="pmcommander-pref-sec-priv-sc-accept-always" name="network.cookie.alwaysAcceptSessionCookies" 	type="bool" />
-			<preference id="pmcommander-pref-sec-priv-3pc-sessiononly"	name="network.cookie.thirdparty.sessionOnly"			type="bool" />
-			<preference id="pmcommander-pref-sec-priv-geolocation"		name="geo.enabled"											type="bool" />
+			<preference id="pmcommander-pref-sec-priv-cache-ssl"				name="browser.cache.disk_cache_ssl"						type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-priv-sc-accept-always" 	name="network.cookie.alwaysAcceptSessionCookies" 	type="bool" />
+			<preference id="pmcommander-pref-sec-priv-3pc-sessiononly"		name="network.cookie.thirdparty.sessionOnly"			type="bool" />
+			<preference id="pmcommander-pref-sec-priv-geolocation"			name="geo.enabled"											type="bool" />
+			<preference id="pmcommander-pref-sec-priv-referer-sendheader"	name="network.http.sendRefererHeader"					type="int" />
+			<preference id="pmcommander-pref-sec-priv-referer-spoof"			name="network.http.referer.spoofSource"				type="bool" />
+			<preference id="pmcommander-pref-sec-priv-referer-trim"			name="network.http.referer.trimmingPolicy"			type="int" />
+			<preference id="pmcommander-pref-sec-priv-referer-xop"			name="network.http.referer.XOriginPolicy"				type="int" />
 			
 		</preferences>
 		<tabbox id="pmcommander-tabbox-sec" flex="1">
@@ -924,6 +928,40 @@
 					<checkbox id="pmcommander-sec-priv-sc-accept-always-check" preference="pmcommander-pref-sec-priv-sc-accept-always" label="&pmcommander.sec.priv.sc.accept.always.label;" />
 					<checkbox id="pmcommander-sec-priv-3pc-sessiononly-check" preference="pmcommander-pref-sec-priv-3pc-sessiononly" label="&pmcommander.sec.priv.3pc.sessiononly.label;" />
 					<checkbox id="pmcommander-sec-priv-geolocation-check" preference="pmcommander-pref-sec-priv-geolocation" label="&pmcommander.sec.priv.geolocation.label;" />
+					<groupbox id="pmcommander-sec-priv-referers">
+					   <caption label="&pmcommander.sec.priv.referers.caption;" />
+					   <hbox align="center">
+						   <label id="pmcommander-sec-priv-referers-sendheader-label" control="pmcommander-sec-priv-referer-sendheader-menu">&pmcommander.sec.priv.referer.sendheader.label;</label>
+						   <menulist id="pmcommander-sec-priv-referer-sendheader-menu" preference="pmcommander-pref-sec-priv-referer-sendheader" sizetopopup="always">
+						      <menupopup>
+						         <menuitem label="&pmcommander.sec.priv.referer.sendheader.never;" value="0" />
+						         <menuitem label="&pmcommander.sec.priv.referer.sendheader.onclicks;" value="1" />
+						         <menuitem label="&pmcommander.sec.priv.referer.sendheader.clicks_and_images;" value="2" />
+						      </menupopup>
+						   </menulist>
+					   </hbox>
+						<checkbox id="pmcommander-sec-priv-referers-spoofheader-check" preference="pmcommander-pref-sec-priv-referer-spoofheader" label="&pmcommander.sec.priv.referer.spoofheader.label;" />				   					     
+					   <hbox align="center">
+						   <label id="pmcommander-sec-priv-referers-trim-label" control="pmcommander-sec-priv-referer-trim-menu">&pmcommander.sec.priv.referer.trim.label;</label>
+						   <menulist id="pmcommander-sec-priv-referer-trim-menu" preference="pmcommander-pref-sec-priv-referer-trim" sizetopopup="always">
+						      <menupopup>
+						         <menuitem label="&pmcommander.sec.priv.referer.trim.none;" value="0" />
+						         <menuitem label="&pmcommander.sec.priv.referer.trim.shpp;" value="1" />
+						         <menuitem label="&pmcommander.sec.priv.referer.trim.shp;" value="2" />
+						      </menupopup>
+						   </menulist>
+					   </hbox>
+					   <hbox align="center">
+						   <label id="pmcommander-sec-priv-referers-xop-label" control="pmcommander-sec-priv-referer-xop-menu">&pmcommander.sec.priv.referer.xop.label;</label>
+						   <menulist id="pmcommander-sec-priv-referer-xop-menu" preference="pmcommander-pref-sec-priv-referer-xop" sizetopopup="always">
+						      <menupopup>
+						         <menuitem label="&pmcommander.sec.priv.referer.xop.always;" value="0" />
+						         <menuitem label="&pmcommander.sec.priv.referer.xop.basedomain;" value="1" />
+						         <menuitem label="&pmcommander.sec.priv.referer.xop.host;" value="2" />
+						      </menupopup>
+						   </menulist>
+					   </hbox>
+					</groupbox>
 				</tabpanel>
 			</tabpanels>
 		</tabbox>
