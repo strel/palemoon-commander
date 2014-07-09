@@ -931,14 +931,6 @@
 
 	<prefpane id="pmcommander-pane-misc" label="&pmcommander.pane.misc;">
 		<preferences>
-			<preference id="pmcommander-pref-devtools-debugger" name="devtools.debugger.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-errorconsole" name="devtools.errorconsole.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-inspector" name="devtools.inspector.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-responsiveui" name="devtools.responsiveUI.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-scratchpad" name="devtools.scratchpad.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-styleeditor" name="devtools.styleeditor.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-tilt" name="devtools.tilt.enabled" type="bool" />
-			<preference id="pmcommander-pref-devtools-toolbar" name="devtools.toolbar.enabled" type="bool" />
 			<preference id="pmcommander-pref-modules-pdfjs" name="pdfjs.disabled" type="bool" inverted="true" 
 				onchange="pmcommanderPrefs.pdfjsChanged();" />
 			<preference id="pmcommander-pref-bookmarkbackups-limit" name="browser.bookmarks.max_backups" type="int" />
@@ -957,17 +949,6 @@
 			<tabpanels flex="1">
 				<tabpanel id="pmcommander-misc-tools" orient="vertical">
 					<label>&pmcommander.info.restartwarning;</label>
-					<groupbox id="pmcommander-misc-tools-groupbox">
-						<caption label="&pmcommander.misc.tools.caption;" />
-						<checkbox id="pmcommander-devtools-debugger-check" preference="pmcommander-pref-devtools-debugger" label="&pmcommander.misc.devtools.debugger;" />
-						<checkbox id="pmcommander-devtools-errorconsole-check" preference="pmcommander-pref-devtools-errorconsole" label="&pmcommander.misc.devtools.errorconsole;" />
-						<checkbox id="pmcommander-devtools-inspector-check" preference="pmcommander-pref-devtools-inspector" label="&pmcommander.misc.devtools.inspector;" />
-						<checkbox id="pmcommander-devtools-responsiveui-check" preference="pmcommander-pref-devtools-responsiveui" label="&pmcommander.misc.devtools.responsiveui;" />
-						<checkbox id="pmcommander-devtools-scratchpad-check" preference="pmcommander-pref-devtools-scratchpad" label="&pmcommander.misc.devtools.scratchpad;" />
-						<checkbox id="pmcommander-devtools-styleeditor-check" preference="pmcommander-pref-devtools-styleeditor" label="&pmcommander.misc.devtools.styleeditor;" />
-						<checkbox id="pmcommander-devtools-tilt-check" preference="pmcommander-pref-devtools-tilt" label="&pmcommander.misc.devtools.tilt;" />
-						<checkbox id="pmcommander-devtools-toolbar-check" preference="pmcommander-pref-devtools-toolbar" label="&pmcommander.misc.devtools.toolbar;" />
-					</groupbox>
 					<checkbox id="pmcommander-tools-pdfjs-check" preference="pmcommander-pref-modules-pdfjs" label="&pmcommander.misc.modules.pdfjs;" />
 				</tabpanel>
 				<tabpanel id="pmcommander-misc-reset" orient="vertical">

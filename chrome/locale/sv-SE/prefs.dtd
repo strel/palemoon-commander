@@ -314,16 +314,7 @@
 <!ENTITY pmcommander.tab.misc.tools "Verktyg">
 <!ENTITY pmcommander.tab.misc.reset "Återställning">
 <!ENTITY pmcommander.tab.misc.other "Övrigt">
-<!ENTITY pmcommander.info.restartwarning "Varning: Ändringar av dessa inställningar kräver en omstart av webbläsaren.">
-<!ENTITY pmcommander.misc.tools.caption "Utvecklingsverktyg">
-<!ENTITY pmcommander.misc.devtools.debugger "Aktivera skriptfelsökare">
-<!ENTITY pmcommander.misc.devtools.errorconsole "Aktivera felkonsol">
-<!ENTITY pmcommander.misc.devtools.inspector "Aktivera granskare">
-<!ENTITY pmcommander.misc.devtools.responsiveui "Aktivera responsivt användargränssnitt">
-<!ENTITY pmcommander.misc.devtools.scratchpad "Aktivera anteckningsblock">
-<!ENTITY pmcommander.misc.devtools.styleeditor "Aktivera formatmallsredigerare">
-<!ENTITY pmcommander.misc.devtools.tilt "Aktivera Tilt (3D-vy för sidlayout)">
-<!ENTITY pmcommander.misc.devtools.toolbar "Aktivera utvecklarverktygsfältet">
+<!ENTITY pmcommander.info.restartwarning "Obs: Ändringar av dessa inställningar kräver en omstart av webbläsaren.">
 <!ENTITY pmcommander.misc.modules.pdfjs "Aktivera den inbyggda PDF-granskaren">
 <!ENTITY pmcommander.misc.reset.info "Om inställningarna hindrar webbläsaren från att fungera korrekt, så kan du återställa dem till standardinställningarna för webbläsaren här för att återställa webbläsaren från felkonfigurering.">
 <!ENTITY pmcommander.reset.allprefs.label "Återställ alla inställningar">

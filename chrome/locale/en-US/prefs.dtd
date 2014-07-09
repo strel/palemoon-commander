@@ -364,15 +364,6 @@
 <!ENTITY pmcommander.tab.misc.other "Other">
 
 <!ENTITY pmcommander.info.restartwarning "Warning: changes to these settings require a browser restart.">
-<!ENTITY pmcommander.misc.tools.caption "Developer tools">
-<!ENTITY pmcommander.misc.devtools.debugger "Enable script debugger">
-<!ENTITY pmcommander.misc.devtools.errorconsole "Enable error console">
-<!ENTITY pmcommander.misc.devtools.inspector "Enable inspector">
-<!ENTITY pmcommander.misc.devtools.responsiveui "Enable responsive UI">
-<!ENTITY pmcommander.misc.devtools.scratchpad "Enable scratchpad">
-<!ENTITY pmcommander.misc.devtools.styleeditor "Enable style editor">
-<!ENTITY pmcommander.misc.devtools.tilt "Enable Tilt (3D page layout view)">
-<!ENTITY pmcommander.misc.devtools.toolbar "Enable the developer toolbar">
 <!ENTITY pmcommander.misc.modules.pdfjs "Enable the built-in PDF viewer">
 
 <!ENTITY pmcommander.misc.reset.info "If settings are preventing proper operation of the browser, you can reset preferences to browser defaults here to recover from misconfiguration.">

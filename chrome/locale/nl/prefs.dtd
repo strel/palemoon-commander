@@ -314,16 +314,7 @@
 <!ENTITY pmcommander.tab.misc.tools "Hulpmiddelen">
 <!ENTITY pmcommander.tab.misc.reset "Reset">
 <!ENTITY pmcommander.tab.misc.other "Overig">
-<!ENTITY pmcommander.info.restartwarning "Waarschuwing: de browser moet worden herstart als deze opties worden gewijzigd.">
-<!ENTITY pmcommander.misc.tools.caption "Ontwikkelaarshulpmiddelen">
-<!ENTITY pmcommander.misc.devtools.debugger "Scriptdebugger inschakelen">
-<!ENTITY pmcommander.misc.devtools.errorconsole "Foutconsole inschakelen">
-<!ENTITY pmcommander.misc.devtools.inspector "Inspector inschakelen">
-<!ENTITY pmcommander.misc.devtools.responsiveui "Responsieve gebruikersinterface inschakelen">
-<!ENTITY pmcommander.misc.devtools.scratchpad "Kladblok inschakelen">
-<!ENTITY pmcommander.misc.devtools.styleeditor "Stijlbewerking inschakelen">
-<!ENTITY pmcommander.misc.devtools.tilt "Tilt (3D-paginastructuurweergave) inschakelen">
-<!ENTITY pmcommander.misc.devtools.toolbar "De ontwikkelaarswerkbalk inschakelen">
+<!ENTITY pmcommander.info.restartwarning "Let op: de browser moet worden herstart als deze opties worden gewijzigd.">
 <!ENTITY pmcommander.misc.modules.pdfjs "De interne PDF-lezer inschakelen">
 <!ENTITY pmcommander.misc.reset.info "Als instellingen het juist werken van de browser voorkomen, kunt u de instellingen terugzetten naar standaardinstellingen om een foutieve configuratie op te heffen.">
 <!ENTITY pmcommander.reset.allprefs.label "Alle instellingen resetten">
