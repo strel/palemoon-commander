@@ -40,7 +40,6 @@
 	
 		<preferences>
 			<preference id="pmcommander-pref-gfx-driverbugs"             name="gfx.work-around-driver-bugs"            type="bool" />
-			<preference id="pmcommander-pref-azure-content"              name="gfx.content.azure.enabled"              type="bool" />
 			<preference id="pmcommander-pref-initialpaint-delay"         name="nglayout.initialpaint.delay"            type="int" />
 			<preference id="pmcommander-pref-webgl-native"               name="webgl.prefer-native-gl"                 type="bool" />
 			<preference id="pmcommander-pref-webgl-msaa-force"           name="webgl.msaa-force"                       type="bool" />
@@ -54,6 +53,7 @@
 			<preference id="pmcommander-pref-layers-force"               name="layers.acceleration.force-enabled"      type="bool" />
 			<preference id="pmcommander-pref-layers-mode"                name="extensions.pmcommander.layers.mode"     type="int" 
 			  onchange="pmcommanderPrefs.layersModeChanged();" />
+			<preference id="pmcommander-pref-rendering-deprecated"		 name="layout.altrendering.enabled"				  type="bool" inverted="true" />
 
 			<preference id="pmcommander-pref-fonts-directwrite"          name="gfx.font_rendering.directwrite.enabled" 						type="bool" />
 			<preference id="pmcommander-pref-fonts-directwrite-gdi"      name="gfx.font_rendering.directwrite.use_gdi_table_loading" 	type="bool" />
@@ -84,7 +84,6 @@
 			<tabpanels flex="1">
 				<tabpanel id="pmcommander-graphics-general" orient="vertical">
 						<checkbox id="pmcommander-gfx-driverbugs-check" preference="pmcommander-pref-gfx-driverbugs" label="&pmcommander.graphics.general.workaround.driverbugs;" />
-						<checkbox id="pmcommander-azure-content-check" preference="pmcommander-pref-azure-content" label="&pmcommander.graphics.general.azure.content.label;" />
 						<hbox align="center">
 							<label id="pmcommander-gfx-initialpaint-delay-label" control="pmcommander-gfx-initialpaint-delay-input">&pmcommander.graphics.general.initialpaint.delay.label;</label>
 							<textbox type="number" size="4" min="25" max="3000" id="pmcommander-gfx-initialpaint-delay-input" preference="pmcommander-pref-initialpaint-delay" />
@@ -111,6 +110,7 @@
 								</menupopup>
 							</menulist>
 						</hbox>
+						<checkbox id="pmcommander-rendering-deprecated-check" preference="pmcommander-pref-rendering-deprecated" label="&pmcommander.graphics.rendering.use.deprecated.label;" />
 					</groupbox>
 				</tabpanel>
 				<tabpanel id="pmcommander-graphics-3D" orient="vertical">

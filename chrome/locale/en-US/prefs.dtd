@@ -17,8 +17,6 @@
 <!ENTITY pmcommander.tab.graphics.CMS "CMS">
 
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "Use workarounds for specific driver bugs">
-<!ENTITY pmcommander.graphics.general.azure.caption "Azure">
-<!ENTITY pmcommander.graphics.general.azure.content.label "Use Azure for content">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Initial paint delay:">
 
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
@@ -33,6 +31,7 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.default "Default">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Prefer Direct3D 9">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Prefer OpenGL">
+<!ENTITY pmcommander.graphics.rendering.use.deprecated.label "Use old (deprecated) rendering method">
 
 <!ENTITY pmcommander.graphics.3d.webgl.native.label "Prefer OpenGL for WebGL">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Force antialising on">
