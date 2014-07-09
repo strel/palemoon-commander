@@ -1,0 +1,343 @@
+<!ENTITY pmcommander.window.title "Pale Moon Commander">
+<!ENTITY pmcommander.pane.graphics "Grafik">
+<!ENTITY pmcommander.pane.network "Nätverk">
+<!ENTITY pmcommander.pane.perf "Prestanda">
+<!ENTITY pmcommander.pane.UI "Gränssnitt">
+<!ENTITY pmcommander.pane.security "Säkerhet">
+<!ENTITY pmcommander.pane.misc "Övrigt">
+<!ENTITY pmcommander.tab.general "Allmänt">
+<!-- Graphics category -->
+<!ENTITY pmcommander.tab.graphics.rendering "Rendering">
+<!ENTITY pmcommander.tab.graphics.3D "3D">
+<!ENTITY pmcommander.tab.graphics.fonts "Teckensnitt">
+<!ENTITY pmcommander.tab.graphics.CMS "CMS">
+<!ENTITY pmcommander.graphics.general.workaround.driverbugs "Använd åtgärdslösningar för specifika fel i drivrutinen">
+<!ENTITY pmcommander.graphics.general.azure.caption "Azure">
+<!ENTITY pmcommander.graphics.general.azure.content.label "Använd Azure för innehåll">
+<!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Inledande återgivningsfördröjning:">
+<!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
+<!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "Aktivera Direct2D-acceleration">
+<!ENTITY pmcommander.graphics.rendering.d2d.force.label "Tvinga användning av Direct2D">
+<!ENTITY pmcommander.graphics.rendering.layers.caption "Lageracceleration">
+<!ENTITY pmcommander.graphics.rendering.layers.enabled.label "Aktivera lageracceleration">
+<!ENTITY pmcommander.graphics.rendering.layers.force.label "Tvinga användning av lageracceleration">
+<!ENTITY pmcommander.graphics.rendering.layers.drawfps.label "Ritade bildrutor per sekund">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.label "Lageraccelerationsläge:">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.default "Standard">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Föredra Direct3D 9">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Föredra OpenGL">
+<!ENTITY pmcommander.graphics.3d.webgl.native.label "Föredra OpenGL för WebGL">
+<!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Tvinga kantutjämning på">
+<!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "Kantutjämningsnivå:">
+<!ENTITY pmcommander.graphics.3d.msaa.level.0 "Av">
+<!ENTITY pmcommander.graphics.3d.msaa.level.2 "x2">
+<!ENTITY pmcommander.graphics.3d.msaa.level.4 "x4">
+<!ENTITY pmcommander.graphics.3d.msaa.level.8 "x8">
+<!ENTITY pmcommander.graphics.3d.msaa.level.16 "x16">
+<!ENTITY pmcommander.graphics.fonts.directwrite.label "Aktivera DirectWrite-teckensnittsrendering">
+<!ENTITY pmcommander.graphics.fonts.directwrite.gdi.label "Använd GDI-tabellinläsning för DirectWrite">
+<!ENTITY pmcommander.graphics.fonts.graphite.label "Aktivera Graphite-teckensnittsrendering">
+<!ENTITY pmcommander.graphics.fonts.cleartype.caption "ClearType">
+<!ENTITY pmcommander.graphics.cleartype.content.always.label "Använd alltid ClearType för innehåll">
+<!ENTITY pmcommander.graphics.cleartype.downloadable.label "Använd ClearType för hämtningsbara teckensnitt">
+<!ENTITY pmcommander.graphics.cleartype.mode.label "ClearType-renderingsläge:">
+<!ENTITY pmcommander.graphics.cleartype.mode.auto "Automatisk">
+<!ENTITY pmcommander.graphics.cleartype.mode.default "Standard">
+<!ENTITY pmcommander.graphics.cleartype.mode.aliased "Med alias">
+<!ENTITY pmcommander.graphics.cleartype.mode.gdiclassic "GDI Klassisk">
+<!ENTITY pmcommander.graphics.cleartype.mode.gdinatural "GDI Naturlig">
+<!ENTITY pmcommander.graphics.cleartype.mode.natural "Naturlig">
+<!ENTITY pmcommander.graphics.cleartype.mode.symmetric "Naturligt symmetrisk">
+<!ENTITY pmcommander.graphics.cleartype.level.label "ClearType-nivå:">
+<!ENTITY pmcommander.graphics.cleartype.contrast.label "ClearType-kontrast:">
+<!ENTITY pmcommander.graphics.cleartype.gamma.label "ClearType-gammanivå:">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.label "Delbildpunktsrendering:">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.auto "Automatisk">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.flat "Platt">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.RGB "RGB-ordning">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.BGR "BGR-ordning">
+<!ENTITY pmcommander.graphics.cleartype.gdimaxsize "Rendera med GDI Klassisk upp till teckenstorlek:">
+<!ENTITY pmcommander.graphics.color.ICC.caption "Färghanteringssystem (CMS)">
+<!ENTITY pmcommander.graphics.color.ICCv4.label "Aktivera profiler enligt ICC version 4">
+<!ENTITY pmcommander.graphics.color.ICCmode.label "CMS-läge:">
+<!ENTITY pmcommander.graphics.color.ICCmode.off "Av">
+<!ENTITY pmcommander.graphics.color.ICCmode.always "Använd för alla bilder">
+<!ENTITY pmcommander.graphics.color.ICCmode.tagged "Använd endast för bilder med profiler">
+<!ENTITY pmcommander.graphics.color.ICCintent.label "Återge med avseende på (färgkonvertering):">
+<!ENTITY pmcommander.graphics.color.ICCintent.embedded "Inbäddad färg">
+<!ENTITY pmcommander.graphics.color.ICCintent.perceptual "Perceptuell (standard)">
+<!ENTITY pmcommander.graphics.color.ICCintent.relative "Relativ kolorimetri">
+<!ENTITY pmcommander.graphics.color.ICCintent.saturation "Mättnad">
+<!ENTITY pmcommander.graphics.color.ICCintent.absolute "Absolut kolorimetri">
+<!-- Networking category -->
+<!ENTITY pmcommander.tab.net.dnslookups "Domännamn">
+<!ENTITY pmcommander.tab.net.http "HTTP">
+<!ENTITY pmcommander.tab.net.pipelining "Direktförbindelse">
+<!ENTITY pmcommander.tab.net.advanced "Övrigt">
+<!ENTITY pmcommander.net.dns.urlfixup.label "Försök automatiskt korrigera ofullständiga adresser">
+<!ENTITY pmcommander.net.dns.urlfixup.prefix.label "Försök korrigera genom att använda följande prefix:">
+<!ENTITY pmcommander.net.dns.urlfixup.suffix.label "Försök korrigera genom att använda följande suffix:">
+<!ENTITY pmcommander.net.dns.caption "DNS">
+<!ENTITY pmcommander.net.dns.ipv6.label "Aktivera IPv6-sökningar">
+<!ENTITY pmcommander.net.dns.prefetch.label "Hämta DNS-sökningar i förhand">
+<!ENTITY pmcommander.net.dns.cache.label "Cachelagrade DNS-poster:">
+<!ENTITY pmcommander.net.dns.expire.label "Förfallotid för cachelagrade DNS-poster:">
+<!ENTITY pmcommander.net.advanced.protocols.caption "Protokoll">
+<!ENTITY pmcommander.net.spdy.label "Aktivera SPDY-protokollet">
+<!ENTITY pmcommander.net.advanced.connections.caption "Anslutningar">
+<!ENTITY pmcommander.net.buffercount.label "Antal nätverkslagerbuffertar:">
+<!ENTITY pmcommander.net.buffersize.label "Storlek på nätverkslagerbuffertar:">
+<!ENTITY pmcommander.net.http.fastfallback.label "Använd snabb återställning från IPv6 till IPv4">
+<!ENTITY pmcommander.net.http.timing.caption "Tidsinställningar för HTTP">
+<!ENTITY pmcommander.net.http.conn.timeout.label "Tidsgräns för HTTP-anslutning:">
+<!ENTITY pmcommander.net.http.retry.timeout.label "HTTP-återanslutningsförsök efter:">
+<!ENTITY pmcommander.net.http.keepalive.timeout.label "Tidsgräns för beständig HTTP-anslutning:">
+<!ENTITY pmcommander.net.http.connections.caption "HTTP-anslutningar">
+<!ENTITY pmcommander.net.http.maxconn.label "Högsta totala antal HTTP-anslutningar:">
+<!ENTITY pmcommander.net.http.persistent.maxconn.server.label "Högsta antal HTTP-anslutningar per server:">
+<!ENTITY pmcommander.net.http.persistent.maxconn.proxy.label "Högsta antal HTTP-anslutningar per proxy:">
+<!ENTITY pmcommander.net.http.diagnostics.label "Aktivera HTTP-protokolldiagnostik">
+<!ENTITY pmcommander.net.pipelining.label "Aktivera direktförbindelse">
+<!ENTITY pmcommander.net.pipelining.ssl.label "Aktivera direktförbindelse över SSL">
+<!ENTITY pmcommander.net.pipelining.proxy.label "Aktivera direktförbindelse över proxyanslutningar">
+<!ENTITY pmcommander.net.pipelining.aggressive.label "Använd aggressiv direktförbindelse">
+<!ENTITY pmcommander.net.pipelining.params.caption "Direktförbindelseparametrar">
+<!ENTITY pmcommander.net.pipelining.maxrequest.label "Högsta antal förfrågningar i direktförbindelsen">
+<!ENTITY pmcommander.net.pipelining.maxrequest.optimistic.label "Högsta antal optimistiska direktförbindelseförfrågningar">
+<!ENTITY pmcommander.net.pipelining.maxsize.label "Största elementstorlek i direktförbindelsen">
+<!ENTITY pmcommander.net.pipelining.timeout.label "Tidsgräns för direktförbindelseläsning innan begäran om icke-direktförbindelse skickas">
+<!ENTITY pmcommander.net.pipelining.reschedule.label "Schemalägg om långsamma direktförbindelseförfrågningar till en annan direktförbindelse">
+<!ENTITY pmcommander.net.pipelining.reschedule.timeout.label "Tidsgräns innan förfrågningar schemaläggs om till en annan direktförbindelse">
+<!-- Performance category -->
+<!ENTITY pmcommander.tab.perf.javascript "JavaScript">
+<!ENTITY pmcommander.tab.perf.javascript.gc "Skräpinsamling">
+<!ENTITY pmcommander.tab.perf.cache "Cache">
+<!ENTITY pmcommander.perf.js.global.disable "Inaktivera JavaScript helt och hållet">
+<!ENTITY pmcommander.perf.js.global.disable.warning "Varning: Att inaktivera JavaScript helt och hållet kommer att lamslå din surfupplevelse och göra många webbplatser funktionsodugliga. Det bör inte göras lättvindigt.">
+<!ENTITY pmcommander.perf.js.chrome.caption "Webbläsarens krom">
+<!ENTITY pmcommander.perf.js.baselinejit.chrome.label "Aktivera Baseline JIT">
+<!ENTITY pmcommander.perf.js.content.caption "Sidinnehåll">
+<!ENTITY pmcommander.perf.js.baselinejit.content.label "Aktivera Baseline JIT">
+<!ENTITY pmcommander.perf.js.ionmonkey.content.label "Aktivera IonMonkey">
+<!ENTITY pmcommander.perf.js.odinmonkey.label "Aktivera OdinMonkey (optimeringar för asm.js)">
+<!ENTITY pmcommander.perf.js.typeinference.label "Aktivera JavaScript-typhärledning">
+<!ENTITY pmcommander.perf.js.gc.onmempressure.label "Utför skräpinsamling vid högt minnestryck">
+<!ENTITY pmcommander.perf.js.gc.per.compartment.label "Utför skräpinsamling fackvis">
+<!ENTITY pmcommander.perf.js.gc.explicit.compartment.label "Aktivera uttrycklig skräpinsamling för fack">
+<!ENTITY pmcommander.perf.js.gc.dynamic.heap.label "Använd dynamisk minnesstack för skräpinsamling">
+<!ENTITY pmcommander.perf.js.gc.dynamic.slice.label "Använd dynamiska minnessegment för skräpinsamling">
+<!ENTITY pmcommander.perf.js.gc.incremental.label "Aktivera stegvis skräpinsamling">
+<!ENTITY pmcommander.perf.js.gc.incremental.slice.ms.label "Tidsintervall för stegvis skräpinsamling:">
+<!ENTITY pmcommander.perf.cache.disk.caption "Diskcache">
+<!ENTITY pmcommander.perf.cache.disk.enable.label "Aktivera cachelagring på disk">
+<!ENTITY pmcommander.perf.cache.disk.auto.label "Anpassa storleken på diskcachen automatiskt">
+<!ENTITY pmcommander.perf.cache.disk.capacity.label "Storlek på diskcachen om den inte anpassas automatiskt:">
+<!ENTITY pmcommander.perf.cache.disk.elementsize.label "Största storlek på element i diskcachen:">
+<!ENTITY pmcommander.perf.cache.compression.label "Komprimering av cache:">
+<!ENTITY pmcommander.cache.compression.off "Ingen komprimering">
+<!ENTITY pmcommander.cache.compression.low "Låg komprimering">
+<!ENTITY pmcommander.cache.compression.medium "Medelhög komprimering">
+<!ENTITY pmcommander.cache.compression.high "Hög komprimering">
+<!ENTITY pmcommander.perf.cache.compression.info "Obs: en ändring av detta alternativ kommer att rensa din cache.">
+<!ENTITY pmcommander.perf.cache.mem.caption "Cacheminne">
+<!ENTITY pmcommander.perf.cache.mem.enable.label "Aktivera cacheminneslagring">
+<!ENTITY pmcommander.perf.cache.mem.capacity.label "Storlek på cacheminnet:">
+<!ENTITY pmcommander.cache.mem.capacity.auto "Automatisk">
+<!ENTITY pmcommander.cache.mem.capacity.4M "4 MB">
+<!ENTITY pmcommander.cache.mem.capacity.8M "8 MB">
+<!ENTITY pmcommander.cache.mem.capacity.16M "16 MB">
+<!ENTITY pmcommander.cache.mem.capacity.32M "32 MB">
+<!ENTITY pmcommander.cache.mem.capacity.64M "64 MB">
+<!ENTITY pmcommander.perf.cache.mem.elementsize.label "Största storlek på element i cacheminnet:">
+<!ENTITY pmcommander.cache.mem.elementsize.auto "Automatisk">
+<!ENTITY pmcommander.cache.mem.elementsize.100K "100 kB">
+<!ENTITY pmcommander.cache.mem.elementsize.500K "500 kB">
+<!ENTITY pmcommander.cache.mem.elementsize.1M "1 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.2M "2 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.4M "4 MB">
+<!ENTITY pmcommander.perf.cache.checking.label "Jämför cachelagrade sidor med sidor på nätverket:">
+<!ENTITY pmcommander.cache.checking.session "En gång per session">
+<!ENTITY pmcommander.cache.checking.always "Alltid">
+<!ENTITY pmcommander.cache.checking.never "Aldrig">
+<!ENTITY pmcommander.cache.checking.expired "När de förfaller">
+<!-- User Interface category -->
+<!ENTITY pmcommander.tab.ui.tabs "Flikar">
+<!ENTITY pmcommander.tab.ui.taskbar "Aktivitetsfältet">
+<!ENTITY pmcommander.tab.ui.downloads "Filhämtningar">
+<!ENTITY pmcommander.tab.ui.forms "Formulär">
+<!ENTITY pmcommander.tab.ui.fullscreen "Helskärm">
+<!ENTITY pmcommander.ui.general.urlbar.caption "Adressfältet">
+<!ENTITY pmcommander.ui.urlbar.autofill.label "Komplettera adresser automatiskt (m.h.a. historik och bokmärken)">
+<!ENTITY pmcommander.ui.urlbar.autofill.typed.label "Använd även tidigare inskrivna adresser för automatisk komplettering">
+<!ENTITY pmcommander.ui.urlbar.formatting.label "Aktivera färgmarkering av domän">
+<!ENTITY pmcommander.ui.urlbar.trimming.label "Aktivera protokolltrimning (tar bort http:// och ftp://)">
+<!ENTITY pmcommander.ui.urlbar.rss.label "Visa en flödesindikator i adressfältet">
+<!ENTITY pmcommander.ui.errorpages.label "Använd anpassade felsidor">
+<!ENTITY pmcommander.ui.toplevel.image.background.label "Bakgrundsfärg för fristående bilder:">
+<!ENTITY pmcommander.ui.hideplaceholders.label "Dölj användargränssnittets platshållartext vid fokusering av indata">
+<!ENTITY pmcommander.ui.tabs.animate.label "Animera flikar">
+<!ENTITY pmcommander.ui.tabs.resize.immediately.label "Ändra omedelbart storleken på kvarvarande flikar när en flik stängs">
+<!ENTITY pmcommander.ui.tabs.intitlebar.label "Rita flikar i namnlisten">
+<!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "När jag öppnar ett bokmärke i en ny flik, växla omedelbart till den">
+<!ENTITY pmcommander.ui.tabs.closebuttons.caption "Stängknappar på flikar">
+<!ENTITY pmcommander.ui.tabs.closebuttons.label "Visa stängknapp:">
+<!ENTITY pmcommander.ui.tabs.closebuttons.active "Endast på den aktiva fliken">
+<!ENTITY pmcommander.ui.tabs.closebuttons.all "På alla flikar, om de är tillräckligt breda">
+<!ENTITY pmcommander.ui.tabs.closebuttons.none "Visa inte stängknappar">
+<!ENTITY pmcommander.ui.tabs.closebuttons.fx1 "I slutet av flikområdet">
+<!ENTITY pmcommander.ui.tabs.clipwidth.label "Visa inte stängknapp om flikbredden är mindre än:">
+<!ENTITY pmcommander.ui.tabs.tabswitching.caption "Växling mellan flikar">
+<!ENTITY pmcommander.ui.tabs.ctrltab.previews.label "Använd grafisk flikväxling för Ctrl+Tabb">
+<!ENTITY pmcommander.ui.tabs.ctrltab.useMRU.label "Prioritera nyligen använda flikar för Ctrl+Tabb">
+<!ENTITY pmcommander.ui.tabs.alltabs.previews.label "Använd grafisk panel när alla flikar listas">
+<!ENTITY pmcommander.ui.tabs.jumplists.caption "Snabblistor (Windows 7 eller senare)">
+<!ENTITY pmcommander.ui.jumplists.enabled.label "Aktivera snabblistor">
+<!ENTITY pmcommander.ui.jumplists.frequent.label "Visa ofta besökta webbplatser i snabblista">
+<!ENTITY pmcommander.ui.jumplists.recent.label "Visa nyligen besökta webbplatser i snabblista">
+<!ENTITY pmcommander.ui.jumplists.tasks.label "Visa webbläsaraktiviteter i snabblista">
+<!ENTITY pmcommander.ui.jumplists.limit.label "Begränsa antalet snabblistobjekt till:">
+<!ENTITY pmcommander.ui.fullscreen.autohide.label "Dölj automatiskt navigerings- och flikfälten i helskärmsläge">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.label "Animera döljandet av verktygsfält:">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.off "Aldrig">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.firstonly "Endast första gången">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.always "Alltid">
+<!ENTITY pmcommander.ui.fullscreen.html5.caption "Helskärmsläge för HTML5">
+<!ENTITY pmcommander.ui.fullscreen.html5.enabled.label "Aktivera helskärmsläge för HTML5-program">
+<!ENTITY pmcommander.ui.fullscreen.html5.approval.label "Kräv godkännande för helskärmsläge enskilt för varje webbplats">
+<!ENTITY pmcommander.ui.fullscreen.html5.exit.on.deactivate.label "Avsluta helskärmsläget när programmet inaktiveras">
+<!ENTITY pmcommander.ui.fullscreen.html5.pointerlock.label "Lås muspekaren till fönstret som är i helskärmsläge">
+<!ENTITY pmcommander.ui.fullscreen.html5.security.label "Kräv användarinteraktion för växling till helskärmsläget">
+<!-- Security category -->
+<!ENTITY pmcommander.tab.sec.padlock "Hänglås">
+<!ENTITY pmcommander.tab.sec.DOM "DOM">
+<!ENTITY pmcommander.tab.sec.SSL "SSL">
+<!ENTITY pmcommander.tab.sec.ciphers1 "Kryptering 1">
+<!ENTITY pmcommander.tab.sec.ciphers2 "Kryptering 2">
+<!ENTITY pmcommander.tab.sec.privacy "Sekretess">
+<!ENTITY pmcommander.js.jithardening.label "Aktivera JavaScript JIT-härdning">
+<!ENTITY pmcommander.sec.general.js.caption "Tillåt JavaScript att:">
+<!ENTITY pmcommander.js.imgsrc.label "Ändra bildkällattribut">
+<!ENTITY pmcommander.js.window_flip.label "Höja eller sänka fönster">
+<!ENTITY pmcommander.js.window_move_resize.label "Flytta eller storleksändra fönster">
+<!ENTITY pmcommander.js.window_close.label "Stänga fönster">
+<!ENTITY pmcommander.js.clipboard.label "Manipulera Urklipp">
+<!ENTITY pmcommander.js.contextmenu.label "Inaktivera eller ändra högerklicksmenyn">
+<!ENTITY pmcommander.sec.fileuri.strict.label "Använd strikt ursprungsprincip för protokollet file://">
+<!ENTITY pmcommander.sec.plugins.clicktoplay.label "Kräv en klickning för att aktivera insticksmoduler (Klicka för att spela upp)">
+<!ENTITY pmcommander.sec.padlock.shown.label "Visa hänglåset">
+<!ENTITY pmcommander.sec.padlock.style.label "Visa hänglåset:">
+<!ENTITY pmcommander.sec.padlock.style.ip.right "I identitetspanelen, till höger">
+<!ENTITY pmcommander.sec.padlock.style.ip.left "I identitetspanelen, till vänster">
+<!ENTITY pmcommander.sec.padlock.style.urlbar.right "I slutet av adressfältet">
+<!ENTITY pmcommander.sec.padlock.style.statusbar "I statusfältet">
+<!ENTITY pmcommander.sec.padlock.style.tabs.right "I flikfältet, till höger">
+<!ENTITY pmcommander.sec.padlock.style.ip.right.classic "Identitetspanelen, till höger (klassiskt)">
+<!ENTITY pmcommander.sec.padlock.style.ip.left.classic "Identitetspanelen, till vänster (klassiskt)">
+<!ENTITY pmcommander.sec.padlock.style.urlbar.right.classic "I slutet av adressfältet (klassiskt)">
+<!ENTITY pmcommander.sec.padlock.style.statusbar.classic "I statusfältet (klassiskt)">
+<!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "Flikfältet, till höger (klassiskt)">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.label "Adressfältets effekt för säkra webbplatser:">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.none "Ingen visuell effekt">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "Använd kantskuggning">
+<!ENTITY pmcommander.sec.dom.windowopen.caption "Popupfönster">
+<!ENTITY pmcommander.sec.dom.when.opening.allow.label "När ett popupfönster öppnas, tillåt skriptet att:">
+<!ENTITY pmcommander.sec.dom.closebutton.label "Inaktivera stängknappen">
+<!ENTITY pmcommander.sec.dom.minbutton.label "Inaktivera minimeringsknappen">
+<!ENTITY pmcommander.sec.dom.addressbar.label "Ta bort adressfältet">
+<!ENTITY pmcommander.sec.dom.navbar.label "Ta bort navigeringsknapparna">
+<!ENTITY pmcommander.sec.dom.statusbar.label "Ta bort statusfältet">
+<!ENTITY pmcommander.sec.dom.menubar.label "Ta bort menyraden">
+<!ENTITY pmcommander.sec.dom.bmtoolbar.label "Ta bort bokmärkesfältet">
+<!ENTITY pmcommander.sec.dom.scrollbars.label "Inaktivera användningen av rullningslister">
+<!ENTITY pmcommander.sec.dom.titlebar.label "Inaktivera namnlisten">
+<!ENTITY pmcommander.sec.ssl.domain.display.label "För domänverifierade, säkra webbplatser, visa:">
+<!ENTITY pmcommander.sec.ssl.domain.display.none "Ingen text">
+<!ENTITY pmcommander.sec.ssl.domain.display.topdomain "Toppdomänen">
+<!ENTITY pmcommander.sec.ssl.domain.display.host "Det fullständiga värdnamnet">
+<!ENTITY pmcommander.sec.ssl.tls.minversion.label "Lägsta protokollversion som stöds:">
+<!ENTITY pmcommander.sec.ssl.tls.maxversion.label "Högsta protokollversion som stöds:">
+<!ENTITY pmcommander.sec.ssl.tls.version.SSL3 "SSL 3.0">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS10 "TLS 1.0">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS11 "TLS 1.1">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS12 "TLS 1.2">
+<!ENTITY pmcommander.sec.ssl.mixedcontent.caption "Webbplatser med blandat innehåll (SSL/icke-SSL)">
+<!ENTITY pmcommander.sec.ssl.no.mixed.scripts.label "Blockera icke-SSL-skript">
+<!ENTITY pmcommander.sec.ssl.no.mixed.display.label "Blockera icke-SSL-visningsobjekt">
+<!ENTITY pmcommander.sec.ssl.hardening.caption "SSL-härdning">
+<!ENTITY pmcommander.sec.ssl.require.safe.neg.label "Kräv säker SSL-förhandling">
+<!ENTITY pmcommander.sec.ssl.unsafe.neg.broken.label "Behandla osäker SSL-förhandling som bruten">
+<!ENTITY pmcommander.sec.ssl.enable.false.start.label "Aktivera tjuvstarter för SSL-handskakningar">
+<!ENTITY pmcommander.sec.ciphers.caption "Använd följande SSL3-krypteringsmetoder:">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-128 "DHE-DSS-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-256 "DHE-DSS-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-cam-128 "DHE-DSS-Camellia, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-cam-256 "DHE-DSS-Camellia, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-des "DHE-DSS-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-128 "DHE-RSA-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-256 "DHE-RSA-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-128 "DHE-RSA-Camellia, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-256 "DHE-RSA-Camellia, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-des "DHE-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-gcm-128 "RSA-AES-GCM, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-128 "RSA-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-256 "RSA-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.rsa-cam-128 "RSA-Camellia, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.rsa-cam-256 "RSA-Camellia, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.rsa-des "RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.rsa-fips "RSA-FIPS-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.rsa-rc4-sha "RSA-RC4-SHA">
+<!ENTITY pmcommander.sec.ciphers.rsa-rc4-md5 "RSA-RC4-MD5">
+<!ENTITY pmcommander.sec.ciphers.rsa-seed "RSA-SEED">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-aes-128 "ECDH-ECDSA-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-aes-256 "ECDH-ECDSA-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-des "ECDH-ECDSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-rc4-128 "ECDH-ECDSA-RC4, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-aes-128 "ECDH-RSA-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-aes-256 "ECDH-RSA-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-des "ECDH-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-rc4-128 "ECDH-RSA-RC4, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-aes-gcm-128 "ECDHE-AES-GCM, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128 "ECDHE-ECDSA-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256 "ECDHE-ECDSA-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-des "ECDHE-ECDSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-rc4-128 "ECDHE-ECDSA-RC4, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-128 "ECDHE-RSA-AES, 128 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-256 "ECDHE-RSA-AES, 256 bitar">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-des "ECDHE-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-rc4-128 "ECDHE-RSA-RC4, 128 bitar">
+<!ENTITY pmcommander.sec.priv.cache.ssl.label "Cachelagra inte sidor som mottagits via säkra anslutningar">
+<!ENTITY pmcommander.sec.priv.cache.ssl.info "Observera att cachelagring endast sker om webbplatsen tillåter det. Detta alternativ ser till att sidor som mottagits via säkra anslutningar aldrig cachelagras på disk, oavsett om webbplatsen tillåter cachelagring eller inte.">
+<!ENTITY pmcommander.sec.priv.sc.accept.always.label "Acceptera alltid sessionskakor">
+<!ENTITY pmcommander.sec.priv.3pc.sessiononly.label "Rensa tredjepartskakor när webbläsaren avslutas">
+<!ENTITY pmcommander.sec.priv.geolocation.label "Aktivera geolokalisering i webbläsaren">
+<!-- Other/misc. category -->
+<!ENTITY pmcommander.tab.misc.tools "Verktyg">
+<!ENTITY pmcommander.tab.misc.reset "Återställning">
+<!ENTITY pmcommander.tab.misc.other "Övrigt">
+<!ENTITY pmcommander.info.restartwarning "Varning: Ändringar av dessa inställningar kräver en omstart av webbläsaren.">
+<!ENTITY pmcommander.misc.tools.caption "Utvecklingsverktyg">
+<!ENTITY pmcommander.misc.devtools.debugger "Aktivera skriptfelsökare">
+<!ENTITY pmcommander.misc.devtools.errorconsole "Aktivera felkonsol">
+<!ENTITY pmcommander.misc.devtools.inspector "Aktivera granskare">
+<!ENTITY pmcommander.misc.devtools.responsiveui "Aktivera responsivt användargränssnitt">
+<!ENTITY pmcommander.misc.devtools.scratchpad "Aktivera anteckningsblock">
+<!ENTITY pmcommander.misc.devtools.styleeditor "Aktivera formatmallsredigerare">
+<!ENTITY pmcommander.misc.devtools.tilt "Aktivera Tilt (3D-vy för sidlayout)">
+<!ENTITY pmcommander.misc.devtools.toolbar "Aktivera utvecklarverktygsfältet">
+<!ENTITY pmcommander.misc.modules.pdfjs "Aktivera den inbyggda PDF-granskaren">
+<!ENTITY pmcommander.misc.reset.info "Om inställningarna hindrar webbläsaren från att fungera korrekt, så kan du återställa dem till standardinställningarna för webbläsaren här för att återställa webbläsaren från felkonfigurering.">
+<!ENTITY pmcommander.reset.allprefs.label "Återställ alla inställningar">
+<!ENTITY pmcommander.reset.allprefs.info "Varning: Det här återställer alla användarinställningar till standardinställningarna för webbläsaren och stänger detta fönster. Observera att detta innefattar samtliga användarspecifika inställningar som inte är en del av detta tillägg, däribland inställningar för andra installerade tillägg, och att webbläsaren kommer att återställas till sina tillverkningsinställningar.">
+<!ENTITY pmcommander.misc.bookmarkbackups.caption "Säkerhetskopiering av bokmärken">
+<!ENTITY pmcommander.misc.bookmarkbackups.limit.label "Högsta antal dagliga säkerhetskopior av bokmärken (-1 = obegränsat):">
+<!ENTITY pmcommander.misc.bookmarkbackups.html.label "Exportera en bokmärkessäkerhetskopia som HTML vid programavslut">
+<!ENTITY pmcommander.misc.dom.storage.caption "Lokal HTML5-lagring">
+<!ENTITY pmcommander.misc.dom.storage.enabled.label "Aktivera lokal HTML5-lagring">
+<!ENTITY pmcommander.misc.dom.storage.limit.label "Övre standardgräns för mängden lagrad data per domän:">
+<!-- Units of measurement -->
+<!ENTITY pmcommander.unit.seconds "s">
+<!ENTITY pmcommander.unit.ms "ms">
+<!ENTITY pmcommander.unit.px "px">
+<!ENTITY pmcommander.unit.bytes "byte">
+<!ENTITY pmcommander.unit.KB "kB">
+<!ENTITY pmcommander.unit.MB "MB">

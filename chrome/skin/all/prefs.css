@@ -1,0 +1,48 @@
+/* ***** BEGIN LICENSE BLOCK *****
+*   The contents of this file are subject to the Pale Moon Freeware License
+*   You may not use this file except in compliance with the License. 
+*   You may obtain a copy of the License at http://www.palemoon.org/freeware-license.shtml
+*   
+*   Software distributed under the License is distributed on an "AS IS" basis,
+*   WITHOUT WARRANTY OF ANY KIND, either express or implied. 
+*   
+*   The Original Code is Pale Moon Commander.
+*   
+*   The Initial Developer of the Original Code is 
+*   Mark Straver <moonchild@palemoon.org>.
+*   
+*   This code is Copyright (C) 2012-2013 the Initial Developer. All Rights Reserved.
+*    
+*   ***** END LICENSE BLOCK *****  */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+radio[pane="pmcommander-pane-graphics"]
+{
+	list-style-image: url("chrome://pmcommander/skin/gfx.png");
+}
+
+radio[pane="pmcommander-pane-network"]
+{
+	list-style-image: url("chrome://pmcommander/skin/net.png");
+}
+
+radio[pane="pmcommander-pane-performance"]
+{
+	list-style-image: url("chrome://pmcommander/skin/perf.png");
+}
+
+radio[pane="pmcommander-pane-UI"]
+{
+	list-style-image: url("chrome://pmcommander/skin/UI.png");
+}
+
+radio[pane="pmcommander-pane-security"]
+{
+	list-style-image: url("chrome://pmcommander/skin/lock.png");
+}
+
+radio[pane="pmcommander-pane-misc"]
+{
+	list-style-image: url("chrome://pmcommander/skin/misc.png");
+}

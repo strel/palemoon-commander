@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - The contents of this file are subject to the Pale Moon Freeware License
+   - You may not use this file except in compliance with the License. 
+   - You may obtain a copy of the License at http://www.palemoon.org/freeware-license.shtml
+   - 
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. 
+   -
+   - The Original Code is Pale Moon Commander.
+   -
+   - The Initial Developer of the Original Code is 
+   - Mark Straver <moonchild@palemoon.org>.
+   -
+   - This code is Copyright (C) 2012-2014 the Initial Developer. All Rights Reserved.
+   - 
+   - ***** END LICENSE BLOCK ***** -->
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+
+		<!-- Info -->
+
+		<em:creator>Moonchild</em:creator>
+		<em:description>Advanced preferences for Pale Moon (and Firefox)</em:description>
+		<em:homepageURL>http://www.palemoon.org/commander.shtml</em:homepageURL>
+		<em:iconURL>chrome://pmcommander/skin/pmc.png</em:iconURL>
+		<em:id>commander@palemoon.org</em:id>
+		<em:name>Pale Moon Commander</em:name>
+		<em:optionsURL>chrome://pmcommander/content/prefs.xul</em:optionsURL>
+		<em:type>2</em:type>
+		<em:version>1.3.6</em:version>
+
+		<!-- Localizations -->
+
+		<em:localized><!-- nl -->
+			<Description>
+				<em:locale>nl</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Geavanceerde voorkeuren voor Pale Moon (en Firefox)</em:description>
+				<em:translator>Moonchild / MarkH [babelzilla]</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized><!-- sv-SE -->
+			<Description>
+				<em:locale>sv-SE</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Avancerade inställningar för Pale Moon (och Firefox)</em:description>
+				<em:translator>Mikael Hiort af Ornäs</em:translator>
+			</Description>
+		</em:localized>
+		
+		<!-- Targets -->
+
+		<em:targetApplication><!-- Firefox/Pale Moon -->
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>24.0</em:minVersion>
+				<em:maxVersion>28.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+	</Description>
+</RDF>

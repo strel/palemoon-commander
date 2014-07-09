@@ -1,0 +1,13 @@
+This add-on is Copyright ©2012-2014 M.C. Straver. 
+It is distributed as Freeware with disclosed source code (see definition below).
+
+Pale Moon Freeware License
+
+The software provided under this license is provided as Freely Available Copyrighted Software ("Freeware"), which means:
+
+1. The author of this software retains full rights to all parts of the software provided. No rights are given to copy, modify or create derivative works of this software.
+2. The software may only be distributed by third parties if such distribution is completely FREE OF CHARGE. No redistribution fee or cost reimbursement may be charged, and the software must be supplied UNALTERED and with all copyright statements intact, accompanied by a copy of this license.
+3. The software may not be included in whole or in part in other software, either free or commercially, without the author's prior permission.
+4. If the source code to the software is officially made available (disclosed), it may be used for educational purposes, but (parts of) the software's source code may not be copied verbatim to other software without the author's prior permission. See (1).
+
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. 

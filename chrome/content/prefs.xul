@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE prefwindow [
+	<!ENTITY % configDTD SYSTEM "chrome://global/locale/config.dtd">
+	%configDTD;
+	<!ENTITY % prefsDTD SYSTEM "chrome://pmcommander/locale/prefs.dtd">
+	%prefsDTD;
+]>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - The contents of this file are subject to the Pale Moon Freeware License
+   - You may not use this file except in compliance with the License. 
+   - You may obtain a copy of the License at http://www.palemoon.org/freeware-license.shtml
+   - 
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. 
+   -
+   - The Original Code is Pale Moon Commander.
+   -
+   - The Initial Developer of the Original Code is 
+   - Mark Straver <moonchild@palemoon.org>.
+   -
+   - This code is Copyright (C) 2012-2013 the Initial Developer. All Rights Reserved.
+   - 
+   - ***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/config.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
+
+<?xml-stylesheet href="chrome://pmcommander/content/prefs.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://pmcommander/skin/prefs.css" type="text/css" ?>
+
+<prefwindow id="pmcommander-prefs" title="&pmcommander.window.title;"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            style="" onload="pmcommanderPrefs.init();">
+
+	<script type="application/javascript" src="chrome://pmcommander/content/prefs.js" />
+	
+	<prefpane id="pmcommander-pane-graphics" label="&pmcommander.pane.graphics;">
+	
+		<preferences>
+			<preference id="pmcommander-pref-gfx-driverbugs"             name="gfx.work-around-driver-bugs"            type="bool" />
+			<preference id="pmcommander-pref-azure-content"              name="gfx.content.azure.enabled"              type="bool" />
+			<preference id="pmcommander-pref-initialpaint-delay"         name="nglayout.initialpaint.delay"            type="int" />
+			<preference id="pmcommander-pref-webgl-native"               name="webgl.prefer-native-gl"                 type="bool" />
+			<preference id="pmcommander-pref-webgl-msaa-force"           name="webgl.msaa-force"                       type="bool" />
+			<preference id="pmcommander-pref-webgl-msaa-level"           name="gl.msaa-level"                       	  type="int" />
+			<preference id="pmcommander-pref-d2d-enabled"                name="gfx.direct2d.disabled"                  type="bool" inverted="true" 
+			  onchange="pmcommanderPrefs.d2dGlobalChanged();" />
+			<preference id="pmcommander-pref-d2d-force"                  name="gfx.direct2d.force-enabled"             type="bool" />
+			<preference id="pmcommander-pref-layers-enabled"             name="layers.acceleration.disabled"           type="bool" inverted="true" 
+				onchange="pmcommanderPrefs.layeraccGlobalChanged();" />
+			<preference id="pmcommander-pref-layers-drawfps"             name="layers.acceleration.draw-fps"           type="bool" />
+			<preference id="pmcommander-pref-layers-force"               name="layers.acceleration.force-enabled"      type="bool" />
+			<preference id="pmcommander-pref-layers-mode"                name="extensions.pmcommander.layers.mode"     type="int" 
+			  onchange="pmcommanderPrefs.layersModeChanged();" />
+
+			<preference id="pmcommander-pref-fonts-directwrite"          name="gfx.font_rendering.directwrite.enabled" 						type="bool" />
+			<preference id="pmcommander-pref-fonts-directwrite-gdi"      name="gfx.font_rendering.directwrite.use_gdi_table_loading" 	type="bool" />
+			<preference id="pmcommander-pref-fonts-graphite"             name="gfx.font_rendering.graphite.enabled"    						type="bool" />
+			<preference id="pmcommander-pref-cleartype-content-always"   name="gfx.font_rendering.cleartype.always_use_for_content"    type="bool" />
+			<preference id="pmcommander-pref-cleartype-downloadable"     name="gfx.font_rendering.cleartype.use_for_downloadable_fonts" type="bool" />
+			<preference id="pmcommander-pref-cleartype-mode"             name="gfx.font_rendering.cleartype_params.rendering_mode"  	type="int" />
+			<preference id="pmcommander-pref-cleartype-level"            name="gfx.font_rendering.cleartype_params.cleartype_level"    type="int" />
+			<preference id="pmcommander-pref-cleartype-contrast"         name="gfx.font_rendering.cleartype_params.enhanced_contrast"  type="int" />
+			<preference id="pmcommander-pref-cleartype-gamma"            name="gfx.font_rendering.cleartype_params.gamma"           	type="int" />
+			<preference id="pmcommander-pref-cleartype-pixel-structure"  name="gfx.font_rendering.cleartype_params.pixel_structure" 	type="int" />
+			<preference id="pmcommander-pref-cleartype-gdi-max-size"		 name="gfx.font_rendering.cleartype_params.force_gdi_classic_max_size" type="int" />
+			
+			<preference id="pmcommander-pref-color-ICCv4"					 name="gfx.color_management.enablev4"			  type="bool" />
+			<preference id="pmcommander-pref-color-ICCmode"					 name="gfx.color_management.mode"				  type="int" />
+			<preference id="pmcommander-pref-color-ICCintent"				 name="gfx.color_management.rendering_intent"  type="int" />
+		</preferences>
+
+		<tabbox id="pmcommander-tabbox-graphics" flex="1">
+			<tabs id="pmcommander-tabs-graphics">
+				<tab id="pmcommander-tab-graphics-general" label="&pmcommander.tab.general;" />
+				<tab id="pmcommander-tab-graphics-rendering"  label="&pmcommander.tab.graphics.rendering;" />
+				<tab id="pmcommander-tab-graphics-3D" label="&pmcommander.tab.graphics.3D;" />
+				<tab id="pmcommander-tab-graphics-fonts" label="&pmcommander.tab.graphics.fonts;" />
+				<tab id="pmcommander-tab-graphics-CMS" label="&pmcommander.tab.graphics.CMS;" />
+			</tabs>
+
+			<tabpanels flex="1">
+				<tabpanel id="pmcommander-graphics-general" orient="vertical">
+						<checkbox id="pmcommander-gfx-driverbugs-check" preference="pmcommander-pref-gfx-driverbugs" label="&pmcommander.graphics.general.workaround.driverbugs;" />
+						<checkbox id="pmcommander-azure-content-check" preference="pmcommander-pref-azure-content" label="&pmcommander.graphics.general.azure.content.label;" />
+						<hbox align="center">
+							<label id="pmcommander-gfx-initialpaint-delay-label" control="pmcommander-gfx-initialpaint-delay-input">&pmcommander.graphics.general.initialpaint.delay.label;</label>
+							<textbox type="number" size="4" min="25" max="3000" id="pmcommander-gfx-initialpaint-delay-input" preference="pmcommander-pref-initialpaint-delay" />
+							<label>&pmcommander.unit.ms;</label>
+						</hbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-graphics-rendering" orient="vertical">
+					<groupbox id="pmcommander-graphics-rendering-d2d">
+						<caption label="&pmcommander.graphics.rendering.d2d.caption;" />
+						<checkbox id="pmcommander-d2d-enabled-check" preference="pmcommander-pref-d2d-enabled" label="&pmcommander.graphics.rendering.d2d.enabled.label;" />
+						<checkbox id="pmcommander-d2d-force-check" preference="pmcommander-pref-d2d-force" label="&pmcommander.graphics.rendering.d2d.force.label;" />
+					</groupbox>
+					<groupbox id="pmcommander-graphics-rendering-layers">
+						<caption label="&pmcommander.graphics.rendering.layers.caption;" />
+						<checkbox id="pmcommander-layers-enabled-check" preference="pmcommander-pref-layers-enabled" label="&pmcommander.graphics.rendering.layers.enabled.label;" />
+						<checkbox id="pmcommander-layers-force-check" preference="pmcommander-pref-layers-force" label="&pmcommander.graphics.rendering.layers.force.label;" />
+						<hbox align="center">
+						   <label id="pmcommander-layers-mode-label" control="pmcommander-layers-mode-menu">&pmcommander.graphics.rendering.layers.mode.label;</label>
+							<menulist id="pmcommander-layers-mode-menu" preference="pmcommander-pref-layers-mode" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.graphics.rendering.layers.mode.default;"    value="0" />
+									<menuitem label="&pmcommander.graphics.rendering.layers.mode.d3d9;" value="1" />
+									<menuitem label="&pmcommander.graphics.rendering.layers.mode.opengl;"  value="2" />
+								</menupopup>
+							</menulist>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-graphics-3D" orient="vertical">
+					<checkbox id="pmcommander-webgl-native-check" preference="pmcommander-pref-webgl-native" label="&pmcommander.graphics.3d.webgl.native.label;" />
+					<checkbox id="pmcommander-webgl-msaa-force-check" preference="pmcommander-pref-webgl-msaa-force" label="&pmcommander.graphics.3d.webgl.msaa.force.label;" />
+					<hbox align="center">
+					   <label id="pmcommander-webgl-msaa-level-label" control="pmcommander-msaa-level-menu">&pmcommander.graphics.3d.webgl.msaa.level.label;</label>
+						<menulist id="pmcommander-layers-mode-menu" preference="pmcommander-pref-webgl-msaa-level" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.graphics.3d.msaa.level.0;"    value="0" />
+								<menuitem label="&pmcommander.graphics.3d.msaa.level.2;"    value="2" />
+								<menuitem label="&pmcommander.graphics.3d.msaa.level.4;"    value="4" />
+								<menuitem label="&pmcommander.graphics.3d.msaa.level.8;"    value="8" />
+								<menuitem label="&pmcommander.graphics.3d.msaa.level.16;"   value="16" />
+							</menupopup>
+						</menulist>
+					</hbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-graphics-fonts" orient="vertical">
+					<checkbox id="pmcommander-fonts-directwrite-gdi-check" preference="pmcommander-pref-fonts-directwrite-gdi" label="&pmcommander.graphics.fonts.directwrite.gdi.label;" />
+					<checkbox id="pmcommander-fonts-graphite-check" preference="pmcommander-pref-fonts-graphite" label="&pmcommander.graphics.fonts.graphite.label;" />
+					<groupbox id="pmcommander-graphics-fonts-cleartype">
+						<caption label="&pmcommander.graphics.fonts.cleartype.caption;" />
+						<checkbox id="pmcommander-cleartype-content-check" preference="pmcommander-pref-cleartype-content-always" label="&pmcommander.graphics.cleartype.content.always.label;" />
+						<checkbox id="pmcommander-cleartype-downloadable-check" preference="pmcommander-pref-cleartype-downloadable" label="&pmcommander.graphics.cleartype.downloadable.label;" />
+						<hbox align="center">
+						   <label id="pmcommander-cleartype-mode-label" control="pmcommander-cleartype-mode-menu">&pmcommander.graphics.cleartype.mode.label;</label>
+							<menulist id="pmcommander-cleartype-mode-menu" preference="pmcommander-pref-cleartype-mode" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.graphics.cleartype.mode.auto;"    		value="-1" />
+									<menuitem label="&pmcommander.graphics.cleartype.mode.default;" 		value="0" />
+									<menuitem label="&pmcommander.graphics.cleartype.mode.aliased;" 		value="1" />
+									<menuitem label="&pmcommander.graphics.cleartype.mode.gdiclassic;" 	value="2" />
+									<menuitem label="&pmcommander.graphics.cleartype.mode.gdinatural;" 	value="3" />
+									<menuitem label="&pmcommander.graphics.cleartype.mode.natural;" 		value="4" />
+									<menuitem label="&pmcommander.graphics.cleartype.mode.symmetric;" 	value="5" />
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox align="center">
+						   <label id="pmcommander-cleartype-level-label" control="pmcommander-cleartype-level-input">&pmcommander.graphics.cleartype.level.label;</label>
+							<textbox type="number" size="3" min="-1" max="100" id="pmcommander-cleartype-level-input" preference="pmcommander-pref-cleartype-level" />
+						</hbox>
+						<hbox align="center">
+						   <label id="pmcommander-cleartype-contrast-label" control="pmcommander-cleartype-contrast-input">&pmcommander.graphics.cleartype.contrast.label;</label>
+							<textbox type="number" size="4" min="-1" max="1000" id="pmcommander-cleartype-contrast-input" preference="pmcommander-pref-cleartype-contrast" />
+						</hbox>
+						<hbox align="center">
+						   <label id="pmcommander-cleartype-gamma-label" control="pmcommander-cleartype-gamma-input">&pmcommander.graphics.cleartype.gamma.label;</label>
+							<textbox type="number" size="4" min="-1" max="2200" id="pmcommander-cleartype-gamma-input" preference="pmcommander-pref-cleartype-gamma" />
+						</hbox>
+						<hbox align="center">
+						   <label id="pmcommander-cleartype-pxmode-label" control="pmcommander-cleartype-pxmode-menu">&pmcommander.graphics.cleartype.pxmode.label;</label>
+							<menulist id="pmcommander-cleartype-pxmode-menu" preference="pmcommander-pref-cleartype-pixel-structure" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.graphics.cleartype.pxmode.auto;" value="-1" />
+									<menuitem label="&pmcommander.graphics.cleartype.pxmode.flat;" value="0" />
+									<menuitem label="&pmcommander.graphics.cleartype.pxmode.RGB;" 	value="1" />
+									<menuitem label="&pmcommander.graphics.cleartype.pxmode.BGR;" 	value="2" />
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-cleartype-gdimax-label" control="pmcommander-image-background-input">&pmcommander.graphics.cleartype.gdimaxsize;</label>
+							<textbox type="number" size="3" max="200" id="pmcommander-cleartype-gdimax-input" preference="pmcommander-pref-cleartype-gdi-max-size" />
+						</hbox>
+					</groupbox>
+				
+				</tabpanel>
+				<tabpanel id="pmcommander-graphics-color" orient="vertical">
+					<label>&pmcommander.info.restartwarning;</label>
+					<groupbox id="pmcommander-graphics-color-ICC">
+						<caption label="&pmcommander.graphics.color.ICC.caption;" />
+						<checkbox id="pmcommander-color-ICCv4-check" preference="pmcommander-pref-color-ICCv4" label="&pmcommander.graphics.color.ICCv4.label;" />
+						<hbox align="center">
+						   <label id="pmcommander-color-ICCmode-label" control="pmcommander-color-ICCmode-menu">&pmcommander.graphics.color.ICCmode.label;</label>
+							<menulist id="pmcommander-color-ICCmode-menu" preference="pmcommander-pref-color-ICCmode" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.graphics.color.ICCmode.off;" value="0" />
+									<menuitem label="&pmcommander.graphics.color.ICCmode.always;" value="1" />
+									<menuitem label="&pmcommander.graphics.color.ICCmode.tagged;" 	value="2" />
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox align="center">
+						   <label id="pmcommander-color-ICCintent-label" control="pmcommander-color-ICCintent-menu">&pmcommander.graphics.color.ICCintent.label;</label>
+							<menulist id="pmcommander-color-ICCintent-menu" preference="pmcommander-pref-color-ICCintent" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.graphics.color.ICCintent.embedded;" value="-1" />
+									<menuitem label="&pmcommander.graphics.color.ICCintent.perceptual;" value="0" />
+									<menuitem label="&pmcommander.graphics.color.ICCintent.relative;" 	value="1" />
+									<menuitem label="&pmcommander.graphics.color.ICCintent.saturation;" 	value="2" />
+									<menuitem label="&pmcommander.graphics.color.ICCintent.absolute;" 	value="3" />
+								</menupopup>
+							</menulist>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</prefpane>
+
+	<prefpane id="pmcommander-pane-network" label="&pmcommander.pane.network;">
+		<preferences>
+			<preference id="pmcommander-pref-net-buffercount" 		   name="network.buffer.cache.count" 					type="int" />
+			<preference id="pmcommander-pref-net-buffersize" 			name="network.buffer.cache.size" 					type="int" />
+			<preference id="pmcommander-pref-net-spdy" 					name="network.http.spdy.enabled" 					type="bool" />
+			
+			<preference id="pmcommander-pref-dns-ipv6" 					name="network.dns.disableIPv6" 						type="bool" inverted="true"/>
+			<preference id="pmcommander-pref-dns-prefetch" 				name="network.dns.disablePrefetch"					type="bool" inverted="true"/>
+			<preference id="pmcommander-pref-dns-cache"					name="network.dnsCacheEntries"						type="int" />
+			<preference id="pmcommander-pref-dns-expire" 				name="network.dnsCacheExpiration"					type="int" />
+			<preference id="pmcommander-pref-dns-urlfixup" 				name="browser.fixup.alternate.enabled"				type="bool" />
+			<preference id="pmcommander-pref-dns-urlfixup-prefix"		name="browser.fixup.alternate.prefix"				type="string" />
+			<preference id="pmcommander-pref-dns-urlfixup-suffix"		name="browser.fixup.alternate.suffix"				type="string" />
+			
+
+			<preference id="pmcommander-pref-http-conn-timeout" 		name="network.http.connection-timeout"				type="int" />
+			<preference id="pmcommander-pref-http-retry-timeout" 		name="network.http.connection-retry-timeout"		type="int" />
+			<preference id="pmcommander-pref-http-fastfallback" 		name="network.http.fast-fallback-to-IPv4"			type="bool" />
+			<preference id="pmcommander-pref-http-keepalive-timeout" name="network.http.keep-alive.timeout" 			type="int" />
+			<preference id="pmcommander-pref-http-maxconn" 				name="network.http.max-connections" 				type="int" />
+			<preference id="pmcommander-pref-http-persistent-maxconn-proxy" 		name="network.http.max-persistent-connections-per-proxy" type="int" />
+			<preference id="pmcommander-pref-http-persistent-maxconn-server" 		name="network.http.max-persistent-connections-per-server" type="int" />
+			<preference id="pmcommander-pref-http-diagnostics"			name="network.http.diagnostics"						type="bool" />
+			
+			<preference id="pmcommander-pref-pipelining" 				name="network.http.pipelining" 						type="bool" />
+			<preference id="pmcommander-pref-pipelining-ssl" 			name="network.http.pipelining.ssl" 					type="bool" />
+			<preference id="pmcommander-pref-pipelining-proxy" 		name="network.http.proxy.pipelining" 				type="bool" />
+			<preference id="pmcommander-pref-pipelining-aggressive" 	name="network.http.pipelining.aggressive" 		type="bool" />
+			<preference id="pmcommander-pref-pipelining-maxrequest-optimistic" 	name="network.http.pipelining.max-optimistic-requests" type="int" />
+			<preference id="pmcommander-pref-pipelining-maxrequest" 	name="network.http.pipelining.maxrequests" 		type="int" />
+			<preference id="pmcommander-pref-pipelining-maxsize" 		name="network.http.pipelining.maxsize" 			type="int" />
+			<preference id="pmcommander-pref-pipelining-readtimeout" name="network.http.pipelining.read-timeout" 		type="int" />
+			<preference id="pmcommander-pref-pipelining-reschedule" 	name="network.http.pipelining.reschedule-on-timeout" type="bool" />
+			<preference id="pmcommander-pref-pipelining-reschedule-timeout" 		name="network.http.pipelining.reschedule-timeout" type="int" />
+						
+		</preferences>
+		<tabbox id="pmcommander-tabbox-net" flex="1">
+			<tabs id="pmcommander-tabs-net">
+<!--				<tab id="pmcommander-tab-net-general" label="&pmcommander.tab.general;" /> -->
+				<tab id="pmcommander-tab-net-dnslookups"  label="&pmcommander.tab.net.dnslookups;" />
+				<tab id="pmcommander-tab-net-http"  label="&pmcommander.tab.net.http;" />
+				<tab id="pmcommander-tab-net-pipelining"  label="&pmcommander.tab.net.pipelining;" />
+				<tab id="pmcommander-tab-net-advanced"  label="&pmcommander.tab.net.advanced;" />
+			</tabs>
+			
+			<tabpanels flex="1">
+				<tabpanel id="pmcommander-net-dnslookups" orient="vertical">
+					<checkbox id="pmcommander-dns-urlfixup-check" preference="pmcommander-pref-dns-urlfixup" label="&pmcommander.net.dns.urlfixup.label;" />
+					<hbox align="center" class="indent">
+						<label id="pmcommander-net-urlfixup-prefix-label" control="pmcommander-net-dns-urlfixup-prefix-input">&pmcommander.net.dns.urlfixup.prefix.label;</label>
+						<textbox size="6" id="pmcommander-net-dns-urlfixup-prefix-input" preference="pmcommander-pref-dns-urlfixup-prefix" />
+					</hbox>
+					<hbox align="center" class="indent">
+						<label id="pmcommander-net-urlfixup-suffix-label" control="pmcommander-net-dns-urlfixup-suffix-input">&pmcommander.net.dns.urlfixup.suffix.label;</label>
+						<textbox size="6" id="pmcommander-net-dns-urlfixup-suffix-input" preference="pmcommander-pref-dns-urlfixup-suffix" />
+					</hbox>
+					<groupbox id="pmcommander-net-dns">
+						<caption label="&pmcommander.net.dns.caption;" />
+						<checkbox id="pmcommander-dns-ipv6-check" preference="pmcommander-pref-dns-ipv6" label="&pmcommander.net.dns.ipv6.label;" />
+						<checkbox id="pmcommander-dns-prefetch-check" preference="pmcommander-pref-dns-prefetch" label="&pmcommander.net.dns.prefetch.label;" />
+						<hbox align="center">
+							<label id="pmcommander-net-dns-cache-label" control="pmcommander-net-dns-cache-input">&pmcommander.net.dns.cache.label;</label>
+							<textbox type="number" size="4" min="20" id="pmcommander-net-dns-cache-input" preference="pmcommander-pref-dns-cache" />
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-dns-expire-label" control="pmcommander-net-dns-expire-input">&pmcommander.net.dns.expire.label;</label>
+							<textbox type="number" size="5" min="60" max="65535" id="pmcommander-net-dns-expire-input" preference="pmcommander-pref-dns-expire" />
+							<label>&pmcommander.unit.seconds;</label>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-net-http" orient="vertical">
+					<checkbox id="pmcommander-net-http-fastfallback-check" preference="pmcommander-pref-http-fastfallback" label="&pmcommander.net.http.fastfallback.label;" />
+					<groupbox id="pmcommander-net-http-timing">
+						<caption label="&pmcommander.net.http.timing.caption;" />
+						<hbox align="center">
+							<label id="pmcommander-net-http-conn-timeout-label" control="pmcommander-net-http-conn-timeout-input">&pmcommander.net.http.conn.timeout.label;</label>
+							<textbox type="number" size="3" min="10" max="600" id="pmcommander-net-http-conn-timeout-input" preference="pmcommander-pref-http-conn-timeout" />
+							<label>&pmcommander.unit.seconds;</label>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-http-retry-timeout-label" control="pmcommander-net-http-retry-timeout-input">&pmcommander.net.http.retry.timeout.label;</label>
+							<textbox type="number" size="4" min="30" max="5000" id="pmcommander-net-http-retry-timeout-input" preference="pmcommander-pref-http-retry-timeout" />
+							<label>&pmcommander.unit.ms;</label>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-http-keepalive-timeout-label" control="pmcommander-net-http-keepalive-timeout-input">&pmcommander.net.http.keepalive.timeout.label;</label>
+							<textbox type="number" size="3" min="10" max="600" id="pmcommander-net-http-keepalive-timeout-input" preference="pmcommander-pref-http-keepalive-timeout" />
+							<label>&pmcommander.unit.seconds;</label>
+						</hbox>
+					</groupbox>
+					<groupbox id="pmcommander-net-http-connections">
+						<caption label="&pmcommander.net.http.connections.caption;" />
+						<hbox align="center">
+							<label id="pmcommander-net-http-maxconn-label" control="pmcommander-net-http-maxconn-input">&pmcommander.net.http.maxconn.label;</label>
+							<textbox type="number" size="3" min="1" max="256" id="pmcommander-net-http-maxconn-input" preference="pmcommander-pref-http-maxconn" />
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-http-persistent-maxconn-server-label" control="pmcommander-net-http-persistent-maxconn-server-input">&pmcommander.net.http.persistent.maxconn.server.label;</label>
+							<textbox type="number" size="3" min="1" max="32" id="pmcommander-net-http-persistent-maxconn-server-input" preference="pmcommander-pref-http-persistent-maxconn-server" />
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-http-persistent-maxconn-proxy-label" control="pmcommander-net-http-persistent-maxconn-proxy-input">&pmcommander.net.http.persistent.maxconn.proxy.label;</label>
+							<textbox type="number" size="3" min="1" max="32" id="pmcommander-net-http-persistent-maxconn-proxy-input" preference="pmcommander-pref-http-persistent-maxconn-proxy" />
+						</hbox>
+					</groupbox>
+					<checkbox id="pmcommander-net-http-diagnostics-check" preference="pmcommander-pref-http-diagnostics" label="&pmcommander.net.http.diagnostics.label;" />							
+				</tabpanel>
+				<tabpanel id="pmcommander-net-pipelining" orient="vertical">
+					<checkbox id="pmcommander-net-pipelining-check" preference="pmcommander-pref-pipelining" label="&pmcommander.net.pipelining.label;" />
+					<checkbox id="pmcommander-net-pipelining-ssl-check" preference="pmcommander-pref-pipelining-ssl" label="&pmcommander.net.pipelining.ssl.label;" />
+					<checkbox id="pmcommander-net-pipelining-proxy-check" preference="pmcommander-pref-pipelining-proxy" label="&pmcommander.net.pipelining.proxy.label;" />
+					<checkbox id="pmcommander-net-pipelining-aggressive-check" preference="pmcommander-pref-pipelining-aggressive" label="&pmcommander.net.pipelining.aggressive.label;" />
+					<groupbox id="pmcommander-net-pipelining-params">
+						<caption label="&pmcommander.net.pipelining.params.caption;" />
+						<hbox align="center">
+							<label id="pmcommander-net-pipelining-maxrequest-label" control="pmcommander-net-pipelining-maxrequest-input">&pmcommander.net.pipelining.maxrequest.label;</label>
+							<textbox type="number" size="3" min="1" max="16" id="pmcommander-net-pipelining-maxrequest-input" preference="pmcommander-pref-pipelining-maxrequest" />
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-pipelining-maxrequest-optimistic-label" control="pmcommander-net-pipelining-maxrequest-optimistic-input">&pmcommander.net.pipelining.maxrequest.optimistic.label;</label>
+							<textbox type="number" size="3" min="1" max="16" id="pmcommander-net-pipelining-maxrequest-optimistic-input" preference="pmcommander-pref-pipelining-maxrequest-optimistic" />
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-pipelining-maxsize-label" control="pmcommander-net-pipelining-maxsize-input">&pmcommander.net.pipelining.maxsize.label;</label>
+							<textbox type="number" size="6" min="512" id="pmcommander-net-pipelining-maxsize-input" preference="pmcommander-pref-pipelining-maxsize" />
+							<label>&pmcommander.unit.bytes;</label>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-pipelining-timeout-label" control="pmcommander-net-pipelining-timeout-input">&pmcommander.net.pipelining.timeout.label;</label>
+							<textbox type="number" size="5" min="500" max="60000" id="pmcommander-net-pipelining-timeout-input" preference="pmcommander-pref-pipelining-readtimeout" />
+							<label>&pmcommander.unit.ms;</label>
+						</hbox>
+						<checkbox id="pmcommander-net-pipelining-reschedule-check" preference="pmcommander-pref-pipelining-reschedule" label="&pmcommander.net.pipelining.reschedule.label;" />
+						<hbox align="center">
+							<label id="pmcommander-net-pipelining-reschedule-label" control="pmcommander-net-pipelining-reschedule-timeout-input">&pmcommander.net.pipelining.reschedule.timeout.label;</label>
+							<textbox type="number" size="5" min="300" max="10000" id="pmcommander-net-pipelining-reschedule-timeout-input" preference="pmcommander-pref-pipelining-reschedule-timeout" />
+							<label>&pmcommander.unit.ms;</label>
+						</hbox>
+					</groupbox>	
+				</tabpanel>
+				<tabpanel id="pmcommander-net-advanced" orient="vertical">
+					<groupbox id="pmcommander-net-protocols">
+						<caption label="&pmcommander.net.advanced.protocols.caption;" />
+						<checkbox id="pmcommander-net-spdy-check" preference="pmcommander-pref-net-spdy" label="&pmcommander.net.spdy.label;" />
+					</groupbox>
+					<groupbox id="pmcommander-net-connections">
+						<caption label="&pmcommander.net.advanced.connections.caption;" />
+						<hbox align="center">
+							<label id="pmcommander-net-buffercount-label" control="pmcommander-net-buffercount-input">&pmcommander.net.buffercount.label;</label>
+							<textbox type="number" size="3" min="1" max="255" id="pmcommander-net-buffercount-input" preference="pmcommander-pref-net-buffercount" />
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-net-buffersize-label" control="pmcommander-net-buffersize-input">&pmcommander.net.buffersize.label;</label>
+							<textbox type="number" size="6" min="512" id="pmcommander-net-buffersize-input" preference="pmcommander-pref-net-buffersize" />
+							<label>&pmcommander.unit.bytes;</label>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>		
+	</prefpane>
+
+	<prefpane id="pmcommander-pane-performance" label="&pmcommander.pane.perf;">
+		<preferences>
+		   <!-- JS global -->
+		   <preference id="pmcommander-pref-js-global-disable"      name="javascript.enabled"								type="bool" inverted="true" />
+		   <preference id="pmcommander-pref-js-typeinference" 		name="javascript.options.typeinference" 			type="bool" />
+			<!-- JS Chrome -->
+			<preference id="pmcommander-pref-js-baselinejit-chrome"	name="javascript.options.baselinejit.chrome"		type="bool" />
+			<!-- JS Content -->
+			<preference id="pmcommander-pref-js-baselinejit-content"	name="javascript.options.baselinejit.content"	type="bool" />
+			<preference id="pmcommander-pref-js-ionmonkey-content"	name="javascript.options.ion.content" 				type="bool" />
+			<preference id="pmcommander-pref-js-odinmonkey"				name="javascript.options.asmjs"		 				type="bool" />
+			<!-- JS GC -->
+			<preference id="pmcommander-pref-js-gc-onmempressure"		name="javascript.options.gc_on_memory_pressure"	type="bool" />
+			<preference id="pmcommander-pref-js-gc-per-compartment"	name="javascript.options.mem.gc_per_compartment" type="bool" />
+			<preference id="pmcommander-pref-js-gc-explicit-compartment" 	name="javascript.options.mem.disable_explicit_compartment_gc" type="bool" inverted="true" />
+			<preference id="pmcommander-pref-js-gc-dynamic-heap" 		name="javascript.options.mem.gc_dynamic_heap_growth" type="bool" />
+			<preference id="pmcommander-pref-js-gc-dynamic-slice" 			name="javascript.options.mem.gc_dynamic_mark_slice" type="bool" />
+			<preference id="pmcommander-pref-js-gc-incremental" 		name="javascript.options.mem.gc_incremental"		type="bool" />
+			<preference id="pmcommander-pref-js-gc-incremental-slice-ms"	name="javascript.options.mem.gc_incremental_slice_ms" type="int" />
+			<!-- Cache -->
+			<preference id="pmcommander-pref-cache-disk-enable"		name="browser.cache.disk.enable" 					type="bool" 
+				onchange="pmcommanderPrefs.diskcacheGlobalChanged();" />
+			<preference id="pmcommander-pref-cache-disk-auto"			name="browser.cache.disk.smart_size.enabled" 	type="bool" />
+			<preference id="pmcommander-pref-cache-disk-capacity"		name="browser.cache.disk.capacity" 					type="int" />
+			<preference id="pmcommander-pref-cache-disk-elementsize"	name="browser.cache.disk.max_entry_size" 			type="int" />
+			<preference id="pmcommander-pref-cache-mem-enable"			name="browser.cache.memory.enable" 					type="bool" 
+				onchange="pmcommanderPrefs.memcacheGlobalChanged();" />
+			<preference id="pmcommander-pref-cache-mem-capacity"		name="browser.cache.memory.capacity" 				type="int" />
+			<preference id="pmcommander-pref-cache-mem-elementsize"	name="browser.cache.memory.max_entry_size" 		type="int" />
+			<preference id="pmcommander-pref-cache-compression"		name="browser.cache.compression_level"				type="int" 
+				onchange="pmcommanderPrefs.cacheCompressionChanged();" />
+			<preference id="pmcommander-pref-cache-checking"			name="browser.cache.check_doc_frequency"			type="int" />
+		</preferences>
+		<tabbox id="pmcommander-tabbox-perf" flex="1">
+			<tabs id="pmcommander-tabs-perf">
+				<tab id="pmcommander-tab-perf-js" label="&pmcommander.tab.perf.javascript;" />
+				<tab id="pmcommander-tab-perf-js-gc"  label="&pmcommander.tab.perf.javascript.gc;" />
+				<tab id="pmcommander-tab-perf-cache"  label="&pmcommander.tab.perf.cache;" />
+			</tabs>
+			<tabpanels flex="1">
+				<tabpanel id="pmcommander-perf-js" orient="vertical">
+				   <checkbox id="pmcommander-js-global-disable" preference="pmcommander-pref-js-global-disable" label="&pmcommander.perf.js.global.disable;" />
+				   <label width="100%">&pmcommander.perf.js.global.disable.warning;</label>
+					<groupbox id="pmcommander-perf-js-chrome">
+						<caption label="&pmcommander.perf.js.chrome.caption;" />
+						<checkbox id="pmcommander-js-baselinejit-chrome-check" preference="pmcommander-pref-js-baselinejit-chrome" label="&pmcommander.perf.js.baselinejit.chrome.label;" />
+					</groupbox>
+					<groupbox id="pmcommander-perf-js-content">
+						<caption label="&pmcommander.perf.js.content.caption;" />
+						<checkbox id="pmcommander-js-baselinejit-content-check" preference="pmcommander-pref-js-baselinejit-content" label="&pmcommander.perf.js.baselinejit.content.label;" />
+						<checkbox id="pmcommander-js-ionmonkey-content-check" preference="pmcommander-pref-js-ionmonkey-content" label="&pmcommander.perf.js.ionmonkey.content.label;" />
+						<checkbox id="pmcommander-js-odinmonkey-check" preference="pmcommander-pref-js-odinmonkey" label="&pmcommander.perf.js.odinmonkey.label;" />
+					</groupbox>
+					<checkbox id="pmcommander-pref-js-typeinference-check" preference="pmcommander-pref-js-typeinference" label="&pmcommander.perf.js.typeinference.label;" />
+				</tabpanel>
+				<tabpanel id="pmcommander-perf-js-gc" orient="vertical">
+					<checkbox id="pmcommander-js-gc-onmempressure-check" preference="pmcommander-pref-js-gc-onmempressure" label="&pmcommander.perf.js.gc.onmempressure.label;" />
+					<checkbox id="pmcommander-js-gc-per-compartment-check" preference="pmcommander-pref-js-gc-per-compartment" label="&pmcommander.perf.js.gc.per.compartment.label;" />
+					<checkbox id="pmcommander-js-gc-explicit-compartment-check" preference="pmcommander-pref-js-gc-explicit-compartment" label="&pmcommander.perf.js.gc.explicit.compartment.label;" />
+					<checkbox id="pmcommander-js-gc-dynamic-heap-check" preference="pmcommander-pref-js-gc-dynamic-heap" label="&pmcommander.perf.js.gc.dynamic.heap.label;" />
+					<checkbox id="pmcommander-js-gc-dynamic-slice-check" preference="pmcommander-pref-js-gc-dynamic-slice" label="&pmcommander.perf.js.gc.dynamic.slice.label;" />
+					<checkbox id="pmcommander-js-gc-incremental-check" preference="pmcommander-pref-js-gc-incremental" label="&pmcommander.perf.js.gc.incremental.label;" />
+					<hbox align="center">
+						<label id="pmcommander-js-gc-incremental-ms-label" control="pmcommander-pref-js-gc-incremental-slice-ms-input">&pmcommander.perf.js.gc.incremental.slice.ms.label;</label>
+						<textbox type="number" size="3" min="5" max="500" id="pmcommander-pref-js-gc-incremental-slice-ms-input" preference="pmcommander-pref-js-gc-incremental-slice-ms" />
+						<label>&pmcommander.unit.ms;</label>
+					</hbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-perf-cache" orient="vertical">
+					<groupbox id="pmcommander-perf-cache-disk">
+						<caption label="&pmcommander.perf.cache.disk.caption;" />
+						<checkbox id="pmcommander-cache-disk-enable-check" preference="pmcommander-pref-cache-disk-enable" label="&pmcommander.perf.cache.disk.enable.label;" />
+						<checkbox id="pmcommander-cache-disk-auto-check" preference="pmcommander-pref-cache-disk-auto" label="&pmcommander.perf.cache.disk.auto.label;" />
+						<hbox align="center">
+							<label id="pmcommander-cache-disk-capacity-label" control="pmcommander-cache-disk-capacity-input">&pmcommander.perf.cache.disk.capacity.label;</label>
+							<textbox type="number" size="7" min="0" max="1048576" id="pmcommander-cache-disk-capacity-input" preference="pmcommander-pref-cache-disk-capacity" />
+							<label>&pmcommander.unit.KB;</label>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-cache-disk-elementsize-label" control="pmcommander-cache-disk-elementsize-input">&pmcommander.perf.cache.disk.elementsize.label;</label>
+							<textbox type="number" size="5" min="100" max="65536" id="pmcommander-cache-disk-elementsize-input" preference="pmcommander-pref-cache-disk-elementsize" />
+							<label>&pmcommander.unit.KB;</label>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-cache-compression-label" control="pmcommander-cache-compression-menu">&pmcommander.perf.cache.compression.label;</label>
+							<menulist id="pmcommander-cache-compression-menu" preference="pmcommander-pref-cache-compression" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.cache.compression.off;" value="0" />
+									<menuitem label="&pmcommander.cache.compression.low;" value="1" />
+									<menuitem label="&pmcommander.cache.compression.medium;" value="4" />
+									<menuitem label="&pmcommander.cache.compression.high;" value="9" />
+								</menupopup>
+							</menulist>
+						</hbox>
+						<label>&pmcommander.perf.cache.compression.info;</label>
+					</groupbox>
+					<groupbox id="pmcommander-perf-cache-mem">
+						<caption label="&pmcommander.perf.cache.mem.caption;" />
+						<checkbox id="pmcommander-cache-mem-enable-check" preference="pmcommander-pref-cache-mem-enable" label="&pmcommander.perf.cache.mem.enable.label;" />
+						<hbox align="center">
+							<label id="pmcommander-cache-mem-capacity-label" control="pmcommander-cache-mem-capacity-menu">&pmcommander.perf.cache.mem.capacity.label;</label>
+							<menulist id="pmcommander-cache-mem-capacity-menu" preference="pmcommander-pref-cache-mem-capacity" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.cache.mem.capacity.auto;" value="-1" />
+									<menuitem label="&pmcommander.cache.mem.capacity.4M;" value="4096" />
+									<menuitem label="&pmcommander.cache.mem.capacity.8M;" value="8192" />
+									<menuitem label="&pmcommander.cache.mem.capacity.16M;" value="16384" />
+									<menuitem label="&pmcommander.cache.mem.capacity.32M;" value="32768" />
+									<menuitem label="&pmcommander.cache.mem.capacity.64M;" value="65536" />
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-cache-mem-elementsize-label" control="pmcommander-cache-mem-elementsize-menu">&pmcommander.perf.cache.mem.elementsize.label;</label>
+							<menulist id="pmcommander-cache-mem-elementsize-menu" preference="pmcommander-pref-cache-mem-elementsize" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.cache.mem.elementsize.auto;" value="-1" />
+									<menuitem label="&pmcommander.cache.mem.elementsize.100K;" value="100" />
+									<menuitem label="&pmcommander.cache.mem.elementsize.500K;" value="500" />
+									<menuitem label="&pmcommander.cache.mem.elementsize.1M;" value="1024" />
+									<menuitem label="&pmcommander.cache.mem.elementsize.2M;" value="2048" />
+									<menuitem label="&pmcommander.cache.mem.elementsize.4M;" value="4096" />
+								</menupopup>
+							</menulist>
+						</hbox>
+					</groupbox>
+					<hbox align="center">
+						<label id="pmcommander-cache-checking-label" control="pmcommander-cache-checking-menu">&pmcommander.perf.cache.checking.label;</label>
+						<menulist id="pmcommander-cache-checking-menu" preference="pmcommander-pref-cache-checking" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.cache.checking.session;" value="0" />
+								<menuitem label="&pmcommander.cache.checking.always;" value="1" />
+								<menuitem label="&pmcommander.cache.checking.never;" value="2" />
+								<menuitem label="&pmcommander.cache.checking.expired;" value="3" />
+							</menupopup>
+						</menulist>
+					</hbox>
+				</tabpanel>			
+			</tabpanels>
+		</tabbox>
+	</prefpane>
+	
+	<prefpane id="pmcommander-pane-UI" label="&pmcommander.pane.UI;">
+		<preferences>
+			<preference id="pmcommander-pref-ctrltab-previews" 		name="browser.ctrlTab.previews" 					type="bool" />
+			<preference id="pmcommander-pref-ctrltab-useMRU" 			name="extensions.pmcommander.ctrlTab.useMRU"	type="bool" 
+				onchange="pmcommanderPrefs.ctrltabModeChanged();" />
+			<preference id="pmcommander-pref-alltabs-previews" 		name="browser.allTabs.previews" 					type="bool" />
+			<preference id="pmcommander-pref-urlbar-formatting"      name="browser.urlbar.formatting.enabled"     type="bool" />
+			<preference id="pmcommander-pref-urlbar-trimming"        name="browser.urlbar.trimURLs"               type="bool" />
+			<preference id="pmcommander-pref-urlbar-rss" 		      name="browser.urlbar.rss"          		      type="bool" />
+			<preference id="pmcommander-pref-tabs-animate" 				name="browser.tabs.animate"						type="bool" />
+			<preference id="pmcommander-pref-tabs-resize-immediately" name="browser.tabs.resize_immediately"		type="bool" />
+			<preference id="pmcommander-pref-tabs-intitlebar"			name="browser.tabs.drawInTitlebar"				type="bool" />
+			<preference id="pmcommander-pref-tabs-bookmark-switchto"	name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
+			<preference id="pmcommander-pref-tabs-closebuttons" 		name="browser.tabs.closeButtons"					type="int" />
+			<preference id="pmcommander-pref-tabs-clipwidth" 			name="browser.tabs.tabClipWidth"					type="int" />
+			
+			<preference id="pmcommander-pref-errorpages" 				name="browser.xul.error_pages.enabled"			type="bool" />
+			<preference id="pmcommander-pref-urlbar-autofill" 			name="browser.urlbar.autoFill"					type="bool" />
+			<preference id="pmcommander-pref-urlbar-autofill-typed" 	name="browser.urlbar.autoFill.typed"			type="bool" />
+			<preference id="pmcommander-pref-images-background" 		name="browser.display.standalone_images.background_color" type="string" />
+			
+			<preference id="pmcommander-pref-ui-hideplaceholders"    name="dom.placeholder.show_on_focus"			type="bool" inverted="true"/>
+			
+			<preference id="pmcommander-pref-jumplists-enabled"		name="browser.taskbar.lists.enabled"				type="bool" 
+				onchange="pmcommanderPrefs.jumplistModeChanged();" />
+			<preference id="pmcommander-pref-jumplists-frequent"		name="browser.taskbar.lists.frequent.enabled"	type="bool" />
+			<preference id="pmcommander-pref-jumplists-recent"			name="browser.taskbar.lists.recent.enabled"		type="bool" />
+			<preference id="pmcommander-pref-jumplists-tasks"			name="browser.taskbar.lists.tasks.enabled"		type="bool" />
+			<preference id="pmcommander-pref-jumplists-limit"			name="browser.taskbar.lists.maxListItemCount"	type="int" />
+			
+			<preference id="pmcommander-pref-fullscreen-autohide"						name="browser.fullscreen.autohide"						type="bool" 
+				onchange="pmcommanderPrefs.fullscreenAutohideChanged();" />
+			<preference id="pmcommander-pref-fullscreen-autohide-animation"		name="browser.fullscreen.animateUp"						type="int" />
+			<preference id="pmcommander-pref-fullscreen-api-enabled"					name="full-screen-api.enabled"							type="bool" 
+				onchange="pmcommanderPrefs.fullscreenAPIGlobalChanged();" />
+			<preference id="pmcommander-pref-fullscreen-api-approval"				name="full-screen-api.approval-required"				type="bool" />
+			<preference id="pmcommander-pref-fullscreen-api-exit-on-deactivate"	name="full-screen-api.exit-on-deactivate"				type="bool" />
+			<preference id="pmcommander-pref-fullscreen-api-pointerlock"			name="full-screen-api.pointer-lock.enabled"			type="bool" />
+			<preference id="pmcommander-pref-fullscreen-api-security"				name="full-screen-api.allow-trusted-requests-only"	type="bool" />
+			
+		</preferences>
+		
+		<tabbox id="pmcommander-tabbox-UI" flex="1">
+			<tabs id="pmcommander-tabs-ui">
+				<tab id="pmcommander-tab-ui-general" label="&pmcommander.tab.general;" />
+				<tab id="pmcommander-tab-ui-tabs"  label="&pmcommander.tab.ui.tabs;" />
+<!--				<tab id="pmcommander-tab-ui-downloads"  label="&pmcommander.tab.ui.downloads;" /> -->
+				<tab id="pmcommander-tab-ui-taskbar"  label="&pmcommander.tab.ui.taskbar;" />
+				<tab id="pmcommander-tab-ui-fullscreen" label="&pmcommander.tab.ui.fullscreen;" />
+			</tabs>
+			
+			<tabpanels flex="1">
+				<tabpanel id="pmcommander-ui-general" orient="vertical">
+					<groupbox id="pmcommander-ui-general-urlbar">
+						<caption label="&pmcommander.ui.general.urlbar.caption;" />
+						<checkbox id="pmcommander-urlbar-autofill-check" preference="pmcommander-pref-urlbar-autofill" label="&pmcommander.ui.urlbar.autofill.label;" />
+						<checkbox id="pmcommander-urlbar-autofill-typed-check" preference="pmcommander-pref-urlbar-autofill-typed" label="&pmcommander.ui.urlbar.autofill.typed.label;" />
+						<checkbox id="pmcommander-urlbar-formatting-check" preference="pmcommander-pref-urlbar-formatting" label="&pmcommander.ui.urlbar.formatting.label;" />
+						<checkbox id="pmcommander-urlbar-trimming-check" preference="pmcommander-pref-urlbar-trimming" label="&pmcommander.ui.urlbar.trimming.label;" />
+						<checkbox id="pmcommander-urlbar-rss-check" preference="pmcommander-pref-urlbar-rss" label="&pmcommander.ui.urlbar.rss.label;" />
+					</groupbox>					
+					<checkbox id="pmcommander-custom-errors-check" preference="pmcommander-pref-errorpages" label="&pmcommander.ui.errorpages.label;" />
+					<hbox align="center">
+						<label id="pmcommander-images-background-label" control="pmcommander-image-background-input">&pmcommander.ui.toplevel.image.background.label;</label>
+						<textbox id="pmcommander-images-background-input" preference="pmcommander-pref-images-background" />
+					</hbox>
+					<checkbox id="pmcommander-ui-hideplaceholders" preference="pmcommander-pref-ui-hideplaceholders" label="&pmcommander.ui.hideplaceholders.label;" />
+				</tabpanel>
+				<tabpanel id="pmcommander-ui-tabs" orient="vertical">
+					<checkbox id="pmcommander-ui-tabs-animate-check" preference="pmcommander-pref-tabs-animate" label="&pmcommander.ui.tabs.animate.label;" />
+					<checkbox id="pmcommander-ui-tabs-resize-immediately-check" preference="pmcommander-pref-tabs-resize-immediately" label="&pmcommander.ui.tabs.resize.immediately.label;" />
+					<checkbox id="pmcommander-ui-tabs-intitlebar-check" preference="pmcommander-pref-tabs-intitlebar" label="&pmcommander.ui.tabs.intitlebar.label;" />
+					<checkbox id="pmcommander-ui-tabs-bookmark-switchto-check" preference="pmcommander-pref-tabs-bookmark-switchto" label="&pmcommander.ui.tabs.bookmark.switchto.label;" />
+					<groupbox id="pmcommander-ui-tabclose">
+						<caption label="&pmcommander.ui.tabs.closebuttons.caption;" />
+						<hbox align="center">
+							<label id="pmcommander-ui-tabs-closebuttons-label" control="pmcommander-ui-tabs-closebuttons-menu">&pmcommander.ui.tabs.closebuttons.label;</label>
+							<menulist id="pmcommander-ui-tabs-closebuttons-menu" preference="pmcommander-pref-tabs-closebuttons" sizetopopup="always">
+								<menupopup>
+									<menuitem label="&pmcommander.ui.tabs.closebuttons.active;" value="0" />
+									<menuitem label="&pmcommander.ui.tabs.closebuttons.all;" value="1" />
+									<menuitem label="&pmcommander.ui.tabs.closebuttons.none;" value="2" />
+									<menuitem label="&pmcommander.ui.tabs.closebuttons.fx1;" value="3" />
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox align="center">
+							<label id="pmcommander-ui-tabs-clipwidth-label" control="pmcommander-ui-tabs-clipwidth-input">&pmcommander.ui.tabs.clipwidth.label;</label>
+							<textbox type="number" size="3" min="1" id="pmcommander-ui-tabs-clipwidth-input" preference="pmcommander-pref-tabs-clipwidth" />
+							<label>&pmcommander.unit.px;</label>
+						</hbox>
+					</groupbox>
+					<groupbox id="pmcommander-ui-tabswitching">
+						<caption label="&pmcommander.ui.tabs.tabswitching.caption;" />
+						<checkbox id="pmcommander-ui-tabs-ctrltab-previews-check" preference="pmcommander-pref-ctrltab-previews" label="&pmcommander.ui.tabs.ctrltab.previews.label;" />
+						<checkbox id="pmcommander-ui-tabs-ctrltab-useMRU-check" preference="pmcommander-pref-ctrltab-useMRU" label="&pmcommander.ui.tabs.ctrltab.useMRU.label;" />
+						<checkbox id="pmcommander-ui-tabs-alltabs-previews-check" preference="pmcommander-pref-alltabs-previews" label="&pmcommander.ui.tabs.alltabs.previews.label;" />
+					</groupbox>
+				</tabpanel>
+<!--				<tabpanel id="pmcommander-ui-downloads" orient="vertical">
+				</tabpanel> -->
+				<tabpanel id="pmcommander-ui-taskbar" orient="vertical">
+					<groupbox id="pmcommander-ui-jumplists">
+						<caption label="&pmcommander.ui.tabs.jumplists.caption;" />
+						<checkbox id="pmcommander-ui-jumplists-enabled-check" preference="pmcommander-pref-jumplists-enabled" label="&pmcommander.ui.jumplists.enabled.label;" />
+						<checkbox id="pmcommander-ui-jumplists-frequent-check" preference="pmcommander-pref-jumplists-frequent" label="&pmcommander.ui.jumplists.frequent.label;" />
+						<checkbox id="pmcommander-ui-jumplists-recent-check" preference="pmcommander-pref-jumplists-recent" label="&pmcommander.ui.jumplists.recent.label;" />
+						<checkbox id="pmcommander-ui-jumplists-tasks-check" preference="pmcommander-pref-jumplists-tasks" label="&pmcommander.ui.jumplists.tasks.label;" />
+						<hbox align="center">
+							<label id="pmcommander-ui-jumplists-limit-label" control="pmcommander-ui-jumplists-limit-input">&pmcommander.ui.jumplists.limit.label;</label>
+							<textbox type="number" size="2" min="1" id="pmcommander-ui-jumplists-limit-input" preference="pmcommander-pref-jumplists-limit" />
+						</hbox>
+					</groupbox>	
+				</tabpanel>
+				<tabpanel id="pmcommander-ui-fullscreen" orient="vertical">
+					<checkbox id="pmcommander-ui-fullscreen-autohide-check" preference="pmcommander-pref-fullscreen-autohide" label="&pmcommander.ui.fullscreen.autohide.label;" />
+					<hbox align="center">
+						<label id="pmcommander-ui-fullscreen-autohide-animation-label" control="pmcommander-ui-fullscreen-autohide-animation-menu">&pmcommander.ui.fullscreen.autohide.animation.label;</label>
+						<menulist id="pmcommander-ui-fullscreen-autohide-animation-menu" preference="pmcommander-pref-fullscreen-autohide-animation" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.ui.fullscreen.autohide.animation.off;" value="0" />
+								<menuitem label="&pmcommander.ui.fullscreen.autohide.animation.firstonly;" value="1" />
+								<menuitem label="&pmcommander.ui.fullscreen.autohide.animation.always;" value="2" />
+							</menupopup>
+						</menulist>
+					</hbox>
+					<groupbox id="pmcommander-ui-fullscreen-html5">
+						<caption label="&pmcommander.ui.fullscreen.html5.caption;" />
+						<checkbox id="pmcommander-ui-fullscreen-api-enabled-check" preference="pmcommander-pref-fullscreen-api-enabled" label="&pmcommander.ui.fullscreen.html5.enabled.label;" />
+						<checkbox id="pmcommander-ui-fullscreen-api-approval-check" preference="pmcommander-pref-fullscreen-api-approval" label="&pmcommander.ui.fullscreen.html5.approval.label;" />
+						<checkbox id="pmcommander-ui-fullscreen-api-exit-on-deactivate-check" preference="pmcommander-pref-fullscreen-api-exit-on-deactivate" label="&pmcommander.ui.fullscreen.html5.exit.on.deactivate.label;" />
+						<checkbox id="pmcommander-ui-fullscreen-api-pointerlock-check" preference="pmcommander-pref-fullscreen-api-pointerlock" label="&pmcommander.ui.fullscreen.html5.pointerlock.label;" />
+						<checkbox id="pmcommander-ui-fullscreen-api-security-check" preference="pmcommander-pref-fullscreen-api-security" label="&pmcommander.ui.fullscreen.html5.security.label;" />
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</prefpane>
+	
+	<prefpane id="pmcommander-pane-security" label="&pmcommander.pane.security;">
+		<preferences>
+			<preference id="pmcommander-pref-js-jithardening" 			name="javascript.options.jit_hardening" 		type="bool" />
+			<preference id="pmcommander-pref-js-imgsrc"					name="dom.disable_image_src_set"					type="bool" inverted="true" />
+			<preference id="pmcommander-pref-js-window_flip"			name="dom.disable_window_flip"					type="bool" inverted="true" />
+			<preference id="pmcommander-pref-js-window_move_resize"	name="dom.disable_window_move_resize"			type="bool" inverted="true" />
+			<preference id="pmcommander-pref-js-window_close"					name="dom.allow_scripts_to_close_windows"		type="bool" />
+			<preference id="pmcommander-pref-js-clipboard"				name="dom.event.clipboardevents.enabled"		type="bool" />
+			<preference id="pmcommander-pref-js-contextmenu"			name="dom.event.contextmenu.enabled"			type="bool" />
+			<preference id="pmcommander-pref-sec-fileuri-strict"		name="security.fileuri.strict_origin_policy"	type="bool" />
+			<preference id="pmcommander-pref-sec-clicktoplay"			name="plugins.click_to_play"						type="bool" />
+			
+			<preference id="pmcommander-pref-sec-padlock-shown"		name="browser.padlock.shown"						type="bool" />
+			<preference id="pmcommander-pref-sec-padlock-style"		name="browser.padlock.style"						type="int" />
+			<preference id="pmcommander-pref-sec-padlock-urlbar-fx"	name="browser.padlock.urlbar_background"		type="int" />
+
+			<preference id="pmcommander-pref-sec-dom-closebutton"		name="dom.disable_window_open_feature.close"			type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-minbutton"		name="dom.disable_window_open_feature.minimizable"	type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-addressbar"		name="dom.disable_window_open_feature.location"		type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-navbar"			name="dom.disable_window_open_feature.toolbar"		type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-statusbar"		name="dom.disable_window_open_feature.status"		type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-menubar"			name="dom.disable_window_open_feature.menubar"		type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-bmtoolbar"		name="dom.disable_window_open_feature.personalbar"	type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-scrollbars"		name="dom.disable_window_open_feature.scrollbars"	type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-dom-titlebar"			name="dom.disable_window_open_feature.titlebar"		type="bool" inverted="true" />
+
+			<preference id="pmcommander-pref-sec-ssl-domain-display"			name="browser.identity.ssl_domain_display"				type="int" />
+			<preference id="pmcommander-pref-sec-ssl-tls-minversion"			name="security.tls.version.min"								type="int" 
+				onchange="pmcommanderPrefs.tlsMinVersionChanged();" />
+			<preference id="pmcommander-pref-sec-ssl-tls-maxversion"			name="security.tls.version.max"								type="int" 
+				onchange="pmcommanderPrefs.tlsMaxVersionChanged();" />
+			<preference id="pmcommander-pref-sec-ssl-no-mixed-scripts"		name="security.mixed_content.block_active_content"		type="bool" />
+			<preference id="pmcommander-pref-sec-ssl-no-mixed-display"		name="security.mixed_content.block_display_content" 	type="bool" />			
+			<preference id="pmcommander-pref-sec-ssl-require-safe-neg"		name="security.ssl.require_safe_negotiation"				type="bool" />
+			<preference id="pmcommander-pref-sec-ssl-unsafe-neg-broken"		name="security.ssl.treat_unsafe_negotiation_as_broken" type="bool" />
+			<preference id="pmcommander-pref-sec-ssl-enable-false-start"	name="security.ssl.enable_false_start"						type="bool" />
+			
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-AES-GCM-128"	name="security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256"	type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-AES-GCM-128"	name="security.ssl3.ecdhe_rsa_aes_128_gcm_sha256"		type="bool" />
+			
+			<preference id="pmcommander-pref-sec-cipher-DHE-DSS-AES-128"	name="security.ssl3.dhe_dss_aes_128_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-DSS-AES-256"	name="security.ssl3.dhe_dss_aes_256_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-DSS-CAM-128"	name="security.ssl3.dhe_dss_camellia_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-DSS-CAM-256"	name="security.ssl3.dhe_dss_camellia_256_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-DSS-DES"			name="security.ssl3.dhe_dss_des_ede3_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-RSA-AES-128"	name="security.ssl3.dhe_rsa_aes_128_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-RSA-AES-256"	name="security.ssl3.dhe_rsa_aes_256_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-RSA-CAM-128"	name="security.ssl3.dhe_rsa_camellia_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-RSA-CAM-256"	name="security.ssl3.dhe_rsa_camellia_256_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-DHE-RSA-DES"			name="security.ssl3.dhe_rsa_des_ede3_sha"					type="bool" />
+			
+			<preference id="pmcommander-pref-sec-cipher-RSA-AES-128"			name="security.ssl3.rsa_aes_128_sha"						type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-AES-256"			name="security.ssl3.rsa_aes_256_sha"						type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-CAM-128"			name="security.ssl3.rsa_camellia_128_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-CAM-256"			name="security.ssl3.rsa_camellia_256_sha"					type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-DES"				name="security.ssl3.rsa_des_ede3_sha"						type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-FIPS"				name="security.ssl3.rsa_fips_des_ede3_sha"				type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-RC4-SHA"			name="security.ssl3.rsa_rc4_128_sha"						type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-RC4-MD5"			name="security.ssl3.rsa_rc4_128_md5"						type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-RSA-SEED"				name="security.ssl3.rsa_seed_sha"							type="bool" />
+
+			<preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-128"	name="security.ssl3.ecdh_ecdsa_aes_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-256"	name="security.ssl3.ecdh_ecdsa_aes_256_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-DES"			name="security.ssl3.ecdh_ecdsa_des_ede3_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-RC4-128"	name="security.ssl3.ecdh_ecdsa_rc4_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-RSA-AES-128"		name="security.ssl3.ecdh_rsa_aes_128_sha"				type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-RSA-AES-256"		name="security.ssl3.ecdh_rsa_aes_256_sha"				type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-RSA-DES"			name="security.ssl3.ecdh_rsa_des_ede3_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDH-RSA-RC4-128"		name="security.ssl3.ecdh_rsa_rc4_128_sha"				type="bool" />
+			
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-128"	name="security.ssl3.ecdhe_ecdsa_aes_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-256"	name="security.ssl3.ecdhe_ecdsa_aes_256_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-DES"		name="security.ssl3.ecdhe_ecdsa_des_ede3_sha"		type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-RC4-128"	name="security.ssl3.ecdhe_ecdsa_rc4_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-128"		name="security.ssl3.ecdhe_rsa_aes_128_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-256"		name="security.ssl3.ecdhe_rsa_aes_256_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-DES"			name="security.ssl3.ecdhe_rsa_des_ede3_sha"			type="bool" />
+			<preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-RC4-128"		name="security.ssl3.ecdhe_rsa_rc4_128_sha"			type="bool" />
+			
+			<preference id="pmcommander-pref-sec-priv-cache-ssl"			name="browser.cache.disk_cache_ssl"						type="bool" inverted="true" />
+			<preference id="pmcommander-pref-sec-priv-sc-accept-always" name="network.cookie.alwaysAcceptSessionCookies" 	type="bool" />
+			<preference id="pmcommander-pref-sec-priv-3pc-sessiononly"	name="network.cookie.thirdparty.sessionOnly"			type="bool" />
+			<preference id="pmcommander-pref-sec-priv-geolocation"		name="geo.enabled"											type="bool" />
+			
+		</preferences>
+		<tabbox id="pmcommander-tabbox-sec" flex="1">
+			<tabs id="pmcommander-tabs-sec">
+				<tab id="pmcommander-tab-sec-general"	label="&pmcommander.tab.general;" />
+				<tab id="pmcommander-tab-sec-padlock"	label="&pmcommander.tab.sec.padlock;" />
+				<tab id="pmcommander-tab-sec-dom"		label="&pmcommander.tab.sec.DOM;" />
+				<tab id="pmcommander-tab-sec-ssl"		label="&pmcommander.tab.sec.SSL;" />
+				<tab id="pmcommander-tab-sec-ciphers1" label="&pmcommander.tab.sec.ciphers1;" />
+				<tab id="pmcommander-tab-sec-ciphers2" label="&pmcommander.tab.sec.ciphers2;" />
+				<tab id="pmcommander-tab-sec-privacy"	label="&pmcommander.tab.sec.privacy;" />
+			</tabs>
+			
+			<tabpanels flex="1">
+				<tabpanel id="pmcommander-sec-general" orient="vertical">
+					<checkbox id="pmcommander-js-jithardening-check" preference="pmcommander-pref-js-jithardening" label="&pmcommander.js.jithardening.label;" />
+					<groupbox id="pmcommander-sec-general-js">
+						<caption label="&pmcommander.sec.general.js.caption;" />
+						<checkbox id="pmcommander-js-imgsrc-check" preference="pmcommander-pref-js-imgsrc" label="&pmcommander.js.imgsrc.label;" />
+						<checkbox id="pmcommander-js-window_flip-check" preference="pmcommander-pref-js-window_flip" label="&pmcommander.js.window_flip.label;" />
+						<checkbox id="pmcommander-js-windows_move_resize-check" preference="pmcommander-pref-js-window_move_resize" label="&pmcommander.js.window_move_resize.label;" />
+						<checkbox id="pmcommander-js-window_close-check" preference="pmcommander-pref-js-window_close" label="&pmcommander.js.window_close.label;" />
+						<checkbox id="pmcommander-js-clipboard-check" preference="pmcommander-pref-js-clipboard" label="&pmcommander.js.clipboard.label;" />
+						<checkbox id="pmcommander-js-contextmenu-check" preference="pmcommander-pref-js-contextmenu" label="&pmcommander.js.contextmenu.label;" />
+					</groupbox>		
+					<checkbox id="pmcommander-sec-fileuri-strict-check" preference="pmcommander-pref-sec-fileuri-strict" label="&pmcommander.sec.fileuri.strict.label;" />
+					<checkbox id="pmcommander-sec-plugins-clicktoplay-check" preference="pmcommander-pref-sec-clicktoplay" label="&pmcommander.sec.plugins.clicktoplay.label;" />
+				</tabpanel>
+				<tabpanel id="pmcommander-sec-padlock" orient="vertical">
+					<checkbox id="pmcommander-sec-padlock-shown-check" preference="pmcommander-pref-sec-padlock-shown" label="&pmcommander.sec.padlock.shown.label;" />
+					<hbox align="center">
+						<label id="pmcommander-sec-padlock-style-label" control="pmcommander-sec-padlock-style-menu">&pmcommander.sec.padlock.style.label;</label>
+						<menulist id="pmcommander-sec-padlock-style-menu" preference="pmcommander-pref-sec-padlock-style" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.sec.padlock.style.ip.right;" value="1" />
+								<menuitem label="&pmcommander.sec.padlock.style.ip.left;" value="2" />
+								<menuitem label="&pmcommander.sec.padlock.style.urlbar.right;" value="3" />
+								<menuitem label="&pmcommander.sec.padlock.style.statusbar;" value="4" />
+								<menuitem label="&pmcommander.sec.padlock.style.tabs.right;" value="5" />
+								<menuitem label="&pmcommander.sec.padlock.style.ip.right.classic;" value="6" />
+								<menuitem label="&pmcommander.sec.padlock.style.ip.left.classic;" value="7" />
+								<menuitem label="&pmcommander.sec.padlock.style.urlbar.right.classic;" value="8" />
+								<menuitem label="&pmcommander.sec.padlock.style.statusbar.classic;" value="9" />
+								<menuitem label="&pmcommander.sec.padlock.style.tabs.right.classic;" value="10" />
+							</menupopup>
+						</menulist>
+					</hbox>
+					<hbox align="center">
+						<label id="pmcommander-sec-padlock-urlbar-fx-label" control="pmcommander-sec-padlock-urlbar-fx-menu">&pmcommander.sec.padlock.urlbar.fx.label;</label>
+						<menulist id="pmcommander-sec-padlock-urlbar-fx-menu" preference="pmcommander-pref-sec-padlock-urlbar-fx" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.none;" value="0" />
+								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.shading;" value="1" />
+							</menupopup>
+						</menulist>
+					</hbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-sec-dom" orient="vertical">
+					<groupbox id="pmcommander-sec-dom-windowopen">
+						<caption label="&pmcommander.sec.dom.windowopen.caption;" />
+						<label>&pmcommander.sec.dom.when.opening.allow.label;</label>
+						<checkbox id="pmcommander-sec-dom-closebutton-check" preference="pmcommander-pref-sec-dom-closebutton" label="&pmcommander.sec.dom.closebutton.label;" />
+						<checkbox id="pmcommander-sec-dom-minbutton-check" preference="pmcommander-pref-sec-dom-minbutton" label="&pmcommander.sec.dom.minbutton.label;" />
+						<checkbox id="pmcommander-sec-dom-addressbar-check" preference="pmcommander-pref-sec-dom-addressbar" label="&pmcommander.sec.dom.addressbar.label;" />
+						<checkbox id="pmcommander-sec-dom-navbar-check" preference="pmcommander-pref-sec-dom-navbar" label="&pmcommander.sec.dom.navbar.label;" />
+						<checkbox id="pmcommander-sec-dom-statusbar-check" preference="pmcommander-pref-sec-dom-statusbar" label="&pmcommander.sec.dom.statusbar.label;" />
+						<checkbox id="pmcommander-sec-dom-menubar-check" preference="pmcommander-pref-sec-dom-menubar" label="&pmcommander.sec.dom.menubar.label;" />
+						<checkbox id="pmcommander-sec-dom-bmtoolbar-check" preference="pmcommander-pref-sec-dom-bmtoolbar" label="&pmcommander.sec.dom.bmtoolbar.label;" />
+						<checkbox id="pmcommander-sec-dom-scrollbars-check" preference="pmcommander-pref-sec-dom-scrollbars" label="&pmcommander.sec.dom.scrollbars.label;" />
+						<checkbox id="pmcommander-sec-dom-titlebar-check" preference="pmcommander-pref-sec-dom-titlebar" label="&pmcommander.sec.dom.titlebar.label;" />
+					</groupbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-sec-ssl" orient="vertical">
+					<hbox align="center">
+						<label id="pmcommander-sec-ssl-domain-display-label" control="pmcommander-sec-ssl-domain-display-menu">&pmcommander.sec.ssl.domain.display.label;</label>
+						<menulist id="pmcommander-sec-ssl-domain-display-menu" preference="pmcommander-pref-sec-ssl-domain-display" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.sec.ssl.domain.display.none;" value="0" />
+								<menuitem label="&pmcommander.sec.ssl.domain.display.topdomain;" value="1" />
+								<menuitem label="&pmcommander.sec.ssl.domain.display.host;" value="2" />
+							</menupopup>
+						</menulist>
+					</hbox>
+					<hbox align="center">
+						<label id="pmcommander-sec-ssl-tls-minversion-label" control="pmcommander-sec-ssl-tls-minversion-menu">&pmcommander.sec.ssl.tls.minversion.label;</label>
+						<menulist id="pmcommander-sec-ssl-tls-minversion-menu" preference="pmcommander-pref-sec-ssl-tls-minversion" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.sec.ssl.tls.version.SSL3;" value="0" />
+								<menuitem label="&pmcommander.sec.ssl.tls.version.TLS10;" value="1" />
+								<menuitem label="&pmcommander.sec.ssl.tls.version.TLS11;" value="2" />
+								<menuitem label="&pmcommander.sec.ssl.tls.version.TLS12;" value="3" />
+							</menupopup>
+						</menulist>
+					</hbox>
+					<hbox align="center">
+						<label id="pmcommander-sec-ssl-tls-maxversion-label" control="pmcommander-sec-ssl-tls-maxversion-menu">&pmcommander.sec.ssl.tls.maxversion.label;</label>
+						<menulist id="pmcommander-sec-ssl-tls-maxversion-menu" preference="pmcommander-pref-sec-ssl-tls-maxversion" sizetopopup="always">
+							<menupopup>
+								<menuitem label="&pmcommander.sec.ssl.tls.version.SSL3;" value="0" />
+								<menuitem label="&pmcommander.sec.ssl.tls.version.TLS10;" value="1" />
+								<menuitem label="&pmcommander.sec.ssl.tls.version.TLS11;" value="2" />
+								<menuitem label="&pmcommander.sec.ssl.tls.version.TLS12;" value="3" />
+							</menupopup>
+						</menulist>
+					</hbox>
+					<groupbox id="pmcommander-sec-ssl-mixedcontent">
+						<caption label="&pmcommander.sec.ssl.mixedcontent.caption;" />
+						<checkbox id="pmcommander-sec-ssl-no-mixed-scripts-check" preference="pmcommander-pref-sec-ssl-no-mixed-scripts" label="&pmcommander.sec.ssl.no.mixed.scripts.label;" />
+						<checkbox id="pmcommander-sec-ssl-no-mixed-display-check" preference="pmcommander-pref-sec-ssl-no-mixed-display" label="&pmcommander.sec.ssl.no.mixed.display.label;" />
+					</groupbox>
+					<groupbox id="pmcommander-sec-ssl-hardening">
+						<caption label="&pmcommander.sec.ssl.hardening.caption;" />
+						<checkbox id="pmcommander-sec-ssl-require-safe-neg-check" preference="pmcommander-pref-sec-ssl-require-safe-neg" label="&pmcommander.sec.ssl.require.safe.neg.label;" />
+						<checkbox id="pmcommander-sec-ssl-unsafe-neg-broken-check" preference="pmcommander-pref-sec-ssl-unsafe-neg-broken" label="&pmcommander.sec.ssl.unsafe.neg.broken.label;" />
+					</groupbox>
+					<checkbox id="pmcommander-sec-ssl-enable-false-start-check" preference="pmcommander-pref-sec-ssl-enable-false-start" label="&pmcommander.sec.ssl.enable.false.start.label;" />
+				</tabpanel>
+				<tabpanel id="pmcommander-sec-ciphers" orient="vertical">
+					<groupbox id="pmcommander-sec-ssl3-ciphers">
+						<caption label="&pmcommander.sec.ciphers.caption;" />
+						<hbox>
+						  <vbox>
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-AES-128"	label="&pmcommander.sec.ciphers.dhe-dss-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-AES-256"	label="&pmcommander.sec.ciphers.dhe-dss-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-CAM-128"	label="&pmcommander.sec.ciphers.dhe-dss-cam-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-CAM-256"	label="&pmcommander.sec.ciphers.dhe-dss-cam-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-DES"		label="&pmcommander.sec.ciphers.dhe-dss-des;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-AES-128"	label="&pmcommander.sec.ciphers.dhe-rsa-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-AES-256"	label="&pmcommander.sec.ciphers.dhe-rsa-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-CAM-128"	label="&pmcommander.sec.ciphers.dhe-rsa-cam-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-CAM-256"	label="&pmcommander.sec.ciphers.dhe-rsa-cam-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-DES"		label="&pmcommander.sec.ciphers.dhe-rsa-des;" />
+						  </vbox>
+						  <vbox>
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-GCM-128"	label="&pmcommander.sec.ciphers.rsa-aes-gcm-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-128"		label="&pmcommander.sec.ciphers.rsa-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-256"		label="&pmcommander.sec.ciphers.rsa-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-CAM-128"		label="&pmcommander.sec.ciphers.rsa-cam-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-CAM-256"		label="&pmcommander.sec.ciphers.rsa-cam-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-DES"				label="&pmcommander.sec.ciphers.rsa-des;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-FIPS"			label="&pmcommander.sec.ciphers.rsa-fips;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-RC4-SHA"		label="&pmcommander.sec.ciphers.rsa-rc4-sha;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-RC4-MD5"		label="&pmcommander.sec.ciphers.rsa-rc4-md5;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-RSA-SEED"			label="&pmcommander.sec.ciphers.rsa-seed;" />
+						  </vbox>
+						</hbox>
+					</groupbox>
+				
+				</tabpanel>
+				<tabpanel id="pmcommander-sec-ciphers2" orient="vertical">
+					<groupbox id="pmcommander-sec-ssl3-ciphers">
+						<caption label="&pmcommander.sec.ciphers.caption;" />
+						<hbox>
+						  <vbox>
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-128" 	label="&pmcommander.sec.ciphers.ecdh-ecdsa-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-256" 	label="&pmcommander.sec.ciphers.ecdh-ecdsa-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-DES" 		label="&pmcommander.sec.ciphers.ecdh-ecdsa-des;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-RC4-128" 	label="&pmcommander.sec.ciphers.ecdh-ecdsa-rc4-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-AES-128" 	label="&pmcommander.sec.ciphers.ecdh-rsa-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-AES-256" 	label="&pmcommander.sec.ciphers.ecdh-rsa-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-DES" 			label="&pmcommander.sec.ciphers.ecdh-rsa-des;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-RC4-128" 	label="&pmcommander.sec.ciphers.ecdh-rsa-rc4-128;" />
+						  </vbox>
+						  <vbox>
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-AES-GCM-128"	label="&pmcommander.sec.ciphers.ecdhe-aes-gcm-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-128" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-256" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-DES" 		label="&pmcommander.sec.ciphers.ecdhe-ecdsa-des;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-RC4-128" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-rc4-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-128" 	label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-128;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-256" 	label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-256;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-DES" 		label="&pmcommander.sec.ciphers.ecdhe-rsa-des;" />
+						    <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-RC4-128" 	label="&pmcommander.sec.ciphers.ecdhe-rsa-rc4-128;" />
+						  </vbox>
+						</hbox>
+					</groupbox>
+				
+				</tabpanel>
+				<tabpanel id="pmcommander-sec-privacy" orient="vertical">
+					<checkbox id="pmcommander-sec-priv-cache-ssl-check" preference="pmcommander-pref-sec-priv-cache-ssl" label="&pmcommander.sec.priv.cache.ssl.label;" />
+					<label width="100%">&pmcommander.sec.priv.cache.ssl.info;</label>
+					<checkbox id="pmcommander-sec-priv-sc-accept-always-check" preference="pmcommander-pref-sec-priv-sc-accept-always" label="&pmcommander.sec.priv.sc.accept.always.label;" />
+					<checkbox id="pmcommander-sec-priv-3pc-sessiononly-check" preference="pmcommander-pref-sec-priv-3pc-sessiononly" label="&pmcommander.sec.priv.3pc.sessiononly.label;" />
+					<checkbox id="pmcommander-sec-priv-geolocation-check" preference="pmcommander-pref-sec-priv-geolocation" label="&pmcommander.sec.priv.geolocation.label;" />
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</prefpane>
+
+	<prefpane id="pmcommander-pane-misc" label="&pmcommander.pane.misc;">
+		<preferences>
+			<preference id="pmcommander-pref-devtools-debugger" name="devtools.debugger.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-errorconsole" name="devtools.errorconsole.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-inspector" name="devtools.inspector.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-responsiveui" name="devtools.responsiveUI.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-scratchpad" name="devtools.scratchpad.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-styleeditor" name="devtools.styleeditor.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-tilt" name="devtools.tilt.enabled" type="bool" />
+			<preference id="pmcommander-pref-devtools-toolbar" name="devtools.toolbar.enabled" type="bool" />
+			<preference id="pmcommander-pref-modules-pdfjs" name="pdfjs.disabled" type="bool" inverted="true" 
+				onchange="pmcommanderPrefs.pdfjsChanged();" />
+			<preference id="pmcommander-pref-bookmarkbackups-limit" name="browser.bookmarks.max_backups" type="int" />
+			<preference id="pmcommander-pref-bookmarkbackups-html" name="browser.bookmarks.autoExportHTML" type="bool" />
+			<preference id="pmcommander-pref-dom-storage-enable" name="dom.storage.enabled" type="bool"  
+				onchange="pmcommanderPrefs.domStorageChanged();" />
+			<preference id="pmcommander-pref-dom-storage-limit" name="dom.storage.default_quota" type="int" />
+		</preferences>
+		<tabbox id="pmcommander-tabbox-misc" flex="1">
+			<tabs id="pmcommander-tabs-misc">
+				<tab id="pmcommander-tab-misc-tools" label="&pmcommander.tab.misc.tools;" />
+				<tab id="pmcommander-tab-misc-reset" label="&pmcommander.tab.misc.reset;" />
+				<tab id="pmcommander-tab-misc-other"  label="&pmcommander.tab.misc.other;" />
+			</tabs>
+			
+			<tabpanels flex="1">
+				<tabpanel id="pmcommander-misc-tools" orient="vertical">
+					<label>&pmcommander.info.restartwarning;</label>
+					<groupbox id="pmcommander-misc-tools-groupbox">
+						<caption label="&pmcommander.misc.tools.caption;" />
+						<checkbox id="pmcommander-devtools-debugger-check" preference="pmcommander-pref-devtools-debugger" label="&pmcommander.misc.devtools.debugger;" />
+						<checkbox id="pmcommander-devtools-errorconsole-check" preference="pmcommander-pref-devtools-errorconsole" label="&pmcommander.misc.devtools.errorconsole;" />
+						<checkbox id="pmcommander-devtools-inspector-check" preference="pmcommander-pref-devtools-inspector" label="&pmcommander.misc.devtools.inspector;" />
+						<checkbox id="pmcommander-devtools-responsiveui-check" preference="pmcommander-pref-devtools-responsiveui" label="&pmcommander.misc.devtools.responsiveui;" />
+						<checkbox id="pmcommander-devtools-scratchpad-check" preference="pmcommander-pref-devtools-scratchpad" label="&pmcommander.misc.devtools.scratchpad;" />
+						<checkbox id="pmcommander-devtools-styleeditor-check" preference="pmcommander-pref-devtools-styleeditor" label="&pmcommander.misc.devtools.styleeditor;" />
+						<checkbox id="pmcommander-devtools-tilt-check" preference="pmcommander-pref-devtools-tilt" label="&pmcommander.misc.devtools.tilt;" />
+						<checkbox id="pmcommander-devtools-toolbar-check" preference="pmcommander-pref-devtools-toolbar" label="&pmcommander.misc.devtools.toolbar;" />
+					</groupbox>
+					<checkbox id="pmcommander-tools-pdfjs-check" preference="pmcommander-pref-modules-pdfjs" label="&pmcommander.misc.modules.pdfjs;" />
+				</tabpanel>
+				<tabpanel id="pmcommander-misc-reset" orient="vertical">
+					<label width="100%">&pmcommander.misc.reset.info;</label>
+					<hbox align="center" style="display:block; padding-top:1em;" width="100%">
+              		<button id="resetAllPrefsButton"
+                  	label="&pmcommander.reset.allprefs.label;" 
+                     oncommand="pmcommanderPrefs.resetAllUserPrefs();" />
+              	   <description>
+               		<label control="resetAllPrefsButton">&pmcommander.reset.allprefs.info;</label>
+                  </description>
+               </hbox>
+				</tabpanel>
+				<tabpanel id="pmcommander-misc-other" orient="vertical">
+					<groupbox id="pmcommander-misc-bookmarkbackups">
+						<caption label="&pmcommander.misc.bookmarkbackups.caption;" />
+						<hbox align="center">
+							<label id="pmcommander-misc-bookmarkbackups-limit-label" control="pmcommander-misc-bookmarkbackups-limit-input">&pmcommander.misc.bookmarkbackups.limit.label;</label>
+							<textbox type="number" size="2" min="-1" id="pmcommander-misc-bookmarkbackups-limit-input" preference="pmcommander-pref-bookmarkbackups-limit" />
+						</hbox>
+						<checkbox id="pmcommander-misc-bookmarkbackups-html-check" preference="pmcommander-pref-bookmarkbackups-html" label="&pmcommander.misc.bookmarkbackups.html.label;" />
+					</groupbox>
+					<groupbox id="pmcommander-misc-dom-storage">
+						<caption label="&pmcommander.misc.dom.storage.caption;" />
+						<checkbox id="pmcommander-misc-dom-storage-check" preference="pmcommander-pref-dom-storage-enable" label="&pmcommander.misc.dom.storage.enabled.label;" />
+						<hbox align="center">
+							<label id="pmcommander-misc-dom-storage-limit-label" control="pmcommander-misc-dom-storage-limit-input">&pmcommander.misc.dom.storage.limit.label;</label>
+							<textbox type="number" size="5" min="0" id="pmcommander-misc-dom-storage-limit-input" preference="pmcommander-pref-dom-storage-limit" />
+							<label>&pmcommander.unit.KB;</label>
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</prefpane>	
+	
+</prefwindow>
