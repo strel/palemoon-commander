@@ -23,14 +23,14 @@
 		<!-- Info -->
 
 		<em:creator>Moonchild</em:creator>
-		<em:description>Advanced preferences for Pale Moon (and Firefox)</em:description>
+		<em:description>Advanced preferences for Pale Moon</em:description>
 		<em:homepageURL>http://www.palemoon.org/commander.shtml</em:homepageURL>
 		<em:iconURL>chrome://pmcommander/skin/pmc.png</em:iconURL>
 		<em:id>commander@palemoon.org</em:id>
 		<em:name>Pale Moon Commander</em:name>
 		<em:optionsURL>chrome://pmcommander/content/prefs.xul</em:optionsURL>
 		<em:type>2</em:type>
-		<em:version>1.3.6</em:version>
+		<em:version>1.4.0</em:version>
 
 		<!-- Localizations -->
 
@@ -38,7 +38,7 @@
 			<Description>
 				<em:locale>nl</em:locale>
 				<em:name>Pale Moon Commander</em:name>
-				<em:description>Geavanceerde voorkeuren voor Pale Moon (en Firefox)</em:description>
+				<em:description>Geavanceerde voorkeuren voor Pale Moon</em:description>
 				<em:translator>Moonchild / MarkH [babelzilla]</em:translator>
 			</Description>
 		</em:localized>
@@ -47,14 +47,14 @@
 			<Description>
 				<em:locale>sv-SE</em:locale>
 				<em:name>Pale Moon Commander</em:name>
-				<em:description>Avancerade inställningar för Pale Moon (och Firefox)</em:description>
+				<em:description>Avancerade inställningar för Pale Moon</em:description>
 				<em:translator>Mikael Hiort af Ornäs</em:translator>
 			</Description>
 		</em:localized>
 		
 		<!-- Targets -->
 
-		<em:targetApplication><!-- Firefox/Pale Moon -->
+		<em:targetApplication><!-- Firefox -->
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>24.0</em:minVersion>
