@@ -12,8 +12,6 @@
 <!ENTITY pmcommander.tab.graphics.fonts "Lettertypen">
 <!ENTITY pmcommander.tab.graphics.CMS "CMS">
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "Oplossingen voor specifieke driverbugs gebruiken">
-<!ENTITY pmcommander.graphics.general.azure.caption "Azure">
-<!ENTITY pmcommander.graphics.general.azure.content.label "Azure voor pagina-inhoud gebruiken">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Wachttijd vóór eerste tekenopdracht:">
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
 <!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "Direct2D-acceleratie gebruiken">
@@ -26,6 +24,7 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.default "Standaard">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Voorkeur voor Direct3D 9">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Voorkeur voor OpenGL">
+<!ENTITY pmcommander.graphics.rendering.use.deprecated.label "Oude (afgeschafte) methode renderingmethode gebruiken">
 <!ENTITY pmcommander.graphics.3d.webgl.native.label "Bij voorkeur OpenGL voor WebGL gebruiken">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Anti-aliasing afdwingen op">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "Sterkte van anti-aliasing:">
@@ -310,6 +309,20 @@
 <!ENTITY pmcommander.sec.priv.sc.accept.always.label "Sessiecookies altijd accepteren">
 <!ENTITY pmcommander.sec.priv.3pc.sessiononly.label "Cookies van derden verwijderen wanneer de browser gesloten wordt">
 <!ENTITY pmcommander.sec.priv.geolocation.label "Browser-locatiebewustzijn inschakelen">
+<!ENTITY pmcommander.sec.priv.referers.caption "Referenties">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.label "Referentieheaders versturen:">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.never "Nooit referenties versturen">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.onclicks "Alleen bij aanklikken versturen">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.clicks_and_images "Bij aanklikken en afbeeldingen versturen">
+<!ENTITY pmcommander.sec.priv.referer.spoofheader.label "Referentie naar doel-URL veinzen">
+<!ENTITY pmcommander.sec.priv.referer.trim.label "Referenties inkorten:">
+<!ENTITY pmcommander.sec.priv.referer.trim.none "URL niet inkorten (standaard)">
+<!ENTITY pmcommander.sec.priv.referer.trim.shpp "Inkorten tot protocol + host + poort + pad">
+<!ENTITY pmcommander.sec.priv.referer.trim.shp "Inkorten tot protocol + host + pad">
+<!ENTITY pmcommander.sec.priv.referer.xop.label "Beleid cross-origin-referentie:">
+<!ENTITY pmcommander.sec.priv.referer.xop.always "Altijd versturen (standaard)">
+<!ENTITY pmcommander.sec.priv.referer.xop.basedomain "Versturen als basisdomein overeenkomt">
+<!ENTITY pmcommander.sec.priv.referer.xop.host "Versturen als host overeenkomt">
 <!-- Other/misc. category -->
 <!ENTITY pmcommander.tab.misc.tools "Hulpmiddelen">
 <!ENTITY pmcommander.tab.misc.reset "Reset">

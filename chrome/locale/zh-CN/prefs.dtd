@@ -1,0 +1,347 @@
+<!ENTITY pmcommander.window.title "Pale Moon Commander">
+<!ENTITY pmcommander.pane.graphics "图形">
+<!ENTITY pmcommander.pane.network "网络">
+<!ENTITY pmcommander.pane.perf "性能">
+<!ENTITY pmcommander.pane.UI "用户界面">
+<!ENTITY pmcommander.pane.security "安全">
+<!ENTITY pmcommander.pane.misc "其他">
+<!ENTITY pmcommander.tab.general "常规">
+<!-- Graphics category -->
+<!ENTITY pmcommander.tab.graphics.rendering "渲染">
+<!ENTITY pmcommander.tab.graphics.3D "3D">
+<!ENTITY pmcommander.tab.graphics.fonts "字体">
+<!ENTITY pmcommander.tab.graphics.CMS "CMS">
+<!ENTITY pmcommander.graphics.general.workaround.driverbugs "使用对特定驱动问题的特定解决方案">
+<!ENTITY pmcommander.graphics.general.initialpaint.delay.label "初次绘制延迟:">
+<!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
+<!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "启用 Direct2D 加速">
+<!ENTITY pmcommander.graphics.rendering.d2d.force.label "强制使用 Direct2D">
+<!ENTITY pmcommander.graphics.rendering.layers.caption "图层加速">
+<!ENTITY pmcommander.graphics.rendering.layers.enabled.label "图层加速已启用">
+<!ENTITY pmcommander.graphics.rendering.layers.force.label "图层加速已强制">
+<!ENTITY pmcommander.graphics.rendering.layers.drawfps.label "每秒绘制帧数">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.label "图层加速模式:">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.default "默认">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "偏好 Direct3D 9">
+<!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "偏好 OpenGL">
+<!ENTITY pmcommander.graphics.rendering.use.deprecated.label "使用旧的（已弃用的）绘制方法">
+<!ENTITY pmcommander.graphics.3d.webgl.native.label "偏好 OpenGL for WebGL">
+<!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "强制开启反锯齿">
+<!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "反锯齿级别:">
+<!ENTITY pmcommander.graphics.3d.msaa.level.0 "关">
+<!ENTITY pmcommander.graphics.3d.msaa.level.2 "x2">
+<!ENTITY pmcommander.graphics.3d.msaa.level.4 "x4">
+<!ENTITY pmcommander.graphics.3d.msaa.level.8 "x8">
+<!ENTITY pmcommander.graphics.3d.msaa.level.16 "x16">
+<!ENTITY pmcommander.graphics.fonts.directwrite.label "启用 DirectWrite 字体渲染">
+<!ENTITY pmcommander.graphics.fonts.directwrite.gdi.label "为 DirectWrite 使用 GDI 表格加载">
+<!ENTITY pmcommander.graphics.fonts.graphite.label "启用 Graphite 字体渲染">
+<!ENTITY pmcommander.graphics.fonts.cleartype.caption "ClearType">
+<!ENTITY pmcommander.graphics.cleartype.content.always.label "始终为内容使用 ClearType">
+<!ENTITY pmcommander.graphics.cleartype.downloadable.label "为可下载字体使用 ClearType">
+<!ENTITY pmcommander.graphics.cleartype.mode.label "ClearType 渲染模式:">
+<!ENTITY pmcommander.graphics.cleartype.mode.auto "自动">
+<!ENTITY pmcommander.graphics.cleartype.mode.default "默认">
+<!ENTITY pmcommander.graphics.cleartype.mode.aliased "混叠">
+<!ENTITY pmcommander.graphics.cleartype.mode.gdiclassic "GDI 经典">
+<!ENTITY pmcommander.graphics.cleartype.mode.gdinatural "GDI 天然">
+<!ENTITY pmcommander.graphics.cleartype.mode.natural "天然">
+<!ENTITY pmcommander.graphics.cleartype.mode.symmetric "天然均衡">
+<!ENTITY pmcommander.graphics.cleartype.level.label "ClearType 级别:">
+<!ENTITY pmcommander.graphics.cleartype.contrast.label "ClearType 对比度:">
+<!ENTITY pmcommander.graphics.cleartype.gamma.label "Cleartype 伽马值:">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.label "次像素渲染:">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.auto "自动">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.flat "平面">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.RGB "RGB 顺序">
+<!ENTITY pmcommander.graphics.cleartype.pxmode.BGR "BGR 顺序">
+<!ENTITY pmcommander.graphics.cleartype.gdimaxsize "渲染 GDI 经典 时提升字体大小到:">
+<!ENTITY pmcommander.graphics.color.ICC.caption "颜色管理系统 (CMS)">
+<!ENTITY pmcommander.graphics.color.ICCv4.label "启用 ICC 第四版配置">
+<!ENTITY pmcommander.graphics.color.ICCmode.label "CMS 模式:">
+<!ENTITY pmcommander.graphics.color.ICCmode.off "关">
+<!ENTITY pmcommander.graphics.color.ICCmode.always "为每个图像使用">
+<!ENTITY pmcommander.graphics.color.ICCmode.tagged "仅为具有配置的图像使用">
+<!ENTITY pmcommander.graphics.color.ICCintent.label "渲染目的（颜色转换）:">
+<!ENTITY pmcommander.graphics.color.ICCintent.embedded "嵌入式颜色">
+<!ENTITY pmcommander.graphics.color.ICCintent.perceptual "感知 (默认)">
+<!ENTITY pmcommander.graphics.color.ICCintent.relative "相对色度">
+<!ENTITY pmcommander.graphics.color.ICCintent.saturation "饱和度">
+<!ENTITY pmcommander.graphics.color.ICCintent.absolute "绝对色度">
+<!-- Networking category -->
+<!ENTITY pmcommander.tab.net.dnslookups "域名">
+<!ENTITY pmcommander.tab.net.http "HTTP">
+<!ENTITY pmcommander.tab.net.pipelining "流水线">
+<!ENTITY pmcommander.tab.net.advanced "杂项">
+<!ENTITY pmcommander.net.dns.urlfixup.label "自动尝试修复不完整的地址">
+<!ENTITY pmcommander.net.dns.urlfixup.prefix.label "尝试修复为使用下列前缀:">
+<!ENTITY pmcommander.net.dns.urlfixup.suffix.label "尝试修复为使用下列后缀:">
+<!ENTITY pmcommander.net.dns.caption "DNS">
+<!ENTITY pmcommander.net.dns.ipv6.label "启用 IPv6 查询">
+<!ENTITY pmcommander.net.dns.prefetch.label "预先进行 DNS 查询">
+<!ENTITY pmcommander.net.dns.cache.label "缓存 DNS 项目:">
+<!ENTITY pmcommander.net.dns.expire.label "缓存 DNS 例外:">
+<!ENTITY pmcommander.net.advanced.protocols.caption "协议">
+<!ENTITY pmcommander.net.spdy.label "启用 SPDY 协议">
+<!ENTITY pmcommander.net.advanced.connections.caption "连接">
+<!ENTITY pmcommander.net.buffercount.label "网络层缓冲器数量:">
+<!ENTITY pmcommander.net.buffersize.label "网络层缓冲器大小:">
+<!ENTITY pmcommander.net.http.fastfallback.label "使用快速的 IPv6 变 IPv4 后备">
+<!ENTITY pmcommander.net.http.timing.caption "HTTP 定时">
+<!ENTITY pmcommander.net.http.conn.timeout.label "HTTP 连接超时:">
+<!ENTITY pmcommander.net.http.retry.timeout.label "HTTP 连接重试阈值:">
+<!ENTITY pmcommander.net.http.keepalive.timeout.label "HTTP 持久连接连接超时:">
+<!ENTITY pmcommander.net.http.connections.caption "HTTP 连接">
+<!ENTITY pmcommander.net.http.maxconn.label "总的 HTTP 连接最大数量:">
+<!ENTITY pmcommander.net.http.persistent.maxconn.server.label "每个服务器 HTTP 连接最大数量:">
+<!ENTITY pmcommander.net.http.persistent.maxconn.proxy.label "每个代理 HTTP 连接最大数量:">
+<!ENTITY pmcommander.net.http.diagnostics.label "启用 HTTP 协议诊断">
+<!ENTITY pmcommander.net.pipelining.label "启用流水线（pipelining）">
+<!ENTITY pmcommander.net.pipelining.ssl.label "启用通过 SSL 的流水线">
+<!ENTITY pmcommander.net.pipelining.proxy.label "启用通过代理连接的流水线">
+<!ENTITY pmcommander.net.pipelining.aggressive.label "使用激进的流水线">
+<!ENTITY pmcommander.net.pipelining.params.caption "流水线参数">
+<!ENTITY pmcommander.net.pipelining.maxrequest.label "流水线中的请求最大数量">
+<!ENTITY pmcommander.net.pipelining.maxrequest.optimistic.label "乐观的流水线请求最多">
+<!ENTITY pmcommander.net.pipelining.maxsize.label "进入流水线的元素最大大小">
+<!ENTITY pmcommander.net.pipelining.timeout.label "请求非流水线化前的流水线读取超时">
+<!ENTITY pmcommander.net.pipelining.reschedule.label "重新安排慢速的流水线请求到另一管道">
+<!ENTITY pmcommander.net.pipelining.reschedule.timeout.label "重新安排请求到另一管道前的时间">
+<!-- Performance category -->
+<!ENTITY pmcommander.tab.perf.javascript "JavaScript">
+<!ENTITY pmcommander.tab.perf.javascript.gc "垃圾收集">
+<!ENTITY pmcommander.tab.perf.cache "缓存">
+<!ENTITY pmcommander.perf.js.global.disable "完全禁用 JavasScript">
+<!ENTITY pmcommander.perf.js.global.disable.warning "警告：完全禁用 JavasScript 将严重降低您的浏览体验，并可能导致许多网站出现不正常的状况。它不应该被轻易采用。">
+<!ENTITY pmcommander.perf.js.chrome.caption "浏览器 Chrome">
+<!ENTITY pmcommander.perf.js.baselinejit.chrome.label "对 UI 脚本启用 Baseline JIT 编译器">
+<!ENTITY pmcommander.perf.js.content.caption "页面内容">
+<!ENTITY pmcommander.perf.js.baselinejit.content.label "对网页启用 Baseline JIT 编译器">
+<!ENTITY pmcommander.perf.js.ionmonkey.content.label "启用 IonMonkey">
+<!ENTITY pmcommander.perf.js.odinmonkey.label "启用 OdinMonkey (asm.js 最优化)">
+<!ENTITY pmcommander.perf.js.typeinference.label "启用 JavaScript 类型推断">
+<!ENTITY pmcommander.perf.js.gc.onmempressure.label "内存紧张时实施 GC">
+<!ENTITY pmcommander.perf.js.gc.per.compartment.label "每个隔间实施 GC">
+<!ENTITY pmcommander.perf.js.gc.explicit.compartment.label "启用对隔间的明确 GC">
+<!ENTITY pmcommander.perf.js.gc.dynamic.heap.label "使用动态 GC 内存堆">
+<!ENTITY pmcommander.perf.js.gc.dynamic.slice.label "使用动态 GC 内存片段">
+<!ENTITY pmcommander.perf.js.gc.incremental.label "启用渐进式垃圾收集">
+<!ENTITY pmcommander.perf.js.gc.incremental.slice.ms.label "用于渐进式垃圾收集的时间片段:">
+<!ENTITY pmcommander.perf.cache.disk.caption "磁盘缓存">
+<!ENTITY pmcommander.perf.cache.disk.enable.label "使用磁盘缓存">
+<!ENTITY pmcommander.perf.cache.disk.auto.label "自动化磁盘缓存大小">
+<!ENTITY pmcommander.perf.cache.disk.capacity.label "如果不自动调整大小，磁盘缓存的容量为:">
+<!ENTITY pmcommander.perf.cache.disk.elementsize.label "磁盘缓存中的最大元素大小:">
+<!ENTITY pmcommander.perf.cache.compression.label "缓存压缩:">
+<!ENTITY pmcommander.cache.compression.off "不压缩">
+<!ENTITY pmcommander.cache.compression.low "低等压缩">
+<!ENTITY pmcommander.cache.compression.medium "中等压缩">
+<!ENTITY pmcommander.cache.compression.high "高等压缩">
+<!ENTITY pmcommander.perf.cache.compression.info "注意：更改此选项将清除您的缓存。">
+<!ENTITY pmcommander.perf.cache.mem.caption "内存缓存">
+<!ENTITY pmcommander.perf.cache.mem.enable.label "启用内存缓存">
+<!ENTITY pmcommander.perf.cache.mem.capacity.label "内存缓存容量:">
+<!ENTITY pmcommander.cache.mem.capacity.auto "自动">
+<!ENTITY pmcommander.cache.mem.capacity.4M "4 MB">
+<!ENTITY pmcommander.cache.mem.capacity.8M "8 MB">
+<!ENTITY pmcommander.cache.mem.capacity.16M "16 MB">
+<!ENTITY pmcommander.cache.mem.capacity.32M "32 MB">
+<!ENTITY pmcommander.cache.mem.capacity.64M "64 MB">
+<!ENTITY pmcommander.perf.cache.mem.elementsize.label "内存缓存中的最大元素大小:">
+<!ENTITY pmcommander.cache.mem.elementsize.auto "自动">
+<!ENTITY pmcommander.cache.mem.elementsize.100K "100 KB">
+<!ENTITY pmcommander.cache.mem.elementsize.500K "500 KB">
+<!ENTITY pmcommander.cache.mem.elementsize.1M "1 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.2M "2 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.4M "4 MB">
+<!ENTITY pmcommander.perf.cache.checking.label "比较缓存的页面与网络上的页面：">
+<!ENTITY pmcommander.cache.checking.session "每次会话一次">
+<!ENTITY pmcommander.cache.checking.always "总是">
+<!ENTITY pmcommander.cache.checking.never "从不">
+<!ENTITY pmcommander.cache.checking.expired "过期时">
+<!-- User Interface category -->
+<!ENTITY pmcommander.tab.ui.tabs "标签页">
+<!ENTITY pmcommander.tab.ui.taskbar "任务栏">
+<!ENTITY pmcommander.tab.ui.downloads "下载">
+<!ENTITY pmcommander.tab.ui.forms "表单">
+<!ENTITY pmcommander.tab.ui.fullscreen "全屏">
+<!ENTITY pmcommander.ui.general.urlbar.caption "地址栏">
+<!ENTITY pmcommander.ui.urlbar.autofill.label "自动完成地址栏 (历史记录和书签)">
+<!ENTITY pmcommander.ui.urlbar.autofill.typed.label "也使用以前输入过的地址用于自动完成">
+<!ENTITY pmcommander.ui.urlbar.formatting.label "启用域名高亮">
+<!ENTITY pmcommander.ui.urlbar.trimming.label "启用协议修剪 (去除 http:// 和 ftp://)">
+<!ENTITY pmcommander.ui.urlbar.rss.label "在地址栏中显示订阅点标志">
+<!ENTITY pmcommander.ui.errorpages.label "使用自定义的错误页面">
+<!ENTITY pmcommander.ui.toplevel.image.background.label "独立图像的背景色:">
+<!ENTITY pmcommander.ui.hideplaceholders.label "聚焦输入框时隐藏 UI 占位文本">
+<!ENTITY pmcommander.ui.tabs.animate.label "标签页动画">
+<!ENTITY pmcommander.ui.tabs.resize.immediately.label "关闭一个选项卡后立即调整标签页尺寸">
+<!ENTITY pmcommander.ui.tabs.intitlebar.label "在标题栏中绘制标签页">
+<!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "当我在一个新标签页中打开一个书签时，立即切换过去">
+<!ENTITY pmcommander.ui.tabs.closebuttons.caption "标签页关闭按钮">
+<!ENTITY pmcommander.ui.tabs.closebuttons.label "显示标签页关闭按钮:">
+<!ENTITY pmcommander.ui.tabs.closebuttons.active "仅在活动标签页上">
+<!ENTITY pmcommander.ui.tabs.closebuttons.all "在所有标签页上，如果宽度超过">
+<!ENTITY pmcommander.ui.tabs.closebuttons.none "不显示关闭按钮">
+<!ENTITY pmcommander.ui.tabs.closebuttons.fx1 "在标签栏的尾部">
+<!ENTITY pmcommander.ui.tabs.clipwidth.label "不要显示关闭按钮，如果标签页宽度小于:">
+<!ENTITY pmcommander.ui.tabs.tabswitching.caption "标签页切换">
+<!ENTITY pmcommander.ui.tabs.ctrltab.previews.label "使用 Ctrl-Tab 时使用图形化的标签页切换">
+<!ENTITY pmcommander.ui.tabs.ctrltab.useMRU.label "使用 Ctrl-Tab 时最近使用的标签页优先">
+<!ENTITY pmcommander.ui.tabs.alltabs.previews.label "列出所有标签页时使用图形化的面板">
+<!ENTITY pmcommander.ui.tabs.jumplists.caption "跳转列表 (Windows 7 或更高)">
+<!ENTITY pmcommander.ui.jumplists.enabled.label "启用跳转列表">
+<!ENTITY pmcommander.ui.jumplists.frequent.label "在跳转列表中显示频繁使用的站点">
+<!ENTITY pmcommander.ui.jumplists.recent.label "在跳转列表中显示最近访问的站点">
+<!ENTITY pmcommander.ui.jumplists.tasks.label "在跳转列表中显示浏览器任务">
+<!ENTITY pmcommander.ui.jumplists.limit.label "限制跳转列表的项目数量为:">
+<!ENTITY pmcommander.ui.fullscreen.autohide.label "全屏模式下自动隐藏导航栏和标签页工具栏">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.label "动画化隐藏工具栏:">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.off "从不">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.firstonly "仅首次">
+<!ENTITY pmcommander.ui.fullscreen.autohide.animation.always "始终">
+<!ENTITY pmcommander.ui.fullscreen.html5.caption "HTML5 全屏">
+<!ENTITY pmcommander.ui.fullscreen.html5.enabled.label "启用 HTML5 应用程序的全屏模式">
+<!ENTITY pmcommander.ui.fullscreen.html5.approval.label "要求手动批准每个网站的全屏申请">
+<!ENTITY pmcommander.ui.fullscreen.html5.exit.on.deactivate.label "应用程序不再活动时退出全屏">
+<!ENTITY pmcommander.ui.fullscreen.html5.pointerlock.label "全屏窗口下锁定指针">
+<!ENTITY pmcommander.ui.fullscreen.html5.security.label "仅允许用户界面切换到全屏">
+<!-- Security category -->
+<!ENTITY pmcommander.tab.sec.padlock "挂锁">
+<!ENTITY pmcommander.tab.sec.DOM "DOM">
+<!ENTITY pmcommander.tab.sec.SSL "SSL">
+<!ENTITY pmcommander.tab.sec.ciphers1 "密码本 1">
+<!ENTITY pmcommander.tab.sec.ciphers2 "密码本 2">
+<!ENTITY pmcommander.tab.sec.privacy "隐私">
+<!ENTITY pmcommander.js.jithardening.label "启用 JavaScript JIT 强化">
+<!ENTITY pmcommander.sec.general.js.caption "允许 JavaScript:">
+<!ENTITY pmcommander.js.imgsrc.label "更改图像源属性">
+<!ENTITY pmcommander.js.window_flip.label "提升或降低窗口">
+<!ENTITY pmcommander.js.window_move_resize.label "移动或调整窗口">
+<!ENTITY pmcommander.js.window_close.label "关闭窗口">
+<!ENTITY pmcommander.js.clipboard.label "操作剪贴板">
+<!ENTITY pmcommander.js.contextmenu.label "禁用或更改右键菜单">
+<!ENTITY pmcommander.sec.fileuri.strict.label "对 file:// 使用严格的同源策略">
+<!ENTITY pmcommander.sec.plugins.clicktoplay.label "启用每个站点的插件权限管理">
+<!ENTITY pmcommander.sec.padlock.shown.label "显示挂锁">
+<!ENTITY pmcommander.sec.padlock.style.label "在哪里显示挂锁:">
+<!ENTITY pmcommander.sec.padlock.style.ip.right "在标识面板中，右侧">
+<!ENTITY pmcommander.sec.padlock.style.ip.left "在标识面板中，左侧">
+<!ENTITY pmcommander.sec.padlock.style.urlbar.right "在地址栏的尾部">
+<!ENTITY pmcommander.sec.padlock.style.statusbar "在状态栏中">
+<!ENTITY pmcommander.sec.padlock.style.tabs.right "在标签页栏中，右侧">
+<!ENTITY pmcommander.sec.padlock.style.ip.right.classic "标识面板，右侧 (经典)">
+<!ENTITY pmcommander.sec.padlock.style.ip.left.classic "标识面板，左侧 (经典)">
+<!ENTITY pmcommander.sec.padlock.style.urlbar.right.classic "地址栏的结尾 (经典)">
+<!ENTITY pmcommander.sec.padlock.style.statusbar.classic "在状态栏中 (经典)">
+<!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "标签栏，右侧 (经典)">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.label "安全站点的地址栏效果:">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.none "无视觉效果">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "使用边框阴影">
+<!ENTITY pmcommander.sec.dom.windowopen.caption "弹出窗口">
+<!ENTITY pmcommander.sec.dom.when.opening.allow.label "当打开一个弹出窗口时，允许脚本:">
+<!ENTITY pmcommander.sec.dom.closebutton.label "禁用关闭按钮">
+<!ENTITY pmcommander.sec.dom.minbutton.label "禁用最小化按钮">
+<!ENTITY pmcommander.sec.dom.addressbar.label "移除地址栏">
+<!ENTITY pmcommander.sec.dom.navbar.label "移除导航栏按钮">
+<!ENTITY pmcommander.sec.dom.statusbar.label "移除状态栏">
+<!ENTITY pmcommander.sec.dom.menubar.label "移除菜单栏">
+<!ENTITY pmcommander.sec.dom.bmtoolbar.label "移除书签工具栏">
+<!ENTITY pmcommander.sec.dom.scrollbars.label "禁用滚动条的使用">
+<!ENTITY pmcommander.sec.dom.titlebar.label "禁用标题栏">
+<!ENTITY pmcommander.sec.ssl.domain.display.label "对于域名已验证的安全站点，显示:">
+<!ENTITY pmcommander.sec.ssl.domain.display.none "无文本">
+<!ENTITY pmcommander.sec.ssl.domain.display.topdomain "顶级域名">
+<!ENTITY pmcommander.sec.ssl.domain.display.host "完整的主机名称">
+<!ENTITY pmcommander.sec.ssl.tls.minversion.label "最低支持协议:">
+<!ENTITY pmcommander.sec.ssl.tls.maxversion.label "最高支持协议:">
+<!ENTITY pmcommander.sec.ssl.tls.version.SSL3 "SSL 3.0">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS10 "TLS 1.0">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS11 "TLS 1.1">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS12 "TLS 1.2">
+<!ENTITY pmcommander.sec.ssl.mixedcontent.caption "混合内容站点 (SSL/非SSL)">
+<!ENTITY pmcommander.sec.ssl.no.mixed.scripts.label "屏蔽非 SSL 脚本">
+<!ENTITY pmcommander.sec.ssl.no.mixed.display.label "屏蔽非 SSL 的显示项目">
+<!ENTITY pmcommander.sec.ssl.hardening.caption "SSL 强化">
+<!ENTITY pmcommander.sec.ssl.require.safe.neg.label "要求安全的 SSL 协商">
+<!ENTITY pmcommander.sec.ssl.unsafe.neg.broken.label "将不安全的 SSL 协商视作故障">
+<!ENTITY pmcommander.sec.ssl.enable.false.start.label "为 SSL 握手启用“抢跑”（SSL false starts）">
+<!ENTITY pmcommander.sec.ciphers.caption "使用下列 SSL/TLS 密码本:">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-128 "DHE-DSS-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-256 "DHE-DSS-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-cam-128 "DHE-DSS-Camellia 128 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-cam-256 "DHE-DSS-Camellia 256 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-dss-des "DHE-DSS-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-128 "DHE-RSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-256 "DHE-RSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-128 "DHE-RSA-Camellia 128 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-256 "DHE-RSA-Camellia 256 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-des "DHE-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-gcm-128 "RSA-AES-GCM 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-128 "RSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-256 "RSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-cam-128 "RSA-Camellia 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-cam-256 "RSA-Camellia 256 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-des "RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.rsa-fips "RSA-FIPS-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.rsa-rc4-sha "RSA-RC4-SHA">
+<!ENTITY pmcommander.sec.ciphers.rsa-rc4-md5 "RSA-RC4-MD5">
+<!ENTITY pmcommander.sec.ciphers.rsa-seed "RSA-SEED">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-aes-128 "ECDH-ECDSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-aes-256 "ECDH-ECDSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-des "ECDH-ECDSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-rc4-128 "ECDH-ECDSA-RC4 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-aes-128 "ECDH-RSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-aes-256 "ECDH-RSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-des "ECDH-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-rc4-128 "ECDH-RSA-RC4 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-aes-gcm-128 "ECDHE-AES-GCM 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128 "ECDHE-ECDSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256 "ECDHE-ECDSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-des "ECDHE-ECDSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-rc4-128 "ECDHE-ECDSA-RC4 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-128 "ECDHE-RSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-256 "ECDHE-RSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-des "ECDHE-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-rc4-128 "ECDHE-RSA-RC4 128 bit">
+<!ENTITY pmcommander.sec.priv.cache.ssl.label "不要缓存通过安全连接收到的页面">
+<!ENTITY pmcommander.sec.priv.cache.ssl.info "需要注意的是，该种缓存仅会发生网站允许时。此选项仅生效在通过安全连接收到的属于从不缓存到磁盘上的页面，而无视该网站允许缓存与否。">
+<!ENTITY pmcommander.sec.priv.sc.accept.always.label "始终接受会话 Cookie">
+<!ENTITY pmcommander.sec.priv.3pc.sessiononly.label "关闭浏览器时清除第三方 Cookie">
+<!ENTITY pmcommander.sec.priv.geolocation.label "启用浏览器位置感知">
+<!ENTITY pmcommander.sec.priv.referers.caption "刷新">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.label "发送 referer 标头:">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.never "从不发送">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.onclicks "仅在点击事件上发送">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.clicks_and_images "在点击和图像上发送">
+<!ENTITY pmcommander.sec.priv.referer.spoofheader.label "发送哄骗的 referer 到目标 URL">
+<!ENTITY pmcommander.sec.priv.referer.trim.label "截短 referer:">
+<!ENTITY pmcommander.sec.priv.referer.trim.none "不截短 URL (默认)">
+<!ENTITY pmcommander.sec.priv.referer.trim.shpp "截短为 协议 + 主机 + 端口 + 路径">
+<!ENTITY pmcommander.sec.priv.referer.trim.shp "截短为 协议 + 主机 + 端口">
+<!ENTITY pmcommander.sec.priv.referer.xop.label "跨源 referer 策略:">
+<!ENTITY pmcommander.sec.priv.referer.xop.always "始终发送 (默认)">
+<!ENTITY pmcommander.sec.priv.referer.xop.basedomain "仅在基础域名匹配时发送">
+<!ENTITY pmcommander.sec.priv.referer.xop.host "仅在主机匹配时发送">
+<!-- Other/misc. category -->
+<!ENTITY pmcommander.tab.misc.tools "工具">
+<!ENTITY pmcommander.tab.misc.reset "重置">
+<!ENTITY pmcommander.tab.misc.other "其他">
+<!ENTITY pmcommander.info.restartwarning "警告：改变这些设置需要一次浏览器重启。">
+<!ENTITY pmcommander.misc.modules.pdfjs "启用内置的 PDF 查看器">
+<!ENTITY pmcommander.misc.reset.info "如果设置阻挡了浏览器的正常运行，您可以在这里重置首选项为浏览器默认设置以从故障中恢复。">
+<!ENTITY pmcommander.reset.allprefs.label "重置所有首选项">
+<!ENTITY pmcommander.reset.allprefs.info "警告：这将重置所有用户首选项到浏览器的默认设置，然后关闭此窗口。请注意：这将包括所有用户设置的首选项，也包括其他已安装扩展的设置（本附加组件除外），并恢复所有浏览器的出厂设置。">
+<!ENTITY pmcommander.misc.bookmarkbackups.caption "书签备份">
+<!ENTITY pmcommander.misc.bookmarkbackups.limit.label "留下多少书签备份 (-1 = 无限):">
+<!ENTITY pmcommander.misc.bookmarkbackups.html.label "浏览器关闭时导出一个 HTML 书签备份">
+<!ENTITY pmcommander.misc.dom.storage.caption "HTML5 本地存储">
+<!ENTITY pmcommander.misc.dom.storage.enabled.label "启用 HTML5 本地存储">
+<!ENTITY pmcommander.misc.dom.storage.limit.label "每个域名存储的数据额度的默认值:">
+<!-- Units of measurement -->
+<!ENTITY pmcommander.unit.seconds "秒">
+<!ENTITY pmcommander.unit.ms "毫秒">
+<!ENTITY pmcommander.unit.px "像素">
+<!ENTITY pmcommander.unit.bytes "字节">
+<!ENTITY pmcommander.unit.KB "KB">
+<!ENTITY pmcommander.unit.MB "MB">

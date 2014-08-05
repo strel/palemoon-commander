@@ -12,8 +12,6 @@
 <!ENTITY pmcommander.tab.graphics.fonts "Teckensnitt">
 <!ENTITY pmcommander.tab.graphics.CMS "CMS">
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "Använd åtgärdslösningar för specifika fel i drivrutinen">
-<!ENTITY pmcommander.graphics.general.azure.caption "Azure">
-<!ENTITY pmcommander.graphics.general.azure.content.label "Använd Azure för innehåll">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Inledande återgivningsfördröjning:">
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
 <!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "Aktivera Direct2D-acceleration">
@@ -26,6 +24,7 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.default "Standard">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Föredra Direct3D 9">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Föredra OpenGL">
+<!ENTITY pmcommander.graphics.rendering.use.deprecated.label "Använd gammal (föråldrad) renderingsmetod">
 <!ENTITY pmcommander.graphics.3d.webgl.native.label "Föredra OpenGL för WebGL">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Tvinga kantutjämning på">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "Kantutjämningsnivå:">
@@ -310,6 +309,20 @@
 <!ENTITY pmcommander.sec.priv.sc.accept.always.label "Acceptera alltid sessionskakor">
 <!ENTITY pmcommander.sec.priv.3pc.sessiononly.label "Rensa tredjepartskakor när webbläsaren avslutas">
 <!ENTITY pmcommander.sec.priv.geolocation.label "Aktivera geolokalisering i webbläsaren">
+<!ENTITY pmcommander.sec.priv.referers.caption "Referensinformation">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.label "Skicka referenssidhuvuden:">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.never "Skicka aldrig referensinformation">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.onclicks "Skicka endast för klickningar">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.clicks_and_images "Skicka för klickningar och bilder">
+<!ENTITY pmcommander.sec.priv.referer.spoofheader.label "Falsk referensinformation till mål-URL">
+<!ENTITY pmcommander.sec.priv.referer.trim.label "Beskär referensadress:">
+<!ENTITY pmcommander.sec.priv.referer.trim.none "Ingen beskärning av URL:en (standard)">
+<!ENTITY pmcommander.sec.priv.referer.trim.shpp "Beskär till protokoll + värd + port + sökväg">
+<!ENTITY pmcommander.sec.priv.referer.trim.shp "Beskär till protokoll + värd + port">
+<!ENTITY pmcommander.sec.priv.referer.xop.label "Princip för Cross-Origin-referensinfo:">
+<!ENTITY pmcommander.sec.priv.referer.xop.always "Skicka alltid (standard)">
+<!ENTITY pmcommander.sec.priv.referer.xop.basedomain "Skicka om basdomänen matchar">
+<!ENTITY pmcommander.sec.priv.referer.xop.host "Skicka om värden matchar">
 <!-- Other/misc. category -->
 <!ENTITY pmcommander.tab.misc.tools "Verktyg">
 <!ENTITY pmcommander.tab.misc.reset "Återställning">

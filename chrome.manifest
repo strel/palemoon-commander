@@ -20,8 +20,9 @@ content	pmcommander			chrome/content/
 
 # Locale registration
 locale	pmcommander	en-US		chrome/locale/en-US/
-locale	pmcommander	nl			chrome/locale/nl/
+locale	pmcommander	nl-NL		chrome/locale/nl-NL/
 locale	pmcommander	sv-SE		chrome/locale/sv-SE/
+locale	pmcommander	zh-CN		chrome/locale/zh-CN/
 
 # Skin registration
 skin	pmcommander	classic/1.0	chrome/skin/all/

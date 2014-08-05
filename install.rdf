@@ -34,9 +34,9 @@
 
 		<!-- Localizations -->
 
-		<em:localized><!-- nl -->
+		<em:localized><!-- nl-NL -->
 			<Description>
-				<em:locale>nl</em:locale>
+				<em:locale>nl-NL</em:locale>
 				<em:name>Pale Moon Commander</em:name>
 				<em:description>Geavanceerde voorkeuren voor Pale Moon</em:description>
 				<em:translator>Moonchild / MarkH [babelzilla]</em:translator>
@@ -49,6 +49,15 @@
 				<em:name>Pale Moon Commander</em:name>
 				<em:description>Avancerade inställningar för Pale Moon</em:description>
 				<em:translator>Mikael Hiort af Ornäs</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized><!-- zh-CN -->
+			<Description>
+				<em:locale>zh-CN</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>适用于 Pale Moon 的高级首选项编辑器</em:description>
+				<em:translator>YFdyh000</em:translator>
 			</Description>
 		</em:localized>
 		
