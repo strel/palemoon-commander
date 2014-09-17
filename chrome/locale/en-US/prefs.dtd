@@ -59,7 +59,7 @@
 <!ENTITY pmcommander.graphics.cleartype.mode.symmetric "Natural Symmetric">
 <!ENTITY pmcommander.graphics.cleartype.level.label "ClearType level:">
 <!ENTITY pmcommander.graphics.cleartype.contrast.label "ClearType contrast:">
-<!ENTITY pmcommander.graphics.cleartype.gamma.label "Cleartype gamma:">
+<!ENTITY pmcommander.graphics.cleartype.gamma.label "ClearType gamma:">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.label "Subpixel rendering:">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.auto "Automatic">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.flat "Flat">
@@ -221,12 +221,12 @@
 <!ENTITY pmcommander.ui.tabs.ctrltab.useMRU.label "Prioritize recently used tabs for Ctrl-Tab">
 <!ENTITY pmcommander.ui.tabs.alltabs.previews.label "Use graphical pane when listing all tabs">
 
-<!ENTITY pmcommander.ui.tabs.jumplists.caption "Jump Lists (Window 7 or later)">
-<!ENTITY pmcommander.ui.jumplists.enabled.label "Enable jump lists">
-<!ENTITY pmcommander.ui.jumplists.frequent.label "Show frequently used sites in jump list">
-<!ENTITY pmcommander.ui.jumplists.recent.label "Show recently visted sites in jump list">
-<!ENTITY pmcommander.ui.jumplists.tasks.label "Show browser tasks in jump list">
-<!ENTITY pmcommander.ui.jumplists.limit.label "Limit the number of jumplist items to:">
+<!ENTITY pmcommander.ui.tabs.jumplists.caption "Jump Lists (Windows 7 or later)">
+<!ENTITY pmcommander.ui.jumplists.enabled.label "Enable Jump Lists">
+<!ENTITY pmcommander.ui.jumplists.frequent.label "Show frequently used sites in Jump List">
+<!ENTITY pmcommander.ui.jumplists.recent.label "Show recently visted sites in Jump List">
+<!ENTITY pmcommander.ui.jumplists.tasks.label "Show browser tasks in Jump List">
+<!ENTITY pmcommander.ui.jumplists.limit.label "Limit the number of Jump List items to:">
 
 <!ENTITY pmcommander.ui.fullscreen.autohide.label "Auto-hide the Navigation and Tab toolbars in full screen mode">
 <!ENTITY pmcommander.ui.fullscreen.autohide.animation.label "Animate the hiding of toolbars:">
