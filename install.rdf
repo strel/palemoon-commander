@@ -30,9 +30,18 @@
 		<em:name>Pale Moon Commander</em:name>
 		<em:optionsURL>chrome://pmcommander/content/prefs.xul</em:optionsURL>
 		<em:type>2</em:type>
-		<em:version>1.4.0</em:version>
+		<em:version>1.4.1</em:version>
 
 		<!-- Localizations -->
+
+		<em:localized><!-- es-AR -->
+			<Description>
+				<em:locale>es-AR</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Configuración avanzada para Pale Moon</em:description>
+				<em:translator>KNTRO</em:translator>
+			</Description>
+		</em:localized>
 
 		<em:localized><!-- nl-NL -->
 			<Description>
