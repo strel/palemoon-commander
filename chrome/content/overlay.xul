@@ -25,12 +25,12 @@
      
     <menupopup id="menu_ToolsPopup">
       <menuitem id="pmcommander-options-fx" oncommand="PalemoonCommander.openOptions();"
-        label="&pmcommander.menu.options.label;"/>
+        insertafter="menu_preferences" label="&pmcommander.menu.options.label;"/>
     </menupopup>
     
     <menupopup id="appmenu_customizeMenu">
-          <menuitem id="pmcommander-options-app" oncommand="PalemoonCommander.openOptions();"
-        label="&pmcommander.menu.options.label;"/>
+      <menuitem id="pmcommander-options-app" oncommand="PalemoonCommander.openOptions();"
+        insertafter="appmenu_preferences" label="&pmcommander.menu.options.label;"/>
     </menupopup>
 
 </overlay>
