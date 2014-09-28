@@ -48,7 +48,7 @@
 			  onchange="pmcommanderPrefs.d2dGlobalChanged();" />
 			<preference id="pmcommander-pref-d2d-force"                  name="gfx.direct2d.force-enabled"             type="bool" />
 			<preference id="pmcommander-pref-layers-enabled"             name="layers.acceleration.disabled"           type="bool" inverted="true" 
-				onchange="pmcommanderPrefs.layeraccGlobalChanged();" />
+			  onchange="pmcommanderPrefs.layeraccGlobalChanged();" />
 			<preference id="pmcommander-pref-layers-drawfps"             name="layers.acceleration.draw-fps"           type="bool" />
 			<preference id="pmcommander-pref-layers-force"               name="layers.acceleration.force-enabled"      type="bool" />
 			<preference id="pmcommander-pref-layers-mode"                name="extensions.pmcommander.layers.mode"     type="int" 

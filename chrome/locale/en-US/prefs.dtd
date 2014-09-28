@@ -42,7 +42,6 @@
 <!ENTITY pmcommander.graphics.3d.msaa.level.8 "x8">
 <!ENTITY pmcommander.graphics.3d.msaa.level.16 "x16">
 
-<!ENTITY pmcommander.graphics.fonts.directwrite.label "Enable DirectWrite font rendering">
 <!ENTITY pmcommander.graphics.fonts.directwrite.gdi.label "Use GDI table loading for DirectWrite">
 <!ENTITY pmcommander.graphics.fonts.graphite.label "Enable Graphite font rendering">
 
