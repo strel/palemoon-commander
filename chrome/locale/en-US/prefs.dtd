@@ -67,6 +67,7 @@
 <!ENTITY pmcommander.graphics.cleartype.pxmode.BGR "BGR order">
 <!ENTITY pmcommander.graphics.cleartype.gdimaxsize "Render with GDI Classic up to font size:">
 
+<!ENTITY pmcommander.graphics.color.override.a11y "Don't use accessibility theme page colors">
 <!ENTITY pmcommander.graphics.color.ICC.caption "Color Management System (CMS)">
 <!ENTITY pmcommander.graphics.color.ICCv4.label "Enable ICC version 4 profiles">
 <!ENTITY pmcommander.graphics.color.ICCmode.label "CMS mode:">

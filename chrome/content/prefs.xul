@@ -67,6 +67,7 @@
 			<preference id="pmcommander-pref-cleartype-pixel-structure"  name="gfx.font_rendering.cleartype_params.pixel_structure" 	type="int" />
 			<preference id="pmcommander-pref-cleartype-gdi-max-size"		 name="gfx.font_rendering.cleartype_params.force_gdi_classic_max_size" type="int" />
 			
+			<preference id="pmcommander-pref-color-override-a11y"			 name="browser.display.ignore_accessibility_theme" type="bool" />
 			<preference id="pmcommander-pref-color-ICCv4"					 name="gfx.color_management.enablev4"			  type="bool" />
 			<preference id="pmcommander-pref-color-ICCmode"					 name="gfx.color_management.mode"				  type="int" />
 			<preference id="pmcommander-pref-color-ICCintent"				 name="gfx.color_management.rendering_intent"  type="int" />
@@ -181,9 +182,10 @@
 				
 				</tabpanel>
 				<tabpanel id="pmcommander-graphics-color" orient="vertical">
-					<label>&pmcommander.info.restartwarning;</label>
+					<checkbox id="pmcommander-graphics-color-override-a11y-check" preference="pmcommander-pref-color-override-a11y" label="&pmcommander.graphics.color.override.a11y;" />
 					<groupbox id="pmcommander-graphics-color-ICC">
 						<caption label="&pmcommander.graphics.color.ICC.caption;" />
+						<label>&pmcommander.info.restartwarning;</label>
 						<checkbox id="pmcommander-color-ICCv4-check" preference="pmcommander-pref-color-ICCv4" label="&pmcommander.graphics.color.ICCv4.label;" />
 						<hbox align="center">
 						   <label id="pmcommander-color-ICCmode-label" control="pmcommander-color-ICCmode-menu">&pmcommander.graphics.color.ICCmode.label;</label>
