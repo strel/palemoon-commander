@@ -79,7 +79,7 @@
 				<tab id="pmcommander-tab-graphics-rendering"  label="&pmcommander.tab.graphics.rendering;" />
 				<tab id="pmcommander-tab-graphics-3D" label="&pmcommander.tab.graphics.3D;" />
 				<tab id="pmcommander-tab-graphics-fonts" label="&pmcommander.tab.graphics.fonts;" />
-				<tab id="pmcommander-tab-graphics-CMS" label="&pmcommander.tab.graphics.CMS;" />
+				<tab id="pmcommander-tab-graphics-color" label="&pmcommander.tab.graphics.color;" />
 			</tabs>
 
 			<tabpanels flex="1">
