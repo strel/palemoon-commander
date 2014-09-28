@@ -467,7 +467,7 @@
 								<menupopup>
 									<menuitem label="&pmcommander.cache.compression.off;" value="0" />
 									<menuitem label="&pmcommander.cache.compression.low;" value="1" />
-									<menuitem label="&pmcommander.cache.compression.medium;" value="4" />
+									<menuitem label="&pmcommander.cache.compression.medium;" value="3" />
 									<menuitem label="&pmcommander.cache.compression.high;" value="9" />
 								</menupopup>
 							</menulist>
