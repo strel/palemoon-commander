@@ -703,6 +703,9 @@
 			<preference id="pmcommander-pref-sec-ssl-unsafe-neg-broken"		name="security.ssl.treat_unsafe_negotiation_as_broken" type="bool" />
 			<preference id="pmcommander-pref-sec-ssl-enable-false-start"	name="security.ssl.enable_false_start"						type="bool" />
 			
+			<preference id="pmcommander-pref-sec-ssl-enable-ocsp-stapling"	name="security.ssl.enable_ocsp_stapling"					type="bool" />
+			<preference id="pmcommander-pref-sec-ssl-allow-ocsp-unsafe"		name="security.ssl.allow_unsafe_ocsp_response"			type="bool" />
+
 			<preference id="pmcommander-pref-sec-cipher-ECDHE-AES-GCM-128"	name="security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256"	type="bool" />
 			<preference id="pmcommander-pref-sec-cipher-RSA-AES-GCM-128"	name="security.ssl3.ecdhe_rsa_aes_128_gcm_sha256"		type="bool" />
 			
@@ -869,6 +872,8 @@
 						<checkbox id="pmcommander-sec-ssl-unsafe-neg-broken-check" preference="pmcommander-pref-sec-ssl-unsafe-neg-broken" label="&pmcommander.sec.ssl.unsafe.neg.broken.label;" />
 					</groupbox>
 					<checkbox id="pmcommander-sec-ssl-enable-false-start-check" preference="pmcommander-pref-sec-ssl-enable-false-start" label="&pmcommander.sec.ssl.enable.false.start.label;" />
+					<checkbox id="pmcommander-sec-ssl-enable-ocsp-stapling-check" preference="pmcommander-pref-sec-ssl-enable-ocsp-stapling" label="&pmcommander.sec.ssl.enable.ocsp.stapling.label;" />
+					<checkbox id="pmcommander-sec-ssl-allow-ocsp-unsafe-check" preference="pmcommander-pref-sec-ssl-allow-ocsp-unsafe" label="&pmcommander.sec.ssl.allow.ocsp.unsafe.label;" />
 				</tabpanel>
 				<tabpanel id="pmcommander-sec-ciphers" orient="vertical">
 					<groupbox id="pmcommander-sec-ssl3-ciphers">

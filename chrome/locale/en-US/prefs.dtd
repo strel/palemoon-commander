@@ -307,6 +307,8 @@
 <!ENTITY pmcommander.sec.ssl.require.safe.neg.label "Require safe SSL negotiation">
 <!ENTITY pmcommander.sec.ssl.unsafe.neg.broken.label "Treat unsafe SSL negotiation as broken">
 <!ENTITY pmcommander.sec.ssl.enable.false.start.label "Enable false starts for SSL handshakes">
+<!ENTITY pmcommander.sec.ssl.enable.ocsp.stapling.label "Enable OCSP-stapling">
+<!ENTITY pmcommander.sec.ssl.allow.ocsp.unsafe.label "Allow expired stapled OCSP responses (unsafe)">
 
 <!ENTITY pmcommander.sec.ciphers.caption "Use the following SSL/TLS ciphers:">
 
