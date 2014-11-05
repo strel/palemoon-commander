@@ -529,12 +529,15 @@
 			<preference id="pmcommander-pref-urlbar-formatting"      name="browser.urlbar.formatting.enabled"     type="bool" />
 			<preference id="pmcommander-pref-urlbar-trimming"        name="browser.urlbar.trimURLs"               type="bool" />
 			<preference id="pmcommander-pref-urlbar-rss" 		      name="browser.urlbar.rss"          		      type="bool" />
+			
 			<preference id="pmcommander-pref-tabs-animate" 				name="browser.tabs.animate"						type="bool" />
 			<preference id="pmcommander-pref-tabs-resize-immediately" name="browser.tabs.resize_immediately"		type="bool" />
 			<preference id="pmcommander-pref-tabs-intitlebar"			name="browser.tabs.drawInTitlebar"				type="bool" />
 			<preference id="pmcommander-pref-tabs-bookmark-switchto"	name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
 			<preference id="pmcommander-pref-tabs-closebuttons" 		name="browser.tabs.closeButtons"					type="int" />
 			<preference id="pmcommander-pref-tabs-clipwidth" 			name="browser.tabs.tabClipWidth"					type="int" />
+			
+			<preference id="pmcommander-pref-tabs-newtab-url" 			name="browser.newtab.url"							type="string" />			
 			
 			<preference id="pmcommander-pref-errorpages" 				name="browser.xul.error_pages.enabled"			type="bool" />
 			<preference id="pmcommander-pref-urlbar-autofill" 			name="browser.urlbar.autoFill"					type="bool" />
@@ -587,6 +590,10 @@
 						<textbox id="pmcommander-images-background-input" preference="pmcommander-pref-images-background" />
 					</hbox>
 					<checkbox id="pmcommander-ui-hideplaceholders" preference="pmcommander-pref-ui-hideplaceholders" label="&pmcommander.ui.hideplaceholders.label;" />
+					<hbox align="center">
+						<label id="pmcommander-ui-newtaburl-label" control="pmcommander-ui-newtaburl-input">&pmcommander.ui.newtaburl.label;</label>
+						<textbox size="55" id="pmcommander-ui-newtaburl-input" preference="pmcommander-pref-tabs-newtab-url" />
+					</hbox>
 				</tabpanel>
 				<tabpanel id="pmcommander-ui-tabs" orient="vertical">
 					<checkbox id="pmcommander-ui-tabs-animate-check" preference="pmcommander-pref-tabs-animate" label="&pmcommander.ui.tabs.animate.label;" />

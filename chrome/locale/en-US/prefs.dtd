@@ -205,6 +205,8 @@
 <!ENTITY pmcommander.ui.toplevel.image.background.label "Background color for stand-alone images:">
 <!ENTITY pmcommander.ui.hideplaceholders.label "Hide UI placeholder text when focusing input">
 
+<!ENTITY pmcommander.ui.newtaburl.label "New tab URL:">
+
 <!ENTITY pmcommander.ui.tabs.animate.label "Animate tabs">
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Immediately resize tabs when closing a tab">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Draw tabs in the title bar">
