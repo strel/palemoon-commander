@@ -10,7 +10,7 @@
 <!ENTITY pmcommander.tab.graphics.rendering "Rendering">
 <!ENTITY pmcommander.tab.graphics.3D "3D">
 <!ENTITY pmcommander.tab.graphics.fonts "Lettertypen">
-<!ENTITY pmcommander.tab.graphics.CMS "CMS">
+<!ENTITY pmcommander.tab.graphics.color "Kleuren">
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "Oplossingen voor specifieke driverbugs gebruiken">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Wachttijd vóór eerste tekenopdracht:">
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
@@ -26,14 +26,13 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Voorkeur voor OpenGL">
 <!ENTITY pmcommander.graphics.rendering.use.deprecated.label "Oude (afgeschafte) methode renderingmethode gebruiken">
 <!ENTITY pmcommander.graphics.3d.webgl.native.label "Bij voorkeur OpenGL voor WebGL gebruiken">
-<!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Anti-aliasing afdwingen op">
+<!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Anti-aliasing forceren">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "Sterkte van anti-aliasing:">
 <!ENTITY pmcommander.graphics.3d.msaa.level.0 "Uit">
 <!ENTITY pmcommander.graphics.3d.msaa.level.2 "x2">
 <!ENTITY pmcommander.graphics.3d.msaa.level.4 "x4">
 <!ENTITY pmcommander.graphics.3d.msaa.level.8 "x8">
 <!ENTITY pmcommander.graphics.3d.msaa.level.16 "x16">
-<!ENTITY pmcommander.graphics.fonts.directwrite.label "DirectWrite voor lettertypen gebruiken">
 <!ENTITY pmcommander.graphics.fonts.directwrite.gdi.label "Laden van GDI-tabel voor DirectWrite gebruiken">
 <!ENTITY pmcommander.graphics.fonts.graphite.label "Graphite-lettertypen gebruiken">
 <!ENTITY pmcommander.graphics.fonts.cleartype.caption "ClearType">
@@ -56,6 +55,7 @@
 <!ENTITY pmcommander.graphics.cleartype.pxmode.RGB "RGB">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.BGR "BGR">
 <!ENTITY pmcommander.graphics.cleartype.gdimaxsize "Met GDI klassiek renderen tot lettergrootte:">
+<!ENTITY pmcommander.graphics.color.override.a11y "Kleuren van het toegankelijkheidsthema niet gebruiken">
 <!ENTITY pmcommander.graphics.color.ICC.caption "Color Management System (CMS)">
 <!ENTITY pmcommander.graphics.color.ICCv4.label "ICC versie 4-profielen gebruiken">
 <!ENTITY pmcommander.graphics.color.ICCmode.label "CMS-modus:">
@@ -174,6 +174,7 @@
 <!ENTITY pmcommander.ui.errorpages.label "Aangepaste foutmeldingsschermen gebruiken">
 <!ENTITY pmcommander.ui.toplevel.image.background.label "Achtergrondkleur voor op zichzelf staande afbeeldingen:">
 <!ENTITY pmcommander.ui.hideplaceholders.label "Tijdelijke tekstaanduiding in de GUI verbergen bij invoeren">
+<!ENTITY pmcommander.ui.newtaburl.label "URL voor nieuwe tab:">
 <!ENTITY pmcommander.ui.tabs.animate.label "Tabbladen animeren">
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Grootte van tabbladen onmiddellijk aanpassen bij sluiten tabblad">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Tabbladen in de titelbalk">
@@ -266,6 +267,8 @@
 <!ENTITY pmcommander.sec.ssl.require.safe.neg.label "Veilige SSL-onderhandeling vereisen">
 <!ENTITY pmcommander.sec.ssl.unsafe.neg.broken.label "Onveilige SSL-onderhandeling als niet-beveiligd beschouwen">
 <!ENTITY pmcommander.sec.ssl.enable.false.start.label "Valse start voor SSL-handshakes gebruiken">
+<!ENTITY pmcommander.sec.ssl.enable.ocsp.stapling.label "Vastnieten van OCSP-antwoorden gebruiken">
+<!ENTITY pmcommander.sec.ssl.allow.ocsp.unsafe.label "Laat verlopen vastgeniette OCSP-antwoorden toe (onveilig)">
 <!ENTITY pmcommander.sec.ciphers.caption "De volgende SSL/TLS ciphers gebruiken:">
 <!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-128 "DHE-DSS-AES 128-bit">
 <!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-256 "DHE-DSS-AES 256-bit">

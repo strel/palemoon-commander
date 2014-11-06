@@ -10,7 +10,7 @@
 <!ENTITY pmcommander.tab.graphics.rendering "渲染">
 <!ENTITY pmcommander.tab.graphics.3D "3D">
 <!ENTITY pmcommander.tab.graphics.fonts "字体">
-<!ENTITY pmcommander.tab.graphics.CMS "CMS">
+<!ENTITY pmcommander.tab.graphics.color "颜色">
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "使用对特定驱动问题的特定解决方案">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "初次绘制延迟:">
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
@@ -33,7 +33,6 @@
 <!ENTITY pmcommander.graphics.3d.msaa.level.4 "x4">
 <!ENTITY pmcommander.graphics.3d.msaa.level.8 "x8">
 <!ENTITY pmcommander.graphics.3d.msaa.level.16 "x16">
-<!ENTITY pmcommander.graphics.fonts.directwrite.label "启用 DirectWrite 字体渲染">
 <!ENTITY pmcommander.graphics.fonts.directwrite.gdi.label "为 DirectWrite 使用 GDI 表格加载">
 <!ENTITY pmcommander.graphics.fonts.graphite.label "启用 Graphite 字体渲染">
 <!ENTITY pmcommander.graphics.fonts.cleartype.caption "ClearType">
@@ -49,13 +48,14 @@
 <!ENTITY pmcommander.graphics.cleartype.mode.symmetric "天然均衡">
 <!ENTITY pmcommander.graphics.cleartype.level.label "ClearType 级别:">
 <!ENTITY pmcommander.graphics.cleartype.contrast.label "ClearType 对比度:">
-<!ENTITY pmcommander.graphics.cleartype.gamma.label "Cleartype 伽马值:">
+<!ENTITY pmcommander.graphics.cleartype.gamma.label "ClearType 伽马值:">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.label "次像素渲染:">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.auto "自动">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.flat "平面">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.RGB "RGB 顺序">
 <!ENTITY pmcommander.graphics.cleartype.pxmode.BGR "BGR 顺序">
 <!ENTITY pmcommander.graphics.cleartype.gdimaxsize "渲染 GDI 经典 时提升字体大小到:">
+<!ENTITY pmcommander.graphics.color.override.a11y "不使用无障碍主题的页面颜色">
 <!ENTITY pmcommander.graphics.color.ICC.caption "颜色管理系统 (CMS)">
 <!ENTITY pmcommander.graphics.color.ICCv4.label "启用 ICC 第四版配置">
 <!ENTITY pmcommander.graphics.color.ICCmode.label "CMS 模式:">
@@ -174,6 +174,7 @@
 <!ENTITY pmcommander.ui.errorpages.label "使用自定义的错误页面">
 <!ENTITY pmcommander.ui.toplevel.image.background.label "独立图像的背景色:">
 <!ENTITY pmcommander.ui.hideplaceholders.label "聚焦输入框时隐藏 UI 占位文本">
+<!ENTITY pmcommander.ui.newtaburl.label "新标签页 URL：">
 <!ENTITY pmcommander.ui.tabs.animate.label "标签页动画">
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "关闭一个选项卡后立即调整标签页尺寸">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "在标题栏中绘制标签页">
@@ -266,6 +267,8 @@
 <!ENTITY pmcommander.sec.ssl.require.safe.neg.label "要求安全的 SSL 协商">
 <!ENTITY pmcommander.sec.ssl.unsafe.neg.broken.label "将不安全的 SSL 协商视作故障">
 <!ENTITY pmcommander.sec.ssl.enable.false.start.label "为 SSL 握手启用“抢跑”（SSL false starts）">
+<!ENTITY pmcommander.sec.ssl.enable.ocsp.stapling.label "启用 OCSP 捆扎">
+<!ENTITY pmcommander.sec.ssl.allow.ocsp.unsafe.label "允许过期的 OCSP 捆扎响应（不安全）">
 <!ENTITY pmcommander.sec.ciphers.caption "使用下列 SSL/TLS 密码本:">
 <!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-128 "DHE-DSS-AES 128 bit">
 <!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-256 "DHE-DSS-AES 256 bit">
