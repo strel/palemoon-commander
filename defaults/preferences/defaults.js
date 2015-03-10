@@ -11,7 +11,7 @@
 *   The Initial Developer of the Original Code is 
 *   Mark Straver <moonchild@palemoon.org>.
 *   
-*   This code is Copyright (C) 2012-2013 the Initial Developer. All Rights Reserved.
+*   This code is Copyright (C) 2012-2015 the Initial Developer. All Rights Reserved.
 *    
 *   ***** END LICENSE BLOCK *****  */
 
