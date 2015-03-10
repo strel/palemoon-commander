@@ -642,7 +642,7 @@
 					</groupbox>					
 					<checkbox id="pmcommander-custom-errors-check" preference="pmcommander-pref-errorpages" label="&pmcommander.ui.errorpages.label;" />
 					<hbox align="center">
-						<label id="pmcommander-images-background-label" control="pmcommander-image-background-input">&pmcommander.ui.toplevel.image.background.label;</label>
+						<label id="pmcommander-images-background-label" control="pmcommander-images-background-input">&pmcommander.ui.toplevel.image.background.label;</label>
 						<textbox id="pmcommander-images-background-input" preference="pmcommander-pref-images-background" />
 					</hbox>
 					<checkbox id="pmcommander-ui-hideplaceholders" preference="pmcommander-pref-ui-hideplaceholders" label="&pmcommander.ui.hideplaceholders.label;" />
