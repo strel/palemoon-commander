@@ -134,7 +134,7 @@
 <!ENTITY pmcommander.tab.perf.javascript.gc "Garbage Collection">
 <!ENTITY pmcommander.tab.perf.cache "Cache">
 
-<!ENTITY pmcommander.perf.js.global.disable "Completely disable JavasScript">
+<!ENTITY pmcommander.perf.js.global.disable "Completely disable JavaScript">
 <!ENTITY pmcommander.perf.js.global.disable.warning "Warning: Completely disabling JavasScript will cripple your browsing experience and make many websites dysfunctional. It should not be done lightly.">
 
 <!ENTITY pmcommander.perf.js.chrome.caption "Browser Chrome">
