@@ -18,6 +18,9 @@
 
 var PMprefs = Components.classes["@mozilla.org/preferences-service;1"]
                 .getService(Components.interfaces.nsIPrefBranch);
+var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+                .getService(Components.interfaces.nsIXULAppInfo);
+
                     
 
 var pmcommanderPrefs =
@@ -383,17 +386,40 @@ var pmcommanderPrefs =
   		self.close();
 	},
 	
+//
+// Firefox mode: disable Pale Moon-only prefs
+//
+   firefoxmode: function()
+   {
+   let PMOnlyPrefs = ['pmcommander-pref-rendering-deprecated',
+                      'pmcommander-pref-color-override-a11y',
+                      'pmcommander-pref-net-disable-hsts',
+                      'pmcommander-pref-sess-exactpos',
+                      'pmcommander-pref-sess-max-concurrent',
+                      'pmcommander-pref-ctrltab-useMRU',
+                      'pmcommander-pref-alltabs-previews',
+                      'pmcommander-pref-urlbar-rss',
+                      'pmcommander-pref-tabs-resize-immediately',
+                      'pmcommander-pref-tabs-tm-focusswitch',
+                      'pmcommander-pref-images-background',
+                      'pmcommander-pref-ui-hideplaceholders',
+                      'pmcommander-pref-sec-padlock-shown',
+                      'pmcommander-pref-sec-padlock-style',
+                      'pmcommander-pref-sec-padlock-urlbar-fx',
+                      'pmcommander-pref-sec-ssl-domain-display',
+                      'pmcommander-pref-sec-ssl-allow-ocsp-unsafe'];
+   
+   for (i=0; i<PMOnlyPrefs.length; i++) {
+     document.getElementById(PMOnlyPrefs[i]).disabled = true;
+     }
+                      
+   },
 
 // 
 // pref init script
 //
 	init: function()
 	{
-      if (PMprefs.getIntPref("browser.ctrlTab.recentlyUsedLimit") != 0)
-			PMprefs.setBoolPref("extensions.pmcommander.ctrlTab.useMRU", true)
-		else
-			PMprefs.setBoolPref("extensions.pmcommander.ctrlTab.useMRU", false);
-			
 		this.getSessionIntervalPref();
 		
 		// Init linked visual elements
@@ -406,6 +432,18 @@ var pmcommanderPrefs =
 		this.domStorageChanged();
 		this.fullscreenAutohideChanged();
 		this.fullscreenAPIGlobalChanged();
+		
+		// Check if running in Firefox and adjust if so.
+      if (appInfo.ID == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
+		   this.firefoxmode();
+		} else {
+		   //PM mode
+         if (PMprefs.getIntPref("browser.ctrlTab.recentlyUsedLimit") != 0)
+				PMprefs.setBoolPref("extensions.pmcommander.ctrlTab.useMRU", true)
+			else
+				PMprefs.setBoolPref("extensions.pmcommander.ctrlTab.useMRU", false);
+		}
+
 		
 	}
 }
