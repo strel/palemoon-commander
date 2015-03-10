@@ -187,6 +187,19 @@
 <!ENTITY pmcommander.cache.checking.never "Never">
 <!ENTITY pmcommander.cache.checking.expired "When expired">
 
+<!ENTITY pmcommander.tab.perf.session "Sessions">
+<!ENTITY pmcommander.perf.sesshistory.max.label "Remember this many session pages:">
+<!ENTITY pmcommander.perf.sesshistory.viewers.label "Number of fully rendered pages to keep in RAM:">
+<!ENTITY pmcommander.perf.sess.interval.label "Save your session to disk every">
+<!ENTITY pmcommander.perf.sess.exactpos.label "Restore exact window positions with session (ignore screen edge)">
+<!ENTITY pmcommander.perf.sess.resumedcrash.label "Automatically resume your session if crashed">
+<!ENTITY pmcommander.perf.sess.ondemand.label "Only restore tabs when clicked">
+<!ENTITY pmcommander.perf.sess.concurrent.tabs.label "Restore this many tabs at a time:">
+<!ENTITY pmcommander.perf.sess.pinnedondemand.label "Only restore pinned tabs when clicked">
+<!ENTITY pmcommander.undolevels.caption "Undo levels">
+<!ENTITY pmcommander.perf.sess.undo.tabs.label "Maximum number of tabs to undo close:">
+<!ENTITY pmcommander.perf.sess.undo.windows.label "Maximum number of windows to undo close:">
+
 <!-- User Interface category -->
 
 <!ENTITY pmcommander.tab.ui.tabs "Tabs">

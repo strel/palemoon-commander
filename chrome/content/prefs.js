@@ -306,6 +306,47 @@ var pmcommanderPrefs =
     } catch(ex) {}
 	},
 	
+	// Sessionstore
+	get sessionIntervalPref()
+	{
+		delete this.sessionIntervalPref;
+		return this.sessionIntervalPref = document.getElementById("pmcommander-pref-sess-interval");
+	},
+	
+	get sessionIntervalRawPref()
+	{
+		delete this.sessionIntervalRawPref;
+		return this.sessionIntervalRawPref = document.getElementById("pmcommander-pref-sess-interval-raw");
+	},
+	
+	getSessionIntervalPref: function()
+	{
+	   this.sessionIntervalPref.value = this.sessionIntervalRawPref.value / 1000;
+	   PMprefs.setIntPref("extensions.pmcommander.sessionstore.interval", this.sessionIntervalPref.value);
+   },
+	
+	setSessionIntervalPref: function()
+	{
+		this.sessionIntervalRawPref.value = this.sessionIntervalPref.value * 1000;
+	},
+	
+	get restoreTabsOnDemandPref()
+	{
+		delete this.restoreTabsOnDemandPref;
+		return this.restoreTabsOnDemandPref = document.getElementById("pmcommander-pref-sess-ondemand");
+	},
+	
+	get restoreMaxConcurrentTabsPref()
+	{
+		delete this.restoreMaxConcurrentTabsPref;
+		return this.restoreMaxConcurrentTabsPref = document.getElementById("pmcommander-pref-sess-max-concurrent");
+	},
+	
+   restoreOnDemandChanged: function()
+   {
+     this.restoreMaxConcurrentTabsPref.disabled = (this.restoreTabsOnDemandPref.value == true);
+	},
+	
 	// SSL/TLS
 	
 	get tlsMinVersionPref()
@@ -353,12 +394,15 @@ var pmcommanderPrefs =
 		else
 			PMprefs.setBoolPref("extensions.pmcommander.ctrlTab.useMRU", false);
 			
+		this.getSessionIntervalPref();
+		
 		// Init linked visual elements
 		this.d2dGlobalChanged();
 		this.layeraccGlobalChanged();
 		this.jumplistModeChanged();
 		this.diskcacheGlobalChanged();
 		this.memcacheGlobalChanged();
+		this.restoreOnDemandChanged();		
 		this.domStorageChanged();
 		this.fullscreenAutohideChanged();
 		this.fullscreenAPIGlobalChanged();

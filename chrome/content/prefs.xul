@@ -410,12 +410,29 @@
 			<preference id="pmcommander-pref-cache-compression"		name="browser.cache.compression_level"				type="int" 
 				onchange="pmcommanderPrefs.cacheCompressionChanged();" />
 			<preference id="pmcommander-pref-cache-checking"			name="browser.cache.check_doc_frequency"			type="int" />
+			<!-- Session -->
+			<preference id="pmcommander-pref-sesshistory-max"        name="browser.sessionhistory.max_entries"       type="int" />
+			<preference id="pmcommander-pref-sesshistory-viewers"    name="browser.sessionhistory.max_total_viewers" type="int" />
+			<preference id="pmcommander-pref-sess-interval"          name="extensions.pmcommander.sessionstore.interval" type="int"
+			   onchange="pmcommanderPrefs.setSessionIntervalPref();" />
+			<preference id="pmcommander-pref-sess-interval-raw"      name="browser.sessionstore.interval"            type="int" />
+						
+			<preference id="pmcommander-pref-sess-exactpos"          name="browser.sessionstore.exactPos"            type="bool" />
+			<preference id="pmcommander-pref-sess-resumedcrash"      name="browser.sessionstore.resume_from_crash"   type="bool" />
+			<preference id="pmcommander-pref-sess-ondemand"          name="browser.sessionstore.restore_on_demand"   type="bool"
+			   onchange="pmcommanderPrefs.restoreOnDemandChanged();" />
+			<preference id="pmcommander-pref-sess-max-concurrent"    name="browser.sessionstore.max_concurrent_tabs" type="int" />
+			<preference id="pmcommander-pref-sess-pinnedondemand"    name="browser.sessionstore.restore_pinned_tabs_on_demand" type="bool" />
+			
+			<preference id="pmcommander-pref-sess-undo-tabs"         name="browser.sessionstore.max_tabs_undo"       type="int" />
+			<preference id="pmcommander-pref-sess-undo-windows"      name="browser.sessionstore.max_windows_undo"    type="int" />
 		</preferences>
 		<tabbox id="pmcommander-tabbox-perf" flex="1">
 			<tabs id="pmcommander-tabs-perf">
 				<tab id="pmcommander-tab-perf-js" label="&pmcommander.tab.perf.javascript;" />
 				<tab id="pmcommander-tab-perf-js-gc"  label="&pmcommander.tab.perf.javascript.gc;" />
 				<tab id="pmcommander-tab-perf-cache"  label="&pmcommander.tab.perf.cache;" />
+				<tab id="pmcommander-tab-perf-sess"   label="&pmcommander.tab.perf.session;" />
 			</tabs>
 			<tabpanels flex="1">
 				<tabpanel id="pmcommander-perf-js" orient="vertical">
@@ -516,6 +533,41 @@
 						</menulist>
 					</hbox>
 				</tabpanel>			
+				<tabpanel id="pmcommander-perf-sess" orient="vertical">
+					<hbox align="center">
+						<label id="pmcommander-sesshistory-max-label" control="pmcommander-pref-sesshistory-max-input">&pmcommander.perf.sesshistory.max.label;</label>
+						<textbox type="number" size="3" min="0" max="500" id="pmcommander-pref-sesshistory-max-input" preference="pmcommander-pref-sesshistory-max" />
+					</hbox>
+					<hbox align="center">
+						<label id="pmcommander-sesshistory-viewers-label" control="pmcommander-pref-sesshistory-viewers-input">&pmcommander.perf.sesshistory.viewers.label;</label>
+						<textbox type="number" size="2" min="-1" max="10" id="pmcommander-pref-sesshistory-viewers-input" preference="pmcommander-pref-sesshistory-viewers" />
+					</hbox>
+					<hbox align="center">
+						<label id="pmcommander-sess-interval-label" control="pmcommander-pref-sess-interval-input">&pmcommander.perf.sess.interval.label;</label>
+						<textbox type="number" size="3" min="5" max="999" id="pmcommander-pref-sess-interval-input" preference="pmcommander-pref-sess-interval" />
+						<label>&pmcommander.unit.seconds;</label>
+					</hbox>
+					<checkbox id="pmcommander-sess-exactpos-check" preference="pmcommander-pref-sess-exactpos" label="&pmcommander.perf.sess.exactpos.label;" />
+					<checkbox id="pmcommander-sess-resumedcrash-check" preference="pmcommander-pref-sess-resumedcrash" label="&pmcommander.perf.sess.resumedcrash.label;" />
+					<checkbox id="pmcommander-sess-ondemand-check" preference="pmcommander-pref-sess-ondemand" label="&pmcommander.perf.sess.ondemand.label;" />
+					<hbox align="center">
+						<label id="pmcommander-sess-concurrent-tabs-label" control="pmcommander-pref-sess-concurrent-tabs-input">&pmcommander.perf.sess.concurrent.tabs.label;</label>
+						<textbox type="number" size="2" min="1" max="10" id="pmcommander-pref-sess-concurrent-tabs-input" preference="pmcommander-pref-sess-max-concurrent" />
+					</hbox>
+					<checkbox id="pmcommander-sess-pinnedondemand-check" preference="pmcommander-pref-sess-pinnedondemand" label="&pmcommander.perf.sess.pinnedondemand.label;" />
+
+					<groupbox>
+					  <caption label="&pmcommander.undolevels.caption;" />
+					  <hbox align="center">
+						  <label id="pmcommander-sess-undo-tabs-label" control="pmcommander-pref-sess-undo-tabs-input">&pmcommander.perf.sess.undo.tabs.label;</label>
+						  <textbox type="number" size="2" min="0" max="30" id="pmcommander-pref-sess-undo-tabs-input" preference="pmcommander-pref-sess-undo-tabs" />
+					  </hbox>
+					  <hbox align="center">
+						  <label id="pmcommander-sess-undo-windows-label" control="pmcommander-pref-sess-undo-windows-input">&pmcommander.perf.sess.undo.windows.label;</label>
+						  <textbox type="number" size="2" min="0" max="30" id="pmcommander-pref-sess-undo-windows-input" preference="pmcommander-pref-sess-undo-windows" />
+					  </hbox>
+					</groupbox>
+				</tabpanel>
 			</tabpanels>
 		</tabbox>
 	</prefpane>
