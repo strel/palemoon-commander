@@ -83,6 +83,7 @@
 <!ENTITY pmcommander.net.dns.expire.label "缓存 DNS 例外:">
 <!ENTITY pmcommander.net.advanced.protocols.caption "协议">
 <!ENTITY pmcommander.net.spdy.label "启用 SPDY 协议">
+<!ENTITY pmcommander.net.disable.hsts.label "禁用 HSTS (HTTP 强制安全传输协议)">
 <!ENTITY pmcommander.net.advanced.connections.caption "连接">
 <!ENTITY pmcommander.net.buffercount.label "网络层缓冲器数量:">
 <!ENTITY pmcommander.net.buffersize.label "网络层缓冲器大小:">
@@ -159,6 +160,18 @@
 <!ENTITY pmcommander.cache.checking.always "总是">
 <!ENTITY pmcommander.cache.checking.never "从不">
 <!ENTITY pmcommander.cache.checking.expired "过期时">
+<!ENTITY pmcommander.tab.perf.session "会话">
+<!ENTITY pmcommander.perf.sesshistory.max.label "记住多少个会话页面：">
+<!ENTITY pmcommander.perf.sesshistory.viewers.label "内存中保留多少个完全呈现页面：">
+<!ENTITY pmcommander.perf.sess.interval.label "保存您的会话到磁盘，每隔">
+<!ENTITY pmcommander.perf.sess.exactpos.label "恢复会话的精确窗口位置（忽略屏幕边缘）">
+<!ENTITY pmcommander.perf.sess.resumedcrash.label "如果遇到崩溃，自动恢复您的会话">
+<!ENTITY pmcommander.perf.sess.ondemand.label "只当点击时恢复标签页">
+<!ENTITY pmcommander.perf.sess.concurrent.tabs.label "一次恢复多少个会话：">
+<!ENTITY pmcommander.perf.sess.pinnedondemand.label "只在点击时恢复固定的标签页">
+<!ENTITY pmcommander.undolevels.caption "撤销级别">
+<!ENTITY pmcommander.perf.sess.undo.tabs.label "最多可撤销多少个已关闭的标签页：">
+<!ENTITY pmcommander.perf.sess.undo.windows.label "最多可撤销多少个已关闭的窗口：">
 <!-- User Interface category -->
 <!ENTITY pmcommander.tab.ui.tabs "标签页">
 <!ENTITY pmcommander.tab.ui.taskbar "任务栏">
@@ -179,6 +192,7 @@
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "关闭一个选项卡后立即调整标签页尺寸">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "在标题栏中绘制标签页">
 <!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "当我在一个新标签页中打开一个书签时，立即切换过去">
+<!ENTITY pmcommander.ui.tabs.tm.focusswitch.label "允许弹出提示切换标签页焦点">
 <!ENTITY pmcommander.ui.tabs.closebuttons.caption "标签页关闭按钮">
 <!ENTITY pmcommander.ui.tabs.closebuttons.label "显示标签页关闭按钮:">
 <!ENTITY pmcommander.ui.tabs.closebuttons.active "仅在活动标签页上">
