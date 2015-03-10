@@ -83,6 +83,7 @@
 <!ENTITY pmcommander.net.dns.expire.label "DNS-zoekopdrachten vervallen na:">
 <!ENTITY pmcommander.net.advanced.protocols.caption "Protocollen">
 <!ENTITY pmcommander.net.spdy.label "Het SPDY-protocol gebruiken">
+<!ENTITY pmcommander.net.disable.hsts.label "HSTS (HTTP Strict Transport Security) uitschakelen">
 <!ENTITY pmcommander.net.advanced.connections.caption "Verbindingen">
 <!ENTITY pmcommander.net.buffercount.label "Aantal buffers in de netwerklaag:">
 <!ENTITY pmcommander.net.buffersize.label "Grootte van buffers in de netwerklaag:">
@@ -159,6 +160,18 @@
 <!ENTITY pmcommander.cache.checking.always "Altijd">
 <!ENTITY pmcommander.cache.checking.never "Nooit">
 <!ENTITY pmcommander.cache.checking.expired "Indien verlopen">
+<!ENTITY pmcommander.tab.perf.session "Sessies">
+<!ENTITY pmcommander.perf.sesshistory.max.label "Dit aantal sessiepagina's onthouden:">
+<!ENTITY pmcommander.perf.sesshistory.viewers.label "Dit aantal gerenderde pagina's in RAM bewaren:">
+<!ENTITY pmcommander.perf.sess.interval.label "Uw sessie op disk opslaan elke">
+<!ENTITY pmcommander.perf.sess.exactpos.label "Exacte vensterposities herstellen (schermrand negeren)">
+<!ENTITY pmcommander.perf.sess.resumedcrash.label "Uw sessie automatisch herstellen na een crash">
+<!ENTITY pmcommander.perf.sess.ondemand.label "Tabs alleen herstellen als ik ze selecteer">
+<!ENTITY pmcommander.perf.sess.concurrent.tabs.label "Dit aantal tabs tegelijk herstellen:">
+<!ENTITY pmcommander.perf.sess.pinnedondemand.label "Gepinde tabs alleen herstellen als ik ze selecteer">
+<!ENTITY pmcommander.undolevels.caption "Ongedaan maken">
+<!ENTITY pmcommander.perf.sess.undo.tabs.label "Aantal tabs waarvan ik het sluiten ongedaan kan maken:">
+<!ENTITY pmcommander.perf.sess.undo.windows.label "Aantal vensters waarvan ik het sluiten ongedaan kan maken:">
 <!-- User Interface category -->
 <!ENTITY pmcommander.tab.ui.tabs "Tabbladen">
 <!ENTITY pmcommander.tab.ui.taskbar "Taakbalk">
@@ -179,6 +192,7 @@
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Grootte van tabbladen onmiddellijk aanpassen bij sluiten tabblad">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Tabbladen in de titelbalk">
 <!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "Onmiddellijk overschakelen wanneer ik een bladwijzer open in een nieuw tabblad">
+<!ENTITY pmcommander.ui.tabs.tm.focusswitch.label "Sta toe dat een prompt een andere tab actief maakt">
 <!ENTITY pmcommander.ui.tabs.closebuttons.caption "Sluitknoppen voor de tabbladen">
 <!ENTITY pmcommander.ui.tabs.closebuttons.label "Knop Tabblad sluiten weergeven:">
 <!ENTITY pmcommander.ui.tabs.closebuttons.active "Alleen op het actieve tabblad">
