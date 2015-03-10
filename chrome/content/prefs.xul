@@ -220,6 +220,7 @@
 			<preference id="pmcommander-pref-net-buffercount" 		   name="network.buffer.cache.count" 					type="int" />
 			<preference id="pmcommander-pref-net-buffersize" 			name="network.buffer.cache.size" 					type="int" />
 			<preference id="pmcommander-pref-net-spdy" 					name="network.http.spdy.enabled" 					type="bool" />
+			<preference id="pmcommander-pref-net-disable-hsts"			name="network.stricttransportsecurity.enabled"	type="bool" inverted="true"/>
 			
 			<preference id="pmcommander-pref-dns-ipv6" 					name="network.dns.disableIPv6" 						type="bool" inverted="true"/>
 			<preference id="pmcommander-pref-dns-prefetch" 				name="network.dns.disablePrefetch"					type="bool" inverted="true"/>
@@ -360,6 +361,7 @@
 					<groupbox id="pmcommander-net-protocols">
 						<caption label="&pmcommander.net.advanced.protocols.caption;" />
 						<checkbox id="pmcommander-net-spdy-check" preference="pmcommander-pref-net-spdy" label="&pmcommander.net.spdy.label;" />
+						<checkbox id="pmcommander-net-disable-hsts-check" preference="pmcommander-pref-net-disable-hsts" label="&pmcommander.net.disable.hsts.label;" />
 					</groupbox>
 					<groupbox id="pmcommander-net-connections">
 						<caption label="&pmcommander.net.advanced.connections.caption;" />

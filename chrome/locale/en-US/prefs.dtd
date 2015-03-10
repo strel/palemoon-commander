@@ -99,6 +99,7 @@
 
 <!ENTITY pmcommander.net.advanced.protocols.caption "Protocols">
 <!ENTITY pmcommander.net.spdy.label "Enable the SPDY protocol">
+<!ENTITY pmcommander.net.disable.hsts.label "Disable HSTS (HTTP Strict Transport Security)">
 
 <!ENTITY pmcommander.net.advanced.connections.caption "Connections">
 <!ENTITY pmcommander.net.buffercount.label "Number of network layer buffers:">
