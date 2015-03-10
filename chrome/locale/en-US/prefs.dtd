@@ -225,6 +225,7 @@
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Immediately resize tabs when closing a tab">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Draw tabs in the title bar">
 <!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "When I open a bookmark in a new tab, switch to it immediately">
+<!ENTITY pmcommander.ui.tabs.tm.focusswitch.label "Allow prompts to switch tab focus">
 <!ENTITY pmcommander.ui.tabs.closebuttons.caption "Tab close buttons">
 <!ENTITY pmcommander.ui.tabs.closebuttons.label "Show tab close button:">
 <!ENTITY pmcommander.ui.tabs.closebuttons.active "On the active tab only">

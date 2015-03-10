@@ -588,6 +588,8 @@
 			<preference id="pmcommander-pref-tabs-resize-immediately" name="browser.tabs.resize_immediately"		type="bool" />
 			<preference id="pmcommander-pref-tabs-intitlebar"			name="browser.tabs.drawInTitlebar"				type="bool" />
 			<preference id="pmcommander-pref-tabs-bookmark-switchto"	name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
+			<preference id="pmcommander-pref-tabs-tm-focusswitch"		name="prompts.tab_modal.focusSwitch"			type="bool" />			
+			
 			<preference id="pmcommander-pref-tabs-closebuttons" 		name="browser.tabs.closeButtons"					type="int" />
 			<preference id="pmcommander-pref-tabs-clipwidth" 			name="browser.tabs.tabClipWidth"					type="int" />
 			
@@ -654,6 +656,7 @@
 					<checkbox id="pmcommander-ui-tabs-resize-immediately-check" preference="pmcommander-pref-tabs-resize-immediately" label="&pmcommander.ui.tabs.resize.immediately.label;" />
 					<checkbox id="pmcommander-ui-tabs-intitlebar-check" preference="pmcommander-pref-tabs-intitlebar" label="&pmcommander.ui.tabs.intitlebar.label;" />
 					<checkbox id="pmcommander-ui-tabs-bookmark-switchto-check" preference="pmcommander-pref-tabs-bookmark-switchto" label="&pmcommander.ui.tabs.bookmark.switchto.label;" />
+					<checkbox id="pmcommander-ui-tabs-tm-focusswitch-check" preference="pmcommander-pref-tabs-tm-focusswitch" label="&pmcommander.ui.tabs.tm.focusswitch.label;" />
 					<groupbox id="pmcommander-ui-tabclose">
 						<caption label="&pmcommander.ui.tabs.closebuttons.caption;" />
 						<hbox align="center">
