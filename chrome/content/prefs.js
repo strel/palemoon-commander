@@ -15,15 +15,10 @@
 *    
 *   ***** END LICENSE BLOCK *****  */
 
-
 var PMprefs = Components.classes["@mozilla.org/preferences-service;1"]
                 .getService(Components.interfaces.nsIPrefBranch);
 var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
                 .getService(Components.interfaces.nsIXULAppInfo);
-var osString = Components.classes["@mozilla.org/xre/app-info;1"]  
-                   .getService(Components.interfaces.nsIXULRuntime).OS;
-
-                    
 
 var pmcommanderPrefs =
 {
@@ -389,15 +384,20 @@ var pmcommanderPrefs =
 	},
 	
 //
-// Linux mode: disable Windows-only prefs
+// Non-Windows: disable Windows-only prefs
 //
-   onlinux: function()
+   nonwindows: function()
    {
-   let WINOnlyPrefs = ['pmcommander-pref-jumplists-enabled',
-                      'pmcommander-pref-jumplists-frequent',
-                      'pmcommander-pref-jumplists-recent',
-                      'pmcommander-pref-jumplists-tasks',
-                      'pmcommander-pref-jumplists-limit',];
+   let WINOnlyPrefs = ['pmcommander-pref-d2d-enabled',
+                       'pmcommander-pref-d2d-force',
+                       'pmcommander-pref-fonts-directwrite',
+                       'pmcommander-pref-fonts-directwrite-gdi'
+                       'pmcommander-ui-jumplists',
+                       'pmcommander-pref-jumplists-enabled',
+                       'pmcommander-pref-jumplists-frequent',
+                       'pmcommander-pref-jumplists-recent',
+                       'pmcommander-pref-jumplists-tasks',
+                       'pmcommander-pref-jumplists-limit'];
    
    for (i=0; i<WINOnlyPrefs.length; i++) {
      document.getElementById(WINOnlyPrefs[i]).disabled = true;
@@ -453,9 +453,11 @@ var pmcommanderPrefs =
 		this.fullscreenAPIGlobalChanged();
 		
 		// Check if running on Linux and adjust if so.
+		// XXX: this should actually be a "filter-out", if "not windows" covering all other OSes.
       if (appInfo.OS == "Linux") {
-		   this.onlinux();
+		   this.nonwindows();
 		}
+		
 		// Check if running in Firefox and adjust if so.
       if (appInfo.ID == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
 		   this.firefoxmode();
