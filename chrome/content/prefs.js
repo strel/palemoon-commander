@@ -20,6 +20,8 @@ var PMprefs = Components.classes["@mozilla.org/preferences-service;1"]
                 .getService(Components.interfaces.nsIPrefBranch);
 var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
                 .getService(Components.interfaces.nsIXULAppInfo);
+var osString = Components.classes["@mozilla.org/xre/app-info;1"]  
+                   .getService(Components.interfaces.nsIXULRuntime).OS;
 
                     
 
@@ -387,6 +389,23 @@ var pmcommanderPrefs =
 	},
 	
 //
+// Linux mode: disable Windows-only prefs
+//
+   onlinux: function()
+   {
+   let WINOnlyPrefs = ['pmcommander-pref-jumplists-enabled',
+                      'pmcommander-pref-jumplists-frequent',
+                      'pmcommander-pref-jumplists-recent',
+                      'pmcommander-pref-jumplists-tasks',
+                      'pmcommander-pref-jumplists-limit',];
+   
+   for (i=0; i<WINOnlyPrefs.length; i++) {
+     document.getElementById(WINOnlyPrefs[i]).disabled = true;
+     }
+                      
+   },
+   
+//
 // Firefox mode: disable Pale Moon-only prefs
 //
    firefoxmode: function()
@@ -433,6 +452,10 @@ var pmcommanderPrefs =
 		this.fullscreenAutohideChanged();
 		this.fullscreenAPIGlobalChanged();
 		
+		// Check if running on Linux and adjust if so.
+      if (appInfo.OS == "Linux") {
+		   this.onlinux();
+		}
 		// Check if running in Firefox and adjust if so.
       if (appInfo.ID == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
 		   this.firefoxmode();
