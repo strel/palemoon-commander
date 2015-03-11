@@ -83,6 +83,7 @@
 <!ENTITY pmcommander.net.dns.expire.label "Vencimiento de la caché DNS:">
 <!ENTITY pmcommander.net.advanced.protocols.caption "Protocolos">
 <!ENTITY pmcommander.net.spdy.label "Habilitar protocolo SPDY">
+<!ENTITY pmcommander.net.disable.hsts.label "Deshabilitar HSTS (Seguridad estricta de tráfico HTTP)">
 <!ENTITY pmcommander.net.advanced.connections.caption "Conexiones">
 <!ENTITY pmcommander.net.buffercount.label "Número de búferes de capa de red:">
 <!ENTITY pmcommander.net.buffersize.label "Tamaño de los búferes de capa de red:">
@@ -159,6 +160,18 @@
 <!ENTITY pmcommander.cache.checking.always "Siempre">
 <!ENTITY pmcommander.cache.checking.never "Nunca">
 <!ENTITY pmcommander.cache.checking.expired "Cuando expiren">
+<!ENTITY pmcommander.tab.perf.session "Sesiones">
+<!ENTITY pmcommander.perf.sesshistory.max.label "Recordar esta cantidad de páginas en la sesión:">
+<!ENTITY pmcommander.perf.sesshistory.viewers.label "Cantidad de páginas completamente renderizadas a guardar en RAM:">
+<!ENTITY pmcommander.perf.sess.interval.label "Salvar la sesión a la unidad cada">
+<!ENTITY pmcommander.perf.sess.exactpos.label "Restablecer la posición exacta de la ventana en la sesión (ignorar los bordes de pantalla)">
+<!ENTITY pmcommander.perf.sess.resumedcrash.label "Restablecer la sesión automáticamente ante cierres inesperados">
+<!ENTITY pmcommander.perf.sess.ondemand.label "Sólo restablecer pestañas al cliquearlas">
+<!ENTITY pmcommander.perf.sess.concurrent.tabs.label "Restablecer esta cantidad de pestañas a la vez:">
+<!ENTITY pmcommander.perf.sess.pinnedondemand.label "Sólo restablecer pestañas pegadas al cliquearlas">
+<!ENTITY pmcommander.undolevels.caption "Deshacer niveles">
+<!ENTITY pmcommander.perf.sess.undo.tabs.label "Cantidad máxima de pestañas para deshacer el cierre:">
+<!ENTITY pmcommander.perf.sess.undo.windows.label "Cantidad máxima de ventadas para deshacer el cierre:">
 <!-- User Interface category -->
 <!ENTITY pmcommander.tab.ui.tabs "Pestañas">
 <!ENTITY pmcommander.tab.ui.taskbar "Barra de pestañas">
@@ -179,6 +192,7 @@
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Redimensionar inmediatamente el tamaño de las pestañas al cerrar una">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Mostrar las pestañas en la barra del título">
 <!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "Cuando abra un marcador en una nueva pestaña, cambiar a ella inmediatamente">
+<!ENTITY pmcommander.ui.tabs.tm.focusswitch.label "Permitir intentos para cambiar el foco de pestaña">
 <!ENTITY pmcommander.ui.tabs.closebuttons.caption "Botones para cerrar pestañas en cada pestaña">
 <!ENTITY pmcommander.ui.tabs.closebuttons.label "Mostrar el botón para cerrar la pestaña:">
 <!ENTITY pmcommander.ui.tabs.closebuttons.active "Sólo en la pestaña activa">
