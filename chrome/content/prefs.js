@@ -391,7 +391,7 @@ var pmcommanderPrefs =
    let WINOnlyPrefs = ['pmcommander-pref-d2d-enabled',
                        'pmcommander-pref-d2d-force',
                        'pmcommander-pref-fonts-directwrite',
-                       'pmcommander-pref-fonts-directwrite-gdi'
+                       'pmcommander-pref-fonts-directwrite-gdi',
                        'pmcommander-ui-jumplists',
                        'pmcommander-pref-jumplists-enabled',
                        'pmcommander-pref-jumplists-frequent',
