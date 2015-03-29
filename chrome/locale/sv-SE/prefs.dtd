@@ -83,6 +83,7 @@
 <!ENTITY pmcommander.net.dns.expire.label "Förfallotid för cachelagrade DNS-poster:">
 <!ENTITY pmcommander.net.advanced.protocols.caption "Protokoll">
 <!ENTITY pmcommander.net.spdy.label "Aktivera SPDY-protokollet">
+<!ENTITY pmcommander.net.disable.hsts.label "Inaktivera HSTS (HTTP Strict Transport Security)">
 <!ENTITY pmcommander.net.advanced.connections.caption "Anslutningar">
 <!ENTITY pmcommander.net.buffercount.label "Antal nätverkslagerbuffertar:">
 <!ENTITY pmcommander.net.buffersize.label "Storlek på nätverkslagerbuffertar:">
@@ -159,6 +160,18 @@
 <!ENTITY pmcommander.cache.checking.always "Alltid">
 <!ENTITY pmcommander.cache.checking.never "Aldrig">
 <!ENTITY pmcommander.cache.checking.expired "När de förfaller">
+<!ENTITY pmcommander.tab.perf.session "Sessioner">
+<!ENTITY pmcommander.perf.sesshistory.max.label "Antal sessionssidor att komma ihåg:">
+<!ENTITY pmcommander.perf.sesshistory.viewers.label "Antal helrenderade sidor att behålla i RAM:">
+<!ENTITY pmcommander.perf.sess.interval.label "Spara session till disk var">
+<!ENTITY pmcommander.perf.sess.exactpos.label "Återställ exakta fönsterpositioner med sessionen (ignorera skärmkanter)">
+<!ENTITY pmcommander.perf.sess.resumedcrash.label "Återuppta session automatiskt efter krasch">
+<!ENTITY pmcommander.perf.sess.ondemand.label "Återställ endast flikar när de klickas">
+<!ENTITY pmcommander.perf.sess.concurrent.tabs.label "Max antal flikar att återställa per omgång:">
+<!ENTITY pmcommander.perf.sess.pinnedondemand.label "Återställ endast fästa flikar när de klickas">
+<!ENTITY pmcommander.undolevels.caption "Antal Ångra-nivåer:">
+<!ENTITY pmcommander.perf.sess.undo.tabs.label "Max antal stängda flikar som kan ångras:">
+<!ENTITY pmcommander.perf.sess.undo.windows.label "Max antal stängda fönster som kan ångras:">
 <!-- User Interface category -->
 <!ENTITY pmcommander.tab.ui.tabs "Flikar">
 <!ENTITY pmcommander.tab.ui.taskbar "Aktivitetsfältet">
@@ -179,6 +192,7 @@
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Ändra omedelbart storleken på kvarvarande flikar när en flik stängs">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Rita flikar i namnlisten">
 <!ENTITY pmcommander.ui.tabs.bookmark.switchto.label "När jag öppnar ett bokmärke i en ny flik, växla omedelbart till den">
+<!ENTITY pmcommander.ui.tabs.tm.focusswitch.label "Tillåt att meddelandefönster byter flikfokus">
 <!ENTITY pmcommander.ui.tabs.closebuttons.caption "Stängknappar på flikar">
 <!ENTITY pmcommander.ui.tabs.closebuttons.label "Visa stängknapp:">
 <!ENTITY pmcommander.ui.tabs.closebuttons.active "Endast på den aktiva fliken">
