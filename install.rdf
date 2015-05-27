@@ -34,6 +34,16 @@
 
 		<!-- Localizations -->
 
+    <em:localized>
+      <!-- de -->
+      <Description>
+        <em:locale>de</em:locale>
+        <em:name>Pale Moon Commander</em:name>
+        <em:description>Erweiterte Einstellungen für Pale Moon</em:description>
+        <em:translator>Mirko Breßler / Gerd Röthig</em:translator>
+      </Description>
+    </em:localized>
+    
 		<em:localized><!-- es-AR -->
 			<Description>
 				<em:locale>es-AR</em:locale>
