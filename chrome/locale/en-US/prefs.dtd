@@ -291,7 +291,9 @@
 <!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "Tabs bar, right side (classic)">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.label "Address bar effect for secure sites:">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.none "No visual effect">
-<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "Use border shading">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.secure "Secure sites only">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.securemixed "Secure and mixed-mode">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.all "All states">
 
 <!ENTITY pmcommander.sec.dom.windowopen.caption "Pop-up windows">
 <!ENTITY pmcommander.sec.dom.when.opening.allow.label "When a pop-up window is opened, allow the script to:">

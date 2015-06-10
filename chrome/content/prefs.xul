@@ -865,7 +865,9 @@
 						<menulist id="pmcommander-sec-padlock-urlbar-fx-menu" preference="pmcommander-pref-sec-padlock-urlbar-fx" sizetopopup="always">
 							<menupopup>
 								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.none;" value="0" />
-								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.shading;" value="1" />
+								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.secure;" value="1" />
+								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.securemixed;" value="2" />
+								<menuitem label="&pmcommander.sec.padlock.urlbar.fx.all;" value="3" />
 							</menupopup>
 						</menulist>
 					</hbox>
