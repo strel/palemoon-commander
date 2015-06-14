@@ -85,9 +85,9 @@
 <!ENTITY pmcommander.net.spdy.label "Aktiviere das SPDY Protokoll">
 <!ENTITY pmcommander.net.disable.hsts.label "Deaktiviere HSTS (Strenge HTTP Transportsicherheit)">
 <!ENTITY pmcommander.net.advanced.connections.caption "Verbindungen">
-<!ENTITY pmcommander.net.buffercount.label "Anzahl der Netzwerk Layer Buffers:">
-<!ENTITY pmcommander.net.buffersize.label "Größe der Netzwerk Layer Buffers:">
-<!ENTITY pmcommander.net.http.fastfallback.label "Verwende schnellen Fallback von IPv6 auf IPv4">
+<!ENTITY pmcommander.net.buffercount.label "Anzahl der Netzwerkebenen-Puffer:">
+<!ENTITY pmcommander.net.buffersize.label "Größe der Netzwerkebenen-Puffer:">
+<!ENTITY pmcommander.net.http.fastfallback.label "Verwende schnelles Zurückschalten von IPv6 auf IPv4">
 <!ENTITY pmcommander.net.http.timing.caption "HTTP Zeiteinstellungen">
 <!ENTITY pmcommander.net.http.conn.timeout.label "HTTP Verbindungszeitüberschreitung:">
 <!ENTITY pmcommander.net.http.retry.timeout.label "HTTP-Verbindungen erneut versuchen nach:">
@@ -97,8 +97,8 @@
 <!ENTITY pmcommander.net.http.persistent.maxconn.server.label "Maximale HTTP Verbindungen pro Server:">
 <!ENTITY pmcommander.net.http.persistent.maxconn.proxy.label "Maximale HTTP Verbindungen pro Proxy:">
 <!ENTITY pmcommander.net.http.diagnostics.label "Aktiviere HTTP Protokoll Fehlerdiagnose">
-<!ENTITY pmcommander.net.pipelining.label "Aktiviere Parallelverarbeitung">
-<!ENTITY pmcommander.net.pipelining.ssl.label "Aktiviere Parallelverarbeitung über SSL">
+<!ENTITY pmcommander.net.pipelining.label "Aktiviere Pipelining">
+<!ENTITY pmcommander.net.pipelining.ssl.label "Aktiviere Pipelining über SSL">
 <!ENTITY pmcommander.net.pipelining.proxy.label "Aktiviere Pipelining über Proxy Verbindungen">
 <!ENTITY pmcommander.net.pipelining.aggressive.label "Verwende aggressives Pipelining">
 <!ENTITY pmcommander.net.pipelining.params.caption "Pipelining Parameter">
@@ -252,7 +252,9 @@
 <!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "In der Tab-Leiste, rechts (klassisch)">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.label "Anzeige sicherer Seiten in Adressleiste:">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.none "Keine Anzeige">
-<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "Randschattierung">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.secure "Nur sichere Seiten">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.securemixed "Sicherer und gemischter Modus">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.all "Sichere und unsichere Seiten">
 <!ENTITY pmcommander.sec.dom.windowopen.caption "Popup-Fenster">
 <!ENTITY pmcommander.sec.dom.when.opening.allow.label "Wenn ein Popup-Fenster geöffnet wird, erlaube dem Skript:">
 <!ENTITY pmcommander.sec.dom.closebutton.label "Deaktivieren der Schließen-Schaltfläche">

@@ -252,7 +252,9 @@
 <!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "En la barra de pestañas, a la derecha (estilo clásico)">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.label "Efecto de la barra de direcciones para sitios seguros:">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.none "Sin efecto visual">
-<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "Usar sombreado en los bordes">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.secure "Sólo sitios seguros">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.securemixed "Los sitios seguros y mixtos">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.all "Todos los estados">
 <!ENTITY pmcommander.sec.dom.windowopen.caption "Ventanas emergentes">
 <!ENTITY pmcommander.sec.dom.when.opening.allow.label "Cuando se abra una ventana emergente, permitirle al script:">
 <!ENTITY pmcommander.sec.dom.closebutton.label "Deshabilitar el botón para cerrar">

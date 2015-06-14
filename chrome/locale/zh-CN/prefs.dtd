@@ -252,7 +252,9 @@
 <!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "标签栏，右侧 (经典)">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.label "安全站点的地址栏效果:">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.none "无视觉效果">
-<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "使用边框阴影">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.secure "仅安全网站">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.securemixed "安全和混合模式">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.all "所有状态">
 <!ENTITY pmcommander.sec.dom.windowopen.caption "弹出窗口">
 <!ENTITY pmcommander.sec.dom.when.opening.allow.label "当打开一个弹出窗口时，允许脚本:">
 <!ENTITY pmcommander.sec.dom.closebutton.label "禁用关闭按钮">

@@ -252,7 +252,9 @@
 <!ENTITY pmcommander.sec.padlock.style.tabs.right.classic "In de tabbalk, rechts (klassiek)">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.label "Visueel effect voor beveiligde websites:">
 <!ENTITY pmcommander.sec.padlock.urlbar.fx.none "Geen visueel effect">
-<!ENTITY pmcommander.sec.padlock.urlbar.fx.shading "Kleurschaduw gebruiken">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.secure "Beveiligde sites">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.securemixed "Beveiligde/gemengde sites">
+<!ENTITY pmcommander.sec.padlock.urlbar.fx.all "Altijd">
 <!ENTITY pmcommander.sec.dom.windowopen.caption "Pop-upvensters">
 <!ENTITY pmcommander.sec.dom.when.opening.allow.label "Wanneer een pop-upvenster wordt geopend mag het script:">
 <!ENTITY pmcommander.sec.dom.closebutton.label "De knop Sluiten uitschakelen">
