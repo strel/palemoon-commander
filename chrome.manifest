@@ -24,6 +24,7 @@ locale	pmcommander	en-US		chrome/locale/en-US/
 locale	pmcommander	de			chrome/locale/de/
 locale	pmcommander	es-AR		chrome/locale/es-AR/
 locale	pmcommander	nl-NL		chrome/locale/nl-NL/
+locale	pmcommander	ru			chrome/locale/ru/
 locale	pmcommander	sv-SE		chrome/locale/sv-SE/
 locale	pmcommander	zh-CN		chrome/locale/zh-CN/
 
