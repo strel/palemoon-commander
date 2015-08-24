@@ -30,7 +30,7 @@
 		<em:name>Pale Moon Commander</em:name>
 		<em:optionsURL>chrome://pmcommander/content/prefs.xul</em:optionsURL>
 		<em:type>2</em:type>
-		<em:version>1.7.1</em:version>
+		<em:version>1.7.2</em:version>
 
 		<!-- Localizations -->
 
@@ -59,6 +59,15 @@
 				<em:name>Pale Moon Commander</em:name>
 				<em:description>Geavanceerde voorkeuren voor Pale Moon</em:description>
 				<em:translator>Moonchild / MarkH [babelzilla]</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized><!-- pl -->
+			<Description>
+				<em:locale>pl</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Zawansowana konfiguracja dla przeglądarki Pale Moon</em:description>
+				<em:translator>Internauta1024A</em:translator>
 			</Description>
 		</em:localized>
 
