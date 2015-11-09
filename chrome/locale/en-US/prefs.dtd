@@ -376,17 +376,17 @@
 <!ENTITY pmcommander.sec.priv.3pc.sessiononly.label "Clear 3rd party cookies when closing the browser">
 <!ENTITY pmcommander.sec.priv.geolocation.label "Enable browser location awareness">
 
-<!ENTITY pmcommander.sec.priv.referers.caption "Referers">
-<!ENTITY pmcommander.sec.priv.referer.sendheader.label "Send referer headers:">
-<!ENTITY pmcommander.sec.priv.referer.sendheader.never "Never send referers">
+<!ENTITY pmcommander.sec.priv.referers.caption "Referrers (HTTP referer header)">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.label "Send referrers:">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.never "Never send referrers">
 <!ENTITY pmcommander.sec.priv.referer.sendheader.onclicks "Send only on clicks">
-<!ENTITY pmcommander.sec.priv.referer.sendheader.clicks_and_images "Send on clicks and images">
-<!ENTITY pmcommander.sec.priv.referer.spoofheader.label "Spoof referer to target URL">
-<!ENTITY pmcommander.sec.priv.referer.trim.label "Trim referers:">
+<!ENTITY pmcommander.sec.priv.referer.sendheader.clicks_and_images "Send on clicks and images (default)">
+<!ENTITY pmcommander.sec.priv.referer.spoofheader.label "Spoof referrer to target URL">
+<!ENTITY pmcommander.sec.priv.referer.trim.label "Trim referrers:">
 <!ENTITY pmcommander.sec.priv.referer.trim.none "No trimming of the URL (default)">
 <!ENTITY pmcommander.sec.priv.referer.trim.shpp "Trim to scheme + host + port + path">
 <!ENTITY pmcommander.sec.priv.referer.trim.shp "Trim to scheme + host + port">
-<!ENTITY pmcommander.sec.priv.referer.xop.label "Cross-Origin referer policy:">
+<!ENTITY pmcommander.sec.priv.referer.xop.label "Cross-Origin referrer policy:">
 <!ENTITY pmcommander.sec.priv.referer.xop.always "Always send (default)">
 <!ENTITY pmcommander.sec.priv.referer.xop.basedomain "Send if base domain matches">
 <!ENTITY pmcommander.sec.priv.referer.xop.host "Send if host matches">
