@@ -1065,6 +1065,14 @@
 				<tabpanel id="pmcommander-misc-reset" orient="vertical">
 					<label width="100%">&pmcommander.misc.reset.info;</label>
 					<hbox align="center" style="display:block; padding-top:1em;" width="100%">
+              		<button id="resetPMCPrefsButton"
+                  	label="&pmcommander.reset.pmcprefs.label;" 
+                     oncommand="pmcommanderPrefs.resetPMCUserPrefs();" />
+              	   <description>
+               		<label control="resetPMCPrefsButton">&pmcommander.reset.pmcprefs.info;</label>
+                  </description>
+               </hbox>
+					<hbox align="center" style="display:block; padding-top:1em;" width="100%">
               		<button id="resetAllPrefsButton"
                   	label="&pmcommander.reset.allprefs.label;" 
                      oncommand="pmcommanderPrefs.resetAllUserPrefs();" />

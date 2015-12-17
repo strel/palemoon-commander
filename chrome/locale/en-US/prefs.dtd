@@ -400,7 +400,9 @@
 <!ENTITY pmcommander.info.restartwarning "Warning: changes to these settings require a browser restart.">
 <!ENTITY pmcommander.misc.modules.pdfjs "Enable the built-in PDF viewer">
 
-<!ENTITY pmcommander.misc.reset.info "If settings are preventing proper operation of the browser, you can reset preferences to browser defaults here to recover from misconfiguration.">
+<!ENTITY pmcommander.misc.reset.info "If settings are preventing proper operation of the browser, you can reset preferences to browser defaults here to recover from misconfiguration. You should exit and restart the browser after using these reset options.">
+<!ENTITY pmcommander.reset.pmcprefs.label "Reset Pale Moon Commander Preferences">
+<!ENTITY pmcommander.reset.pmcprefs.info "This will reset all user preferences controlled by this extension (including ones you may have changed outside of it) to browser defaults and close this window.">
 <!ENTITY pmcommander.reset.allprefs.label "Reset All Preferences">
 <!ENTITY pmcommander.reset.allprefs.info "Warning: This will reset all user preferences to browser defaults and close this window. Note that this will include any user-set preferences that are not part of this add-on, including settings of other installed extensions, and will restore all factory defaults of the browser.">
 
