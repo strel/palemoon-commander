@@ -593,13 +593,13 @@ var pmcommanderPrefs =
                             'dom.storage.default_quota'
                             ];
      for (i=0; i<ControlledPrefs.length; i++) {
-       if (PMprefs.prefHasUserValue(ControlledPrefs[i])
+       if (PMprefs.prefHasUserValue(ControlledPrefs[i]))
          PMprefs.clearUserPref(ControlledPrefs[i]);
      }
      // Cleanup based on preferences
      this.cacheCompressionChanged();
      // Re-initialize
-     this.init();
+     self.close();
    },
 
 
