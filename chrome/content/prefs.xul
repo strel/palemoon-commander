@@ -1013,7 +1013,7 @@
                         </menupopup>
                      </menulist>
                   </hbox>
-                  <checkbox id="pmcommander-sec-priv-referers-spoofheader-check" preference="pmcommander-pref-sec-priv-referer-spoofheader" label="&pmcommander.sec.priv.referer.spoofheader.label;" />                                  
+                  <checkbox id="pmcommander-sec-priv-referers-spoofheader-check" preference="pmcommander-pref-sec-priv-referer-spoof" label="&pmcommander.sec.priv.referer.spoofheader.label;" />                                  
                   <hbox align="center">
                      <label id="pmcommander-sec-priv-referers-trim-label" control="pmcommander-sec-priv-referer-trim-menu">&pmcommander.sec.priv.referer.trim.label;</label>
                      <menulist id="pmcommander-sec-priv-referer-trim-menu" preference="pmcommander-pref-sec-priv-referer-trim" sizetopopup="always">
