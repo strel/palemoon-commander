@@ -349,6 +349,8 @@
 <!ENTITY pmcommander.info.restartwarning "Let op: de browser moet worden herstart als deze opties worden gewijzigd.">
 <!ENTITY pmcommander.misc.modules.pdfjs "De interne PDF-lezer inschakelen">
 <!ENTITY pmcommander.misc.reset.info "Als instellingen het juist werken van de browser voorkomen, kunt u de instellingen terugzetten naar standaardinstellingen om een foutieve configuratie op te heffen.">
+<!ENTITY pmcommander.reset.pmcprefs.label "Pale Moon Commander voorkeuren resetten.">
+<!ENTITY pmcommander.reset.pmcprefs.info "Dit stelt alle gebuikersvoorkeuren die door deze extensie worden beheerd (inclusief voorkeuren die buiten deze extensie zijn ingesteld) in op standaardwaarden, en sluit dit venster.">
 <!ENTITY pmcommander.reset.allprefs.label "Alle instellingen resetten">
 <!ENTITY pmcommander.reset.allprefs.info "Waarschuwing: Dit zet alle instellingen terug naar standaardwaarden van de browser en sluit automatisch dit venster. Merk op dat niet alleen de instellingen die genoemd worden in deze add-on worden teruggezet, maar alle instellingen; ook de instellingen van andere geïnstalleerde add-ons en andere browser-instellingen. Alles wordt teruggezet naar fabrieksinstellingen.">
 <!ENTITY pmcommander.misc.bookmarkbackups.caption "Back-ups van bladwijzers">

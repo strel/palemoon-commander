@@ -170,8 +170,8 @@
 <!ENTITY pmcommander.perf.sess.concurrent.tabs.label "Anzahl auf einmal wiederherzustellender Tabs:">
 <!ENTITY pmcommander.perf.sess.pinnedondemand.label "Angepinnte Tabs nur nach Anklicken wiederherstellen">
 <!ENTITY pmcommander.undolevels.caption "Rückgängig-Ebenen:">
-<!ENTITY pmcommander.perf.sess.undo.tabs.label "Maximale Anzahl von Tabs, bei denen Schließen rückgängig gemacht werden kann:">
-<!ENTITY pmcommander.perf.sess.undo.windows.label "Maximale Anzahl von Fenstern, bei denen Schließen rückgängig gemacht werden kann:">
+<!ENTITY pmcommander.perf.sess.undo.tabs.label "Maximale Anzahl Tabs, bei denen Schließen rückgängig gemacht werden kann:">
+<!ENTITY pmcommander.perf.sess.undo.windows.label "Maximale Anzahl Fenster, bei denen Schließen rückgängig gemacht werden kann:">
 <!-- User Interface category -->
 <!ENTITY pmcommander.tab.ui.tabs "Tabs">
 <!ENTITY pmcommander.tab.ui.taskbar "Taskleiste">
@@ -349,6 +349,8 @@
 <!ENTITY pmcommander.info.restartwarning "Achtung: Änderungen an diesen Einstellungen erfordern einen Neustart des Browsers.">
 <!ENTITY pmcommander.misc.modules.pdfjs "Aktiviere eingebauten PDF-Betrachter">
 <!ENTITY pmcommander.misc.reset.info "Falls die Einstellungen eine korrekte Funktion des Browsers verhindern, können sie hier auf Standardwerte zurückgesetzt werden, um die Funktion nach einer Fehlkonfiguration wieder herzustellen.">
+<!ENTITY pmcommander.reset.pmcprefs.label "Einstellungen von Pale Moon Commander zurücksetzen">
+<!ENTITY pmcommander.reset.pmcprefs.info "Dies setzt alle von dieser Erweiterung gesteuerten Benutzereinstellungen (auch wenn außerhalb geändert) auf Standardwerte zurück und schließt dieses Fenster.">
 <!ENTITY pmcommander.reset.allprefs.label "Setze alle Einstellungen zurück">
 <!ENTITY pmcommander.reset.allprefs.info "Warnung: Dies wird alle Benutzer-Einstellungen auf Standardwerte zurücksetzen und dieses Fenster schließen. Beachte: Dies schließt auch Einstellungen mit ein, die nicht Teil dieses Add-Ons sind, einschließlich Einstellungen anderer Erweiterungen. Es werden alle Einstellungen des Browsers auf den Werkszustand zurückgesetzt.">
 <!ENTITY pmcommander.misc.bookmarkbackups.caption "Sicherheitskopien für Lesezeichen">

@@ -349,6 +349,8 @@
 <!ENTITY pmcommander.info.restartwarning "警告：改变这些设置需要一次浏览器重启。">
 <!ENTITY pmcommander.misc.modules.pdfjs "启用内置的 PDF 查看器">
 <!ENTITY pmcommander.misc.reset.info "如果设置阻挡了浏览器的正常运行，您可以在这里重置首选项为浏览器默认设置以从故障中恢复。">
+<!ENTITY pmcommander.reset.pmcprefs.label "重置 Pale Moon Commander 首选项">
+<!ENTITY pmcommander.reset.pmcprefs.info "这将重置本扩展控制的所有用户首选项（包括您可能已在其他地方更改的首选项）至浏览器默认值，并关闭此窗口。">
 <!ENTITY pmcommander.reset.allprefs.label "重置所有首选项">
 <!ENTITY pmcommander.reset.allprefs.info "警告：这将重置所有用户首选项到浏览器的默认设置，然后关闭此窗口。请注意：这将包括所有用户设置的首选项，也包括其他已安装扩展的设置（本附加组件除外），并恢复所有浏览器的出厂设置。">
 <!ENTITY pmcommander.misc.bookmarkbackups.caption "书签备份">

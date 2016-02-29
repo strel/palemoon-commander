@@ -401,6 +401,8 @@
 <!ENTITY pmcommander.misc.modules.pdfjs "Włącz wbudowana przeglądarkę PDF">
 
 <!ENTITY pmcommander.misc.reset.info "Jeżeli ustawienia uniemożliwiają prawidłowe działanie przeglądarki, możesz tutaj przywrócić ustawienia domyślne, przy złej konfiguracji przeglądarki.">
+<!ENTITY pmcommander.reset.pmcprefs.label "Reset Pale Moon Commander Preferences">
+<!ENTITY pmcommander.reset.pmcprefs.info "This will reset all user preferences controlled by this extension (including ones you may have changed outside of it) to browser defaults and close this window.">
 <!ENTITY pmcommander.reset.allprefs.label "Przywróć wartości domyślne wszystkich preferencji">
 <!ENTITY pmcommander.reset.allprefs.info "Ostrzeżenie: Wszystkie preferencje zostaną przywrócone do wartości domyślnych i okno zostanie zamknięte. Uwaga: dotyczy to wszystkich preferencji ustawioych przez użytkownika nie będących częścią tego dodatku, włączając ustawienia innych zainstalowanych dodatków, zostaną przywrócone wszystkie domyślne ustawienia przeglądarki.">
 

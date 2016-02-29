@@ -187,7 +187,7 @@
 <!ENTITY pmcommander.ui.errorpages.label "Usar páginas de error personalizadas">
 <!ENTITY pmcommander.ui.toplevel.image.background.label "Color de fondo para imágenes individuales:">
 <!ENTITY pmcommander.ui.hideplaceholders.label "Ocultar el texto de marco de interface al enfocar la entrada">
-<!ENTITY pmcommander.ui.newtaburl.label "URL nueva pestaña:">
+<!ENTITY pmcommander.ui.newtaburl.label "Dirección web de nueva pestaña:">
 <!ENTITY pmcommander.ui.tabs.animate.label "Animar pestañas">
 <!ENTITY pmcommander.ui.tabs.resize.immediately.label "Redimensionar inmediatamente el tamaño de las pestañas al cerrar una">
 <!ENTITY pmcommander.ui.tabs.intitlebar.label "Mostrar las pestañas en la barra del título">
@@ -349,6 +349,8 @@
 <!ENTITY pmcommander.info.restartwarning "Advertencia: los cambios a estas configuraciones requieren reinicio del navegador web.">
 <!ENTITY pmcommander.misc.modules.pdfjs "Habilitar el visor incorporado de PDF">
 <!ENTITY pmcommander.misc.reset.info "Si las configuraciones están evitando el correcto funcionamiento del navegador web, podés restablecer las mismas a la configuración predeterminada del navegador para recuperarlo de una configuración problemática.">
+<!ENTITY pmcommander.reset.pmcprefs.label "Restablecer la configuración de Pale Moon Commander">
+<!ENTITY pmcommander.reset.pmcprefs.info "Esto restablecerá todas las configuraciones del usuario controladas por esta extensión (incluyendo las que hayás cambiado sin ella) a la configuración predeterminada del navegador web, y cerrará esta ventana.">
 <!ENTITY pmcommander.reset.allprefs.label "Restablecer todas las configuraciones">
 <!ENTITY pmcommander.reset.allprefs.info "Advertencia: esto restablecerá todas las configuraciones del usuario a los valores predeterminados del navegador web, y cerrará esta ventana. Tené en cuenta que esto incluye cualquier configuración hecha por el usuario que no sean parte de este complemento, incluyendo configuraciones de otros complementos instalados, además de la configuración de fábrica del navegador.">
 <!ENTITY pmcommander.misc.bookmarkbackups.caption "Resguardo de marcadores">

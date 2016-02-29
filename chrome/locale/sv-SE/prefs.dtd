@@ -349,6 +349,8 @@
 <!ENTITY pmcommander.info.restartwarning "Obs: Ändringar av dessa inställningar kräver en omstart av webbläsaren.">
 <!ENTITY pmcommander.misc.modules.pdfjs "Aktivera den inbyggda PDF-granskaren">
 <!ENTITY pmcommander.misc.reset.info "Om inställningarna hindrar webbläsaren från att fungera korrekt, så kan du återställa dem till standardinställningarna för webbläsaren här för att återställa webbläsaren från felkonfigurering.">
+<!ENTITY pmcommander.reset.pmcprefs.label "Återställ Pale Moon Commander inställningar">
+<!ENTITY pmcommander.reset.pmcprefs.info "Det här återställer alla användarinställningar som styrs av detta tillägg (inklusive dem som du kan ha ändrats utanför det) till standardinställningarna för webbläsaren och stänger detta fönster.">
 <!ENTITY pmcommander.reset.allprefs.label "Återställ alla inställningar">
 <!ENTITY pmcommander.reset.allprefs.info "Varning: Det här återställer alla användarinställningar till standardinställningarna för webbläsaren och stänger detta fönster. Observera att detta innefattar samtliga användarspecifika inställningar som inte är en del av detta tillägg, däribland inställningar för andra installerade tillägg, och att webbläsaren kommer att återställas till sina tillverkningsinställningar.">
 <!ENTITY pmcommander.misc.bookmarkbackups.caption "Säkerhetskopiering av bokmärken">
