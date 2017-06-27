@@ -11,7 +11,7 @@
 # The Initial Developer of the Original Code is 
 # Mark Straver <moonchild@palemoon.org>.
 # 
-# This code is Copyright (C) 2012-2017 the Initial Developer. All Rights Reserved.
+# This code is Copyright (C) 2012-2015 the Initial Developer. All Rights Reserved.
 #  
 # ***** END LICENSE BLOCK *****
 
@@ -20,6 +20,14 @@ content	pmcommander			chrome/content/
 
 # Locale registration
 locale	pmcommander	en-US		chrome/locale/en-US/
+
+locale	pmcommander	de			chrome/locale/de/
+locale	pmcommander	es-AR		chrome/locale/es-AR/
+locale	pmcommander	nl-NL		chrome/locale/nl-NL/
+locale	pmcommander	pl			chrome/locale/pl/
+locale	pmcommander	ru			chrome/locale/ru/
+locale	pmcommander	sv-SE		chrome/locale/sv-SE/
+locale	pmcommander	zh-CN		chrome/locale/zh-CN/
 
 # Skin registration
 skin	pmcommander	classic/1.0	chrome/skin/all/

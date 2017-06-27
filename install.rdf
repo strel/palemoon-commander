@@ -34,70 +34,7 @@
 
 		<!-- Localizations -->
 
-    <em:localized>
-      <!-- de -->
-      <Description>
-        <em:locale>de</em:locale>
-        <em:name>Pale Moon Commander</em:name>
-        <em:description>Erweiterte Einstellungen für Pale Moon</em:description>
-        <em:translator>Mirko Breßler / Gerd Röthig</em:translator>
-      </Description>
-    </em:localized>
-    
-		<em:localized><!-- es-AR -->
-			<Description>
-				<em:locale>es-AR</em:locale>
-				<em:name>Pale Moon Commander</em:name>
-				<em:description>Configuración avanzada para Pale Moon</em:description>
-				<em:translator>KNTRO</em:translator>
-			</Description>
-		</em:localized>
 
-		<em:localized><!-- nl-NL -->
-			<Description>
-				<em:locale>nl-NL</em:locale>
-				<em:name>Pale Moon Commander</em:name>
-				<em:description>Geavanceerde voorkeuren voor Pale Moon</em:description>
-				<em:translator>Moonchild / MarkH [babelzilla]</em:translator>
-			</Description>
-		</em:localized>
-		
-		<em:localized><!-- pl -->
-			<Description>
-				<em:locale>pl</em:locale>
-				<em:name>Pale Moon Commander</em:name>
-				<em:description>Zawansowana konfiguracja dla przeglądarki Pale Moon</em:description>
-				<em:translator>Internauta1024A</em:translator>
-			</Description>
-		</em:localized>
-
-		<em:localized><!-- ru -->
-			<Description>
-				<em:locale>ru</em:locale>
-				<em:name>Pale Moon Commander</em:name>
-				<em:description>Продвинутые настройки для Pale Moon</em:description>
-				<em:translator>LeonSK</em:translator>
-			</Description>
-		</em:localized>
-
-		<em:localized><!-- sv-SE -->
-			<Description>
-				<em:locale>sv-SE</em:locale>
-				<em:name>Pale Moon Commander</em:name>
-				<em:description>Avancerade inställningar för Pale Moon</em:description>
-				<em:translator>Mikael Hiort af Ornäs</em:translator>
-			</Description>
-		</em:localized>
-		
-		<em:localized><!-- zh-CN -->
-			<Description>
-				<em:locale>zh-CN</em:locale>
-				<em:name>Pale Moon Commander</em:name>
-				<em:description>适用于 Pale Moon 的高级首选项编辑器</em:description>
-				<em:translator>YFdyh000</em:translator>
-			</Description>
-		</em:localized>
-		
 		<!-- Targets -->
 
 		<em:targetApplication><!-- Firefox -->

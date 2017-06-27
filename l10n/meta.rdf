@@ -1,0 +1,64 @@
+    <em:localized>
+      <!-- de -->
+      <Description>
+        <em:locale>de</em:locale>
+        <em:name>Pale Moon Commander</em:name>
+        <em:description>Erweiterte Einstellungen fÃ¼r Pale Moon</em:description>
+        <em:translator>Mirko BreÃŸler / Gerd RÃÂthig</em:translator>
+      </Description>
+    </em:localized>
+    
+		<em:localized><!-- es-AR -->
+			<Description>
+				<em:locale>es-AR</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>ConfiguraciÃ¦n avanzada para Pale Moon</em:description>
+				<em:translator>KNTRO</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized><!-- nl-NL -->
+			<Description>
+				<em:locale>nl-NL</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Geavanceerde voorkeuren voor Pale Moon</em:description>
+				<em:translator>Moonchild / MarkH [babelzilla]</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized><!-- pl -->
+			<Description>
+				<em:locale>pl</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Zawansowana konfiguracja dla przeglÄàdarki Pale Moon</em:description>
+				<em:translator>Internauta1024A</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized><!-- ru -->
+			<Description>
+				<em:locale>ru</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>ĞŸĞÇĞ¥Ğ´Ğ²Ğ©Ğ¢ĞâĞéĞïĞÁ Ğ¢Ğ°ĞüĞéĞÇĞ¥Ğ¹ĞºĞ© Ğ´Ğ»ĞÅ Pale Moon</em:description>
+				<em:translator>LeonSK</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized><!-- sv-SE -->
+			<Description>
+				<em:locale>sv-SE</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>Avancerade instÃñllningar fÃÂr Pale Moon</em:description>
+				<em:translator>Mikael Hiort af OrnÃñs</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized><!-- zh-CN -->
+			<Description>
+				<em:locale>zh-CN</em:locale>
+				<em:name>Pale Moon Commander</em:name>
+				<em:description>ÚÇéŞö¿õºÄ Pale Moon ŞÜäÚ½ÿŞººÚªûÚÇëÚí¹Ş¼ûş¥æÕÖ¿</em:description>
+				<em:translator>YFdyh000</em:translator>
+			</Description>
+		</em:localized>
+		
