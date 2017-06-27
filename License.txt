@@ -1,4 +1,4 @@
-This add-on is Copyright ©2012-2015 M.C. Straver. 
+This add-on is Copyright ©2012-2017 M.C. Straver. 
 It is distributed as Freeware with disclosed source code (see definition below).
 
 Pale Moon Freeware License
