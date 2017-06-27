@@ -41,23 +41,30 @@
       <preferences>
          <preference id="pmcommander-pref-gfx-driverbugs"             name="gfx.work-around-driver-bugs"            type="bool" />
          <preference id="pmcommander-pref-initialpaint-delay"         name="nglayout.initialpaint.delay"            type="int" />
+         <preference id="pmcommander-pref-gfx-vsync-driver"           name="gfx.vsync.refreshdriver"                type="bool" />
+         <preference id="pmcommander-pref-gfx-vsync-compositor"       name="gfx.vsync.compositor"                   type="bool" />
+         <preference id="pmcommander-pref-gfx-vsync-hardware"         name="gfx.vsync.hw-vsync.enabled"             type="bool" />
+         
          <preference id="pmcommander-pref-webgl-native"               name="webgl.prefer-native-gl"                 type="bool" />
          <preference id="pmcommander-pref-webgl-msaa-force"           name="webgl.msaa-force"                       type="bool" />
          <preference id="pmcommander-pref-webgl-msaa-level"           name="gl.msaa-level"                          type="int" />
          <preference id="pmcommander-pref-d2d-enabled"                name="gfx.direct2d.disabled"                  type="bool" inverted="true" 
            onchange="pmcommanderPrefs.d2dGlobalChanged();" />
          <preference id="pmcommander-pref-d2d-force"                  name="gfx.direct2d.force-enabled"             type="bool" />
+         <preference id="pmcommander-pref-d2d-1_1"                    name="gfx.direct2d.use1_1"                    type="bool" />
          <preference id="pmcommander-pref-layers-enabled"             name="layers.acceleration.disabled"           type="bool" inverted="true" 
            onchange="pmcommanderPrefs.layeraccGlobalChanged();" />
-         <preference id="pmcommander-pref-layers-drawfps"             name="layers.acceleration.draw-fps"           type="bool" />
          <preference id="pmcommander-pref-layers-force"               name="layers.acceleration.force-enabled"      type="bool" />
          <preference id="pmcommander-pref-layers-mode"                name="extensions.pmcommander.layers.mode"     type="int" 
            onchange="pmcommanderPrefs.layersModeChanged();" />
-         <preference id="pmcommander-pref-rendering-deprecated"       name="layout.altrendering.enabled"            type="bool" inverted="true" />
 
+         <preference id="pmcommander-pref-fonts-downloadable"         name="gfx.downloadable_fonts.enabled"                         type="bool" />
+         <preference id="pmcommander-pref-fonts-woff2"                name="gfx.downloadable_fonts.woff2.enabled"                   type="bool" />
          <preference id="pmcommander-pref-fonts-directwrite"          name="gfx.font_rendering.directwrite.enabled"                 type="bool" />
          <preference id="pmcommander-pref-fonts-directwrite-gdi"      name="gfx.font_rendering.directwrite.use_gdi_table_loading"   type="bool" />
          <preference id="pmcommander-pref-fonts-graphite"             name="gfx.font_rendering.graphite.enabled"                    type="bool" />
+         <preference id="pmcommander-pref-fonts-opentype-svg"         name="gfx.font_rendering.opentype_svg.enabled"                type="bool" />
+
          <preference id="pmcommander-pref-cleartype-content-always"   name="gfx.font_rendering.cleartype.always_use_for_content"    type="bool" />
          <preference id="pmcommander-pref-cleartype-downloadable"     name="gfx.font_rendering.cleartype.use_for_downloadable_fonts" type="bool" />
          <preference id="pmcommander-pref-cleartype-mode"             name="gfx.font_rendering.cleartype_params.rendering_mode"     type="int" />
@@ -67,7 +74,6 @@
          <preference id="pmcommander-pref-cleartype-pixel-structure"  name="gfx.font_rendering.cleartype_params.pixel_structure"    type="int" />
          <preference id="pmcommander-pref-cleartype-gdi-max-size"     name="gfx.font_rendering.cleartype_params.force_gdi_classic_max_size" type="int" />
          
-         <preference id="pmcommander-pref-color-override-a11y"        name="browser.display.ignore_accessibility_theme" type="bool" />
          <preference id="pmcommander-pref-color-ICCv4"                name="gfx.color_management.enablev4"          type="bool" />
          <preference id="pmcommander-pref-color-ICCmode"              name="gfx.color_management.mode"              type="int" />
          <preference id="pmcommander-pref-color-ICCintent"            name="gfx.color_management.rendering_intent"  type="int" />
@@ -79,23 +85,30 @@
             <tab id="pmcommander-tab-graphics-rendering"  label="&pmcommander.tab.graphics.rendering;" />
             <tab id="pmcommander-tab-graphics-3D" label="&pmcommander.tab.graphics.3D;" />
             <tab id="pmcommander-tab-graphics-fonts" label="&pmcommander.tab.graphics.fonts;" />
+            <tab id="pmcommander-tab-graphics-cleartype" label="&pmcommander.tab.graphics.cleartype;" />
             <tab id="pmcommander-tab-graphics-color" label="&pmcommander.tab.graphics.color;" />
          </tabs>
 
          <tabpanels flex="1">
             <tabpanel id="pmcommander-graphics-general" orient="vertical">
+                  <label>&pmcommander.info.restartwarning;</label>
                   <checkbox id="pmcommander-gfx-driverbugs-check" preference="pmcommander-pref-gfx-driverbugs" label="&pmcommander.graphics.general.workaround.driverbugs;" />
                   <hbox align="center">
                      <label id="pmcommander-gfx-initialpaint-delay-label" control="pmcommander-gfx-initialpaint-delay-input">&pmcommander.graphics.general.initialpaint.delay.label;</label>
                      <textbox type="number" size="4" min="25" max="3000" id="pmcommander-gfx-initialpaint-delay-input" preference="pmcommander-pref-initialpaint-delay" />
                      <label>&pmcommander.unit.ms;</label>
                   </hbox>
+                  <checkbox id="pmcommander-gfx-vsync-driver-check" preference="pmcommander-pref-gfx-vsync-driver" label="&pmcommander.graphics.general.vsync.driver.label;" />
+                  <checkbox id="pmcommander-gfx-vsync-compositor-check" preference="pmcommander-pref-gfx-vsync-compositor" label="&pmcommander.graphics.general.vsync.compositor.label;" />
+                  <checkbox id="pmcommander-gfx-vsync-hardware-check" preference="pmcommander-pref-gfx-vsync-hardware" label="&pmcommander.graphics.general.vsync.hardware.label;" />
             </tabpanel>
             <tabpanel id="pmcommander-graphics-rendering" orient="vertical">
+               <label>&pmcommander.info.restartwarning;</label>
                <groupbox id="pmcommander-graphics-rendering-d2d">
                   <caption label="&pmcommander.graphics.rendering.d2d.caption;" />
                   <checkbox id="pmcommander-d2d-enabled-check" preference="pmcommander-pref-d2d-enabled" label="&pmcommander.graphics.rendering.d2d.enabled.label;" />
                   <checkbox id="pmcommander-d2d-force-check" preference="pmcommander-pref-d2d-force" label="&pmcommander.graphics.rendering.d2d.force.label;" />
+                  <checkbox id="pmcommander-d2d-1_1-check" preference="pmcommander-pref-d2d-1_1" label="&pmcommander.graphics.rendering.d2d.1_1.label;" />
                </groupbox>
                <groupbox id="pmcommander-graphics-rendering-layers">
                   <caption label="&pmcommander.graphics.rendering.layers.caption;" />
@@ -111,7 +124,6 @@
                         </menupopup>
                      </menulist>
                   </hbox>
-                  <checkbox id="pmcommander-rendering-deprecated-check" preference="pmcommander-pref-rendering-deprecated" label="&pmcommander.graphics.rendering.use.deprecated.label;" />
                </groupbox>
             </tabpanel>
             <tabpanel id="pmcommander-graphics-3D" orient="vertical">
@@ -131,58 +143,58 @@
                </hbox>
             </tabpanel>
             <tabpanel id="pmcommander-graphics-fonts" orient="vertical">
+               <checkbox id="pmcommander-fonts-download-check" preference="pmcommander-pref-fonts-downloadable" label="&pmcommander.graphics.fonts.downloadable.label;" />
+               <checkbox id="pmcommander-fonts-woff2-check" preference="pmcommander-pref-fonts-woff2" label="&pmcommander.graphics.fonts.woff2.label;" />
                <checkbox id="pmcommander-fonts-directwrite-gdi-check" preference="pmcommander-pref-fonts-directwrite-gdi" label="&pmcommander.graphics.fonts.directwrite.gdi.label;" />
                <checkbox id="pmcommander-fonts-graphite-check" preference="pmcommander-pref-fonts-graphite" label="&pmcommander.graphics.fonts.graphite.label;" />
-               <groupbox id="pmcommander-graphics-fonts-cleartype">
-                  <caption label="&pmcommander.graphics.fonts.cleartype.caption;" />
-                  <checkbox id="pmcommander-cleartype-content-check" preference="pmcommander-pref-cleartype-content-always" label="&pmcommander.graphics.cleartype.content.always.label;" />
-                  <checkbox id="pmcommander-cleartype-downloadable-check" preference="pmcommander-pref-cleartype-downloadable" label="&pmcommander.graphics.cleartype.downloadable.label;" />
-                  <hbox align="center">
-                     <label id="pmcommander-cleartype-mode-label" control="pmcommander-cleartype-mode-menu">&pmcommander.graphics.cleartype.mode.label;</label>
-                     <menulist id="pmcommander-cleartype-mode-menu" preference="pmcommander-pref-cleartype-mode" sizetopopup="always">
-                        <menupopup>
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.auto;"         value="-1" />
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.default;"      value="0" />
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.aliased;"      value="1" />
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.gdiclassic;"   value="2" />
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.gdinatural;"   value="3" />
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.natural;"      value="4" />
-                           <menuitem label="&pmcommander.graphics.cleartype.mode.symmetric;"    value="5" />
-                        </menupopup>
-                     </menulist>
-                  </hbox>
-                  <hbox align="center">
-                     <label id="pmcommander-cleartype-level-label" control="pmcommander-cleartype-level-input">&pmcommander.graphics.cleartype.level.label;</label>
-                     <textbox type="number" size="3" min="-1" max="100" id="pmcommander-cleartype-level-input" preference="pmcommander-pref-cleartype-level" />
-                  </hbox>
-                  <hbox align="center">
-                     <label id="pmcommander-cleartype-contrast-label" control="pmcommander-cleartype-contrast-input">&pmcommander.graphics.cleartype.contrast.label;</label>
-                     <textbox type="number" size="4" min="-1" max="1000" id="pmcommander-cleartype-contrast-input" preference="pmcommander-pref-cleartype-contrast" />
-                  </hbox>
-                  <hbox align="center">
-                     <label id="pmcommander-cleartype-gamma-label" control="pmcommander-cleartype-gamma-input">&pmcommander.graphics.cleartype.gamma.label;</label>
-                     <textbox type="number" size="4" min="-1" max="2200" id="pmcommander-cleartype-gamma-input" preference="pmcommander-pref-cleartype-gamma" />
-                  </hbox>
-                  <hbox align="center">
-                     <label id="pmcommander-cleartype-pxmode-label" control="pmcommander-cleartype-pxmode-menu">&pmcommander.graphics.cleartype.pxmode.label;</label>
-                     <menulist id="pmcommander-cleartype-pxmode-menu" preference="pmcommander-pref-cleartype-pixel-structure" sizetopopup="always">
-                        <menupopup>
-                           <menuitem label="&pmcommander.graphics.cleartype.pxmode.auto;" value="-1" />
-                           <menuitem label="&pmcommander.graphics.cleartype.pxmode.flat;" value="0" />
-                           <menuitem label="&pmcommander.graphics.cleartype.pxmode.RGB;"  value="1" />
-                           <menuitem label="&pmcommander.graphics.cleartype.pxmode.BGR;"  value="2" />
-                        </menupopup>
-                     </menulist>
-                  </hbox>
-                  <hbox align="center">
-                     <label id="pmcommander-cleartype-gdimax-label" control="pmcommander-image-background-input">&pmcommander.graphics.cleartype.gdimaxsize;</label>
-                     <textbox type="number" size="3" max="200" id="pmcommander-cleartype-gdimax-input" preference="pmcommander-pref-cleartype-gdi-max-size" />
-                  </hbox>
-               </groupbox>
-            
+               <checkbox id="pmcommander-fonts-opentype-svg-check" preference="pmcommander-pref-fonts-opentype-svg" label="&pmcommander.graphics.fonts.opentype.svg.label;" />
+            </tabpanel>
+            <tabpanel id="pmcommander-graphics-cleartype" orient="vertical">
+               <checkbox id="pmcommander-cleartype-content-check" preference="pmcommander-pref-cleartype-content-always" label="&pmcommander.graphics.cleartype.content.always.label;" />
+               <checkbox id="pmcommander-cleartype-downloadable-check" preference="pmcommander-pref-cleartype-downloadable" label="&pmcommander.graphics.cleartype.downloadable.label;" />
+               <hbox align="center">
+                  <label id="pmcommander-cleartype-mode-label" control="pmcommander-cleartype-mode-menu">&pmcommander.graphics.cleartype.mode.label;</label>
+                  <menulist id="pmcommander-cleartype-mode-menu" preference="pmcommander-pref-cleartype-mode" sizetopopup="always">
+                     <menupopup>
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.auto;"         value="-1" />
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.default;"      value="0" />
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.aliased;"      value="1" />
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.gdiclassic;"   value="2" />
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.gdinatural;"   value="3" />
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.natural;"      value="4" />
+                        <menuitem label="&pmcommander.graphics.cleartype.mode.symmetric;"    value="5" />
+                     </menupopup>
+                  </menulist>
+               </hbox>
+               <hbox align="center">
+                  <label id="pmcommander-cleartype-level-label" control="pmcommander-cleartype-level-input">&pmcommander.graphics.cleartype.level.label;</label>
+                  <textbox type="number" size="3" min="-1" max="100" id="pmcommander-cleartype-level-input" preference="pmcommander-pref-cleartype-level" />
+               </hbox>
+               <hbox align="center">
+                  <label id="pmcommander-cleartype-contrast-label" control="pmcommander-cleartype-contrast-input">&pmcommander.graphics.cleartype.contrast.label;</label>
+                  <textbox type="number" size="4" min="-1" max="1000" id="pmcommander-cleartype-contrast-input" preference="pmcommander-pref-cleartype-contrast" />
+               </hbox>
+               <hbox align="center">
+                  <label id="pmcommander-cleartype-gamma-label" control="pmcommander-cleartype-gamma-input">&pmcommander.graphics.cleartype.gamma.label;</label>
+                  <textbox type="number" size="4" min="-1" max="2200" id="pmcommander-cleartype-gamma-input" preference="pmcommander-pref-cleartype-gamma" />
+               </hbox>
+               <hbox align="center">
+                  <label id="pmcommander-cleartype-pxmode-label" control="pmcommander-cleartype-pxmode-menu">&pmcommander.graphics.cleartype.pxmode.label;</label>
+                  <menulist id="pmcommander-cleartype-pxmode-menu" preference="pmcommander-pref-cleartype-pixel-structure" sizetopopup="always">
+                     <menupopup>
+                     <menuitem label="&pmcommander.graphics.cleartype.pxmode.auto;" value="-1" />
+                     <menuitem label="&pmcommander.graphics.cleartype.pxmode.flat;" value="0" />
+                     <menuitem label="&pmcommander.graphics.cleartype.pxmode.RGB;"  value="1" />
+                        <menuitem label="&pmcommander.graphics.cleartype.pxmode.BGR;"  value="2" />
+                     </menupopup>
+                  </menulist>
+               </hbox>
+               <hbox align="center">
+                  <label id="pmcommander-cleartype-gdimax-label" control="pmcommander-image-background-input">&pmcommander.graphics.cleartype.gdimaxsize;</label>
+                  <textbox type="number" size="3" max="200" id="pmcommander-cleartype-gdimax-input" preference="pmcommander-pref-cleartype-gdi-max-size" />
+               </hbox>
             </tabpanel>
             <tabpanel id="pmcommander-graphics-color" orient="vertical">
-               <checkbox id="pmcommander-graphics-color-override-a11y-check" preference="pmcommander-pref-color-override-a11y" label="&pmcommander.graphics.color.override.a11y;" />
                <groupbox id="pmcommander-graphics-color-ICC">
                   <caption label="&pmcommander.graphics.color.ICC.caption;" />
                   <label>&pmcommander.info.restartwarning;</label>
@@ -384,21 +396,19 @@
       <preferences>
          <!-- JS global -->
          <preference id="pmcommander-pref-js-global-disable"      name="javascript.enabled"                       type="bool" inverted="true" />
-         <preference id="pmcommander-pref-js-typeinference"       name="javascript.options.typeinference"         type="bool" />
-         <!-- JS Chrome -->
-         <preference id="pmcommander-pref-js-baselinejit-chrome"  name="javascript.options.baselinejit.chrome"    type="bool" />
          <!-- JS Content -->
-         <preference id="pmcommander-pref-js-baselinejit-content" name="javascript.options.baselinejit.content"   type="bool" />
-         <preference id="pmcommander-pref-js-ionmonkey-content"   name="javascript.options.ion.content"           type="bool" />
+         <preference id="pmcommander-pref-js-baselinejit"         name="javascript.options.baselinejit"           type="bool" />
+         <preference id="pmcommander-pref-js-ionmonkey"           name="javascript.options.ion"                   type="bool" />
          <preference id="pmcommander-pref-js-odinmonkey"          name="javascript.options.asmjs"                 type="bool" />
          <!-- JS GC -->
          <preference id="pmcommander-pref-js-gc-onmempressure"    name="javascript.options.gc_on_memory_pressure" type="bool" />
          <preference id="pmcommander-pref-js-gc-per-compartment"  name="javascript.options.mem.gc_per_compartment" type="bool" />
-         <preference id="pmcommander-pref-js-gc-explicit-compartment"   name="javascript.options.mem.disable_explicit_compartment_gc" type="bool" inverted="true" />
          <preference id="pmcommander-pref-js-gc-dynamic-heap"     name="javascript.options.mem.gc_dynamic_heap_growth" type="bool" />
          <preference id="pmcommander-pref-js-gc-dynamic-slice"          name="javascript.options.mem.gc_dynamic_mark_slice" type="bool" />
          <preference id="pmcommander-pref-js-gc-incremental"      name="javascript.options.mem.gc_incremental"    type="bool" />
          <preference id="pmcommander-pref-js-gc-incremental-slice-ms"   name="javascript.options.mem.gc_incremental_slice_ms" type="int" />
+         <preference id="pmcommander-pref-js-gc-generational"     name="javascript.options.mem.gc_generational"   type="bool" />
+         <preference id="pmcommander-pref-js-gc-compacting"       name="javascript.options.mem.gc_compacting"     type="bool" />
          <!-- Cache -->
          <preference id="pmcommander-pref-cache-disk-enable"      name="browser.cache.disk.enable"                type="bool" 
             onchange="pmcommanderPrefs.diskcacheGlobalChanged();" />
@@ -407,7 +417,6 @@
          <preference id="pmcommander-pref-cache-disk-elementsize" name="browser.cache.disk.max_entry_size"        type="int" />
          <preference id="pmcommander-pref-cache-mem-enable"       name="browser.cache.memory.enable"              type="bool" 
             onchange="pmcommanderPrefs.memcacheGlobalChanged();" />
-         <preference id="pmcommander-pref-cache-mem-capacity"     name="browser.cache.memory.capacity"            type="int" />
          <preference id="pmcommander-pref-cache-mem-elementsize"  name="browser.cache.memory.max_entry_size"      type="int" />
          <preference id="pmcommander-pref-cache-compression"      name="browser.cache.compression_level"          type="int" 
             onchange="pmcommanderPrefs.cacheCompressionChanged();" />
@@ -440,22 +449,16 @@
             <tabpanel id="pmcommander-perf-js" orient="vertical">
                <checkbox id="pmcommander-js-global-disable" preference="pmcommander-pref-js-global-disable" label="&pmcommander.perf.js.global.disable;" />
                <label width="100%">&pmcommander.perf.js.global.disable.warning;</label>
-               <groupbox id="pmcommander-perf-js-chrome">
-                  <caption label="&pmcommander.perf.js.chrome.caption;" />
-                  <checkbox id="pmcommander-js-baselinejit-chrome-check" preference="pmcommander-pref-js-baselinejit-chrome" label="&pmcommander.perf.js.baselinejit.chrome.label;" />
-               </groupbox>
                <groupbox id="pmcommander-perf-js-content">
                   <caption label="&pmcommander.perf.js.content.caption;" />
-                  <checkbox id="pmcommander-js-baselinejit-content-check" preference="pmcommander-pref-js-baselinejit-content" label="&pmcommander.perf.js.baselinejit.content.label;" />
-                  <checkbox id="pmcommander-js-ionmonkey-content-check" preference="pmcommander-pref-js-ionmonkey-content" label="&pmcommander.perf.js.ionmonkey.content.label;" />
+                  <checkbox id="pmcommander-js-baselinejit-check" preference="pmcommander-pref-js-baselinejit" label="&pmcommander.perf.js.baselinejit.label;" />
+                  <checkbox id="pmcommander-js-ionmonkey-check" preference="pmcommander-pref-js-ionmonkey" label="&pmcommander.perf.js.ionmonkey.label;" />
                   <checkbox id="pmcommander-js-odinmonkey-check" preference="pmcommander-pref-js-odinmonkey" label="&pmcommander.perf.js.odinmonkey.label;" />
                </groupbox>
-               <checkbox id="pmcommander-pref-js-typeinference-check" preference="pmcommander-pref-js-typeinference" label="&pmcommander.perf.js.typeinference.label;" />
             </tabpanel>
             <tabpanel id="pmcommander-perf-js-gc" orient="vertical">
                <checkbox id="pmcommander-js-gc-onmempressure-check" preference="pmcommander-pref-js-gc-onmempressure" label="&pmcommander.perf.js.gc.onmempressure.label;" />
                <checkbox id="pmcommander-js-gc-per-compartment-check" preference="pmcommander-pref-js-gc-per-compartment" label="&pmcommander.perf.js.gc.per.compartment.label;" />
-               <checkbox id="pmcommander-js-gc-explicit-compartment-check" preference="pmcommander-pref-js-gc-explicit-compartment" label="&pmcommander.perf.js.gc.explicit.compartment.label;" />
                <checkbox id="pmcommander-js-gc-dynamic-heap-check" preference="pmcommander-pref-js-gc-dynamic-heap" label="&pmcommander.perf.js.gc.dynamic.heap.label;" />
                <checkbox id="pmcommander-js-gc-dynamic-slice-check" preference="pmcommander-pref-js-gc-dynamic-slice" label="&pmcommander.perf.js.gc.dynamic.slice.label;" />
                <checkbox id="pmcommander-js-gc-incremental-check" preference="pmcommander-pref-js-gc-incremental" label="&pmcommander.perf.js.gc.incremental.label;" />
@@ -464,6 +467,8 @@
                   <textbox type="number" size="3" min="5" max="500" id="pmcommander-pref-js-gc-incremental-slice-ms-input" preference="pmcommander-pref-js-gc-incremental-slice-ms" />
                   <label>&pmcommander.unit.ms;</label>
                </hbox>
+               <checkbox id="pmcommander-js-gc-generational-check" preference="pmcommander-pref-js-gc-generational" label="&pmcommander.perf.js.gc.generational.label;" />
+               <checkbox id="pmcommander-js-gc-compacting-check" preference="pmcommander-pref-js-gc-compacting" label="&pmcommander.perf.js.gc.compacting.label;" />
             </tabpanel>
             <tabpanel id="pmcommander-perf-cache" orient="vertical">
                <groupbox id="pmcommander-perf-cache-disk">
@@ -497,28 +502,15 @@
                   <caption label="&pmcommander.perf.cache.mem.caption;" />
                   <checkbox id="pmcommander-cache-mem-enable-check" preference="pmcommander-pref-cache-mem-enable" label="&pmcommander.perf.cache.mem.enable.label;" />
                   <hbox align="center">
-                     <label id="pmcommander-cache-mem-capacity-label" control="pmcommander-cache-mem-capacity-menu">&pmcommander.perf.cache.mem.capacity.label;</label>
-                     <menulist id="pmcommander-cache-mem-capacity-menu" preference="pmcommander-pref-cache-mem-capacity" sizetopopup="always">
-                        <menupopup>
-                           <menuitem label="&pmcommander.cache.mem.capacity.auto;" value="-1" />
-                           <menuitem label="&pmcommander.cache.mem.capacity.4M;" value="4096" />
-                           <menuitem label="&pmcommander.cache.mem.capacity.8M;" value="8192" />
-                           <menuitem label="&pmcommander.cache.mem.capacity.16M;" value="16384" />
-                           <menuitem label="&pmcommander.cache.mem.capacity.32M;" value="32768" />
-                           <menuitem label="&pmcommander.cache.mem.capacity.64M;" value="65536" />
-                        </menupopup>
-                     </menulist>
-                  </hbox>
-                  <hbox align="center">
                      <label id="pmcommander-cache-mem-elementsize-label" control="pmcommander-cache-mem-elementsize-menu">&pmcommander.perf.cache.mem.elementsize.label;</label>
                      <menulist id="pmcommander-cache-mem-elementsize-menu" preference="pmcommander-pref-cache-mem-elementsize" sizetopopup="always">
                         <menupopup>
-                           <menuitem label="&pmcommander.cache.mem.elementsize.auto;" value="-1" />
-                           <menuitem label="&pmcommander.cache.mem.elementsize.100K;" value="100" />
                            <menuitem label="&pmcommander.cache.mem.elementsize.500K;" value="500" />
                            <menuitem label="&pmcommander.cache.mem.elementsize.1M;" value="1024" />
                            <menuitem label="&pmcommander.cache.mem.elementsize.2M;" value="2048" />
-                           <menuitem label="&pmcommander.cache.mem.elementsize.4M;" value="4096" />
+                           <menuitem label="&pmcommander.cache.mem.elementsize.5M;" value="5120" />
+                           <menuitem label="&pmcommander.cache.mem.elementsize.10M;" value="10240" />
+                           <menuitem label="&pmcommander.cache.mem.elementsize.20M;" value="20480" />
                         </menupopup>
                      </menulist>
                   </hbox>
@@ -725,11 +717,10 @@
    
    <prefpane id="pmcommander-pane-security" label="&pmcommander.pane.security;">
       <preferences>
-         <preference id="pmcommander-pref-js-jithardening"        name="javascript.options.jit_hardening"      type="bool" />
          <preference id="pmcommander-pref-js-imgsrc"              name="dom.disable_image_src_set"             type="bool" inverted="true" />
          <preference id="pmcommander-pref-js-window_flip"         name="dom.disable_window_flip"               type="bool" inverted="true" />
          <preference id="pmcommander-pref-js-window_move_resize"  name="dom.disable_window_move_resize"        type="bool" inverted="true" />
-         <preference id="pmcommander-pref-js-window_close"              name="dom.allow_scripts_to_close_windows"    type="bool" />
+         <preference id="pmcommander-pref-js-window_close"        name="dom.allow_scripts_to_close_windows"    type="bool" />
          <preference id="pmcommander-pref-js-clipboard"           name="dom.event.clipboardevents.enabled"     type="bool" />
          <preference id="pmcommander-pref-js-contextmenu"         name="dom.event.contextmenu.enabled"         type="bool" />
          <preference id="pmcommander-pref-sec-fileuri-strict"     name="security.fileuri.strict_origin_policy" type="bool" />
@@ -828,7 +819,6 @@
          
          <tabpanels flex="1">
             <tabpanel id="pmcommander-sec-general" orient="vertical">
-               <checkbox id="pmcommander-js-jithardening-check" preference="pmcommander-pref-js-jithardening" label="&pmcommander.js.jithardening.label;" />
                <groupbox id="pmcommander-sec-general-js">
                   <caption label="&pmcommander.sec.general.js.caption;" />
                   <checkbox id="pmcommander-js-imgsrc-check" preference="pmcommander-pref-js-imgsrc" label="&pmcommander.js.imgsrc.label;" />
@@ -906,6 +896,7 @@
                         <menuitem label="&pmcommander.sec.ssl.tls.version.TLS10;" value="1" />
                         <menuitem label="&pmcommander.sec.ssl.tls.version.TLS11;" value="2" />
                         <menuitem label="&pmcommander.sec.ssl.tls.version.TLS12;" value="3" />
+                        <menuitem label="&pmcommander.sec.ssl.tls.version.TLS13;" value="4" />
                      </menupopup>
                   </menulist>
                </hbox>
@@ -917,6 +908,7 @@
                         <menuitem label="&pmcommander.sec.ssl.tls.version.TLS10;" value="1" />
                         <menuitem label="&pmcommander.sec.ssl.tls.version.TLS11;" value="2" />
                         <menuitem label="&pmcommander.sec.ssl.tls.version.TLS12;" value="3" />
+                        <menuitem label="&pmcommander.sec.ssl.tls.version.TLS13;" value="4" />
                      </menupopup>
                   </menulist>
                </hbox>
@@ -1042,8 +1034,8 @@
 
    <prefpane id="pmcommander-pane-misc" label="&pmcommander.pane.misc;">
       <preferences>
-         <preference id="pmcommander-pref-modules-pdfjs" name="pdfjs.disabled" type="bool" inverted="true" 
-            onchange="pmcommanderPrefs.pdfjsChanged();" />
+<!--         <preference id="pmcommander-pref-modules-pdfjs" name="pdfjs.disabled" type="bool" inverted="true" 
+            onchange="pmcommanderPrefs.pdfjsChanged();" /> -->
          <preference id="pmcommander-pref-bookmarkbackups-limit" name="browser.bookmarks.max_backups" type="int" />
          <preference id="pmcommander-pref-bookmarkbackups-html" name="browser.bookmarks.autoExportHTML" type="bool" />
          <preference id="pmcommander-pref-dom-storage-enable" name="dom.storage.enabled" type="bool"  
@@ -1052,16 +1044,16 @@
       </preferences>
       <tabbox id="pmcommander-tabbox-misc" flex="1">
          <tabs id="pmcommander-tabs-misc">
-            <tab id="pmcommander-tab-misc-tools" label="&pmcommander.tab.misc.tools;" />
+<!--            <tab id="pmcommander-tab-misc-tools" label="&pmcommander.tab.misc.tools;" /> -->
             <tab id="pmcommander-tab-misc-reset" label="&pmcommander.tab.misc.reset;" />
             <tab id="pmcommander-tab-misc-other"  label="&pmcommander.tab.misc.other;" />
          </tabs>
          
          <tabpanels flex="1">
-            <tabpanel id="pmcommander-misc-tools" orient="vertical">
+<!--            <tabpanel id="pmcommander-misc-tools" orient="vertical">
                <label>&pmcommander.info.restartwarning;</label>
                <checkbox id="pmcommander-tools-pdfjs-check" preference="pmcommander-pref-modules-pdfjs" label="&pmcommander.misc.modules.pdfjs;" />
-            </tabpanel>
+            </tabpanel> -->
             <tabpanel id="pmcommander-misc-reset" orient="vertical">
                <label width="100%">&pmcommander.misc.reset.info;</label>
                <hbox align="center" style="display:block; padding-top:1em;" width="100%">

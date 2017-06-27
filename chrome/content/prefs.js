@@ -294,7 +294,6 @@ var pmcommanderPrefs =
    
    memcacheGlobalChanged: function()
    {
-     this.memcacheCapacityPref.disabled = (this.memcacheEnabledPref.value == false);
      this.memcacheElementsizePref.disabled = (this.memcacheEnabledPref.value == false);
    },
    
@@ -384,19 +383,25 @@ var pmcommanderPrefs =
      let ControlledPrefs = [// Graphics
                             'gfx.work-around-driver-bugs',
                             'nglayout.initialpaint.delay',
+                            'gfx.vsync.refreshdriver',
+                            'gfx.vsync.compositor',
+                            'gfx.vsync.hw-vsync.enabled',
                             'webgl.prefer-native-gl',
                             'webgl.msaa-force',
                             'gl.msaa-level',
                             'gfx.direct2d.disabled',
                             'gfx.direct2d.force-enabled',
+                            'gfx.direct2d.use1_1',
                             'layers.acceleration.disabled',
                             'layers.acceleration.draw-fps',
                             'layers.acceleration.force-enabled',
                             'extensions.pmcommander.layers.mode',
-                            'layout.altrendering.enabled',
+                            'gfx.downloadable_fonts.enabled',
+                            'gfx.downloadable_fonts.woff2.enabled',
                             'gfx.font_rendering.directwrite.enabled',
                             'gfx.font_rendering.directwrite.use_gdi_table_loading',
                             'gfx.font_rendering.graphite.enabled',
+                            'gfx.font_rendering.opentype_svg.enabled',
                             'gfx.font_rendering.cleartype.always_use_for_content',
                             'gfx.font_rendering.cleartype.use_for_downloadable_fonts',
                             'gfx.font_rendering.cleartype_params.rendering_mode',
@@ -405,7 +410,6 @@ var pmcommanderPrefs =
                             'gfx.font_rendering.cleartype_params.gamma',
                             'gfx.font_rendering.cleartype_params.pixel_structure',
                             'gfx.font_rendering.cleartype_params.force_gdi_classic_max_size',
-                            'browser.display.ignore_accessibility_theme',
                             'gfx.color_management.enablev4',
                             'gfx.color_management.mode',
                             'gfx.color_management.rendering_intent',
@@ -441,24 +445,23 @@ var pmcommanderPrefs =
                             'network.http.pipelining.reschedule-timeout',
                             // Performance
                             'javascript.enabled',
-                            'javascript.options.typeinference',
-                            'javascript.options.baselinejit.chrome',
+                            'javascript.options.baselinejit',
                             'javascript.options.baselinejit.content',
-                            'javascript.options.ion.content',
+                            'javascript.options.ion',
                             'javascript.options.asmjs',
                             'javascript.options.gc_on_memory_pressure',
                             'javascript.options.mem.gc_per_compartment',
-                            'javascript.options.mem.disable_explicit_compartment_gc',
                             'javascript.options.mem.gc_dynamic_heap_growth',
                             'javascript.options.mem.gc_dynamic_mark_slice',
                             'javascript.options.mem.gc_incremental',
                             'javascript.options.mem.gc_incremental_slice_ms',
+                            'javascript.options.mem.gc_generational',
+                            'javascript.options.mem.gc_compacting',
                             'browser.cache.disk.enable',
                             'browser.cache.disk.smart_size.enabled',
                             'browser.cache.disk.capacity',
                             'browser.cache.disk.max_entry_size',
                             'browser.cache.memory.enable',
-                            'browser.cache.memory.capacity',
                             'browser.cache.memory.max_entry_size',
                             'browser.cache.compression_level',
                             'browser.cache.check_doc_frequency',
@@ -507,7 +510,6 @@ var pmcommanderPrefs =
                             'full-screen-api.pointer-lock.enabled',
                             'full-screen-api.allow-trusted-requests-only',
                             // Security
-                            'javascript.options.jit_hardening',
                             'dom.disable_image_src_set',
                             'dom.disable_window_flip',
                             'dom.disable_window_move_resize',
@@ -585,8 +587,6 @@ var pmcommanderPrefs =
                             'network.http.referer.trimmingPolicy',
                             'network.http.referer.XOriginPolicy',
                             // Miscellaneous
-                            'pdfjs.disabled',
-                            'pdfjs.firstRun',
                             'browser.bookmarks.max_backups',
                             'browser.bookmarks.autoExportHTML',
                             'dom.storage.enabled',
@@ -617,8 +617,12 @@ var pmcommanderPrefs =
 //
    nonwindows: function()
    {
-   let WINOnlyPrefs = ['pmcommander-pref-d2d-enabled',
+   let WINOnlyPrefs = ['pmcommander-pref-gfx-vsync-driver',
+                       'pmcommander-pref-gfx-vsync-compositor',
+                       'pmcommander-pref-gfx-vsync-hardware',
+                       'pmcommander-pref-d2d-enabled',
                        'pmcommander-pref-d2d-force',
+                       'pmcommander-pref-d2d-1_1',
                        'pmcommander-pref-fonts-directwrite',
                        'pmcommander-pref-fonts-directwrite-gdi',
                        'pmcommander-pref-jumplists-enabled',

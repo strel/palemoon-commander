@@ -14,14 +14,19 @@
 <!ENTITY pmcommander.tab.graphics.rendering "Rendering">
 <!ENTITY pmcommander.tab.graphics.3D "3D">
 <!ENTITY pmcommander.tab.graphics.fonts "Fonts">
+<!ENTITY pmcommander.tab.graphics.cleartype "ClearType">
 <!ENTITY pmcommander.tab.graphics.color "Colors">
 
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "Use workarounds for specific driver bugs">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Initial paint delay:">
+<!ENTITY pmcommander.graphics.general.vsync.driver.label "Align refresh with monitor vsync">
+<!ENTITY pmcommander.graphics.general.vsync.compositor.label "Align compositor with monitor vsync">
+<!ENTITY pmcommander.graphics.general.vsync.hardware.label "Use GPU hardware for vsync timing (dedicated GPU only!)">
 
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
 <!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "Enable Direct2D acceleration">
 <!ENTITY pmcommander.graphics.rendering.d2d.force.label "Force use of Direct2D">
+<!ENTITY pmcommander.graphics.rendering.d2d.1_1.label "Use Direct2D v1.1 when available">
 
 <!ENTITY pmcommander.graphics.rendering.layers.caption "Layers acceleration">
 <!ENTITY pmcommander.graphics.rendering.layers.enabled.label "Layers acceleration enabled">
@@ -31,7 +36,6 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.default "Default">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Prefer Direct3D 9">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Prefer OpenGL">
-<!ENTITY pmcommander.graphics.rendering.use.deprecated.label "Use old (deprecated) rendering method">
 
 <!ENTITY pmcommander.graphics.3d.webgl.native.label "Prefer OpenGL for WebGL">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Force antialising on">
@@ -42,10 +46,12 @@
 <!ENTITY pmcommander.graphics.3d.msaa.level.8 "x8">
 <!ENTITY pmcommander.graphics.3d.msaa.level.16 "x16">
 
+<!ENTITY pmcommander.graphics.fonts.downloadable.label "Enable downloadable fonts">
+<!ENTITY pmcommander.graphics.fonts.woff2.label "Enable WOFF2 downloadable fonts">
 <!ENTITY pmcommander.graphics.fonts.directwrite.gdi.label "Use GDI table loading for DirectWrite">
 <!ENTITY pmcommander.graphics.fonts.graphite.label "Enable Graphite font rendering">
+<!ENTITY pmcommander.graphics.fonts.opentype.svg.label "Enable SVG glyphs in OpenType fonts">
 
-<!ENTITY pmcommander.graphics.fonts.cleartype.caption "ClearType">
 <!ENTITY pmcommander.graphics.cleartype.content.always.label "Always use ClearType for content">
 <!ENTITY pmcommander.graphics.cleartype.downloadable.label "Use ClearType for downloadable fonts">
 <!ENTITY pmcommander.graphics.cleartype.mode.label "ClearType rendering mode:">
@@ -66,7 +72,6 @@
 <!ENTITY pmcommander.graphics.cleartype.pxmode.BGR "BGR order">
 <!ENTITY pmcommander.graphics.cleartype.gdimaxsize "Render with GDI Classic up to font size:">
 
-<!ENTITY pmcommander.graphics.color.override.a11y "Don't use accessibility theme page colors">
 <!ENTITY pmcommander.graphics.color.ICC.caption "Color Management System (CMS)">
 <!ENTITY pmcommander.graphics.color.ICCv4.label "Enable ICC version 4 profiles">
 <!ENTITY pmcommander.graphics.color.ICCmode.label "CMS mode:">
@@ -137,21 +142,19 @@
 <!ENTITY pmcommander.perf.js.global.disable "Completely disable JavaScript">
 <!ENTITY pmcommander.perf.js.global.disable.warning "Warning: Completely disabling JavasScript will cripple your browsing experience and make many websites dysfunctional. It should not be done lightly.">
 
-<!ENTITY pmcommander.perf.js.chrome.caption "Browser Chrome">
-<!ENTITY pmcommander.perf.js.baselinejit.chrome.label "Enable Baseline JIT compiler for UI scripts">
 <!ENTITY pmcommander.perf.js.content.caption "Page Content">
-<!ENTITY pmcommander.perf.js.baselinejit.content.label "Enable Baseline JIT compiler for web pages">
-<!ENTITY pmcommander.perf.js.ionmonkey.content.label "Enable IonMonkey">
+<!ENTITY pmcommander.perf.js.baselinejit.label "Enable Baseline JIT compiler for web pages">
+<!ENTITY pmcommander.perf.js.ionmonkey.label "Enable IonMonkey">
 <!ENTITY pmcommander.perf.js.odinmonkey.label "Enable OdinMonkey (asm.js optimizations)">
-<!ENTITY pmcommander.perf.js.typeinference.label "Enable JavaScript type inference">
 
 <!ENTITY pmcommander.perf.js.gc.onmempressure.label "Perform GC on memory pressure">
 <!ENTITY pmcommander.perf.js.gc.per.compartment.label "Perform GC per compartment">
-<!ENTITY pmcommander.perf.js.gc.explicit.compartment.label "Enable explicit GC for compartments">
 <!ENTITY pmcommander.perf.js.gc.dynamic.heap.label "Use dynamic GC memory heap">
 <!ENTITY pmcommander.perf.js.gc.dynamic.slice.label "Use dynamic GC memory slices">
 <!ENTITY pmcommander.perf.js.gc.incremental.label "Enable incremental GC">
 <!ENTITY pmcommander.perf.js.gc.incremental.slice.ms.label "Time slice used for incremental GC:">
+<!ENTITY pmcommander.perf.js.gc.generational.label "Enable generational GC">
+<!ENTITY pmcommander.perf.js.gc.compacting.label "Enable compacting GC">
 
 <!ENTITY pmcommander.perf.cache.disk.caption "Disk Cache">
 <!ENTITY pmcommander.perf.cache.disk.enable.label "Enable Disk Cache">
@@ -167,20 +170,13 @@
 
 <!ENTITY pmcommander.perf.cache.mem.caption "Memory Cache">
 <!ENTITY pmcommander.perf.cache.mem.enable.label "Enable Memory Cache">
-<!ENTITY pmcommander.perf.cache.mem.capacity.label "Memory Cache capacity:">
-<!ENTITY pmcommander.cache.mem.capacity.auto "Automatic">
-<!ENTITY pmcommander.cache.mem.capacity.4M "4 MB">
-<!ENTITY pmcommander.cache.mem.capacity.8M "8 MB">
-<!ENTITY pmcommander.cache.mem.capacity.16M "16 MB">
-<!ENTITY pmcommander.cache.mem.capacity.32M "32 MB">
-<!ENTITY pmcommander.cache.mem.capacity.64M "64 MB">
 <!ENTITY pmcommander.perf.cache.mem.elementsize.label "Maximum element size in Memory Cache:">
-<!ENTITY pmcommander.cache.mem.elementsize.auto "Automatic">
-<!ENTITY pmcommander.cache.mem.elementsize.100K "100 KB">
 <!ENTITY pmcommander.cache.mem.elementsize.500K "500 KB">
 <!ENTITY pmcommander.cache.mem.elementsize.1M "1 MB">
 <!ENTITY pmcommander.cache.mem.elementsize.2M "2 MB">
-<!ENTITY pmcommander.cache.mem.elementsize.4M "4 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.5M "5 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.10M "10 MB">
+<!ENTITY pmcommander.cache.mem.elementsize.20M "20 MB">
 
 <!ENTITY pmcommander.perf.cache.checking.label "Compare cached pages to pages on the network:">
 <!ENTITY pmcommander.cache.checking.session "Once per session">
@@ -266,7 +262,6 @@
 <!ENTITY pmcommander.tab.sec.ciphers2 "Ciphers 2">
 <!ENTITY pmcommander.tab.sec.privacy "Privacy">
 
-<!ENTITY pmcommander.js.jithardening.label "Enable JavaScript JIT hardening">
 <!ENTITY pmcommander.sec.general.js.caption "Allow JavaScript to:">
 <!ENTITY pmcommander.js.imgsrc.label "Change image source attributes">
 <!ENTITY pmcommander.js.window_flip.label "Raise or lower windows">
@@ -317,6 +312,7 @@
 <!ENTITY pmcommander.sec.ssl.tls.version.TLS10 "TLS 1.0">
 <!ENTITY pmcommander.sec.ssl.tls.version.TLS11 "TLS 1.1">
 <!ENTITY pmcommander.sec.ssl.tls.version.TLS12 "TLS 1.2">
+<!ENTITY pmcommander.sec.ssl.tls.version.TLS13 "TLS 1.3">
 <!ENTITY pmcommander.sec.ssl.mixedcontent.caption "Mixed content sites (SSL/non-SSL)">
 <!ENTITY pmcommander.sec.ssl.no.mixed.scripts.label "Block non-SSL scripts">
 <!ENTITY pmcommander.sec.ssl.no.mixed.display.label "Block non-SSL display items">
