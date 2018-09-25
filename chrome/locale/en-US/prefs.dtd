@@ -23,9 +23,6 @@
 
 <!ENTITY pmcommander.graphics.general.workaround.driverbugs "Use workarounds for specific driver bugs">
 <!ENTITY pmcommander.graphics.general.initialpaint.delay.label "Initial paint delay:">
-<!ENTITY pmcommander.graphics.general.vsync.driver.label "Align refresh with monitor vsync">
-<!ENTITY pmcommander.graphics.general.vsync.compositor.label "Align compositor with monitor vsync">
-<!ENTITY pmcommander.graphics.general.vsync.hardware.label "Use GPU hardware for vsync timing (dedicated GPU only!)">
 
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
 <!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "Enable Direct2D acceleration">
@@ -41,7 +38,6 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Prefer Direct3D 9">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Prefer OpenGL">
 
-<!ENTITY pmcommander.graphics.3d.webgl.native.label "Prefer OpenGL for WebGL">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Force antialising on">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "Level of antialiasing:">
 <!ENTITY pmcommander.graphics.3d.msaa.level.0 "Off">

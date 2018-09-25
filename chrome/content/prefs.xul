@@ -28,11 +28,7 @@
       <preferences>
          <preference id="pmcommander-pref-gfx-driverbugs"             name="gfx.work-around-driver-bugs"            type="bool" />
          <preference id="pmcommander-pref-initialpaint-delay"         name="nglayout.initialpaint.delay"            type="int" />
-         <preference id="pmcommander-pref-gfx-vsync-driver"           name="gfx.vsync.refreshdriver"                type="bool" />
-         <preference id="pmcommander-pref-gfx-vsync-compositor"       name="gfx.vsync.compositor"                   type="bool" />
-         <preference id="pmcommander-pref-gfx-vsync-hardware"         name="gfx.vsync.hw-vsync.enabled"             type="bool" />
          
-         <preference id="pmcommander-pref-webgl-native"               name="webgl.prefer-native-gl"                 type="bool" />
          <preference id="pmcommander-pref-webgl-msaa-force"           name="webgl.msaa-force"                       type="bool" />
          <preference id="pmcommander-pref-webgl-msaa-level"           name="gl.msaa-level"                          type="int" />
          <preference id="pmcommander-pref-d2d-enabled"                name="gfx.direct2d.disabled"                  type="bool" inverted="true" 
@@ -85,9 +81,6 @@
                      <textbox type="number" size="4" min="25" max="3000" id="pmcommander-gfx-initialpaint-delay-input" preference="pmcommander-pref-initialpaint-delay" />
                      <label>&pmcommander.unit.ms;</label>
                   </hbox>
-                  <checkbox id="pmcommander-gfx-vsync-driver-check" preference="pmcommander-pref-gfx-vsync-driver" label="&pmcommander.graphics.general.vsync.driver.label;" />
-                  <checkbox id="pmcommander-gfx-vsync-compositor-check" preference="pmcommander-pref-gfx-vsync-compositor" label="&pmcommander.graphics.general.vsync.compositor.label;" />
-                  <checkbox id="pmcommander-gfx-vsync-hardware-check" preference="pmcommander-pref-gfx-vsync-hardware" label="&pmcommander.graphics.general.vsync.hardware.label;" />
             </tabpanel>
             <tabpanel id="pmcommander-graphics-rendering" orient="vertical">
                <label>&pmcommander.info.restartwarning;</label>
@@ -114,7 +107,6 @@
                </groupbox>
             </tabpanel>
             <tabpanel id="pmcommander-graphics-3D" orient="vertical">
-               <checkbox id="pmcommander-webgl-native-check" preference="pmcommander-pref-webgl-native" label="&pmcommander.graphics.3d.webgl.native.label;" />
                <checkbox id="pmcommander-webgl-msaa-force-check" preference="pmcommander-pref-webgl-msaa-force" label="&pmcommander.graphics.3d.webgl.msaa.force.label;" />
                <hbox align="center">
                   <label id="pmcommander-webgl-msaa-level-label" control="pmcommander-msaa-level-menu">&pmcommander.graphics.3d.webgl.msaa.level.label;</label>
