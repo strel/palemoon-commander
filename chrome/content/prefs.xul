@@ -28,9 +28,22 @@
       <preferences>
          <preference id="pmcommander-pref-gfx-driverbugs"             name="gfx.work-around-driver-bugs"            type="bool" />
          <preference id="pmcommander-pref-initialpaint-delay"         name="nglayout.initialpaint.delay"            type="int" />
+        
+         <preference id="pmcommander-pref-webgl-enabled"              name="webgl.disabled"                         type="bool" inverted="true"
+           onchange="pmcommanderPrefs.WebGLGlobalChanged();" />
+         <preference id="pmcommander-pref-webgl2-enabled"             name="webgl.enable-webgl2"                    type="bool" />
+
+         <preference id="pmcommander-pref-webgl-force-enabled"        name="webgl.force-enabled"                    type="bool" />
+         <preference id="pmcommander-pref-webgl-disable-angle"        name="webgl.disable-angle"                    type="bool" />
+         <preference id="pmcommander-pref-webgl-disable-wgl"          name="webgl.disable-wgl"                      type="bool" />
+         <preference id="pmcommander-pref-webgl-disable-extensions"   name="webgl.disable-extensions"               type="bool" 
+           onchange="pmcommanderPrefs.WebGLExtensionsChanged();" />
+         <preference id="pmcommander-pref-webgl-enable-draft"         name="webgl.enable-draft-extensions"          type="bool" />
+         <preference id="pmcommander-pref-webgl-enable-priv"          name="webgl.enable-privileged-extensions"     type="bool" />
          
          <preference id="pmcommander-pref-webgl-msaa-force"           name="webgl.msaa-force"                       type="bool" />
          <preference id="pmcommander-pref-webgl-msaa-level"           name="gl.msaa-level"                          type="int" />
+         
          <preference id="pmcommander-pref-d2d-enabled"                name="gfx.direct2d.disabled"                  type="bool" inverted="true" 
            onchange="pmcommanderPrefs.d2dGlobalChanged();" />
          <preference id="pmcommander-pref-d2d-force"                  name="gfx.direct2d.force-enabled"             type="bool" />
@@ -107,19 +120,30 @@
                </groupbox>
             </tabpanel>
             <tabpanel id="pmcommander-graphics-3D" orient="vertical">
-               <checkbox id="pmcommander-webgl-msaa-force-check" preference="pmcommander-pref-webgl-msaa-force" label="&pmcommander.graphics.3d.webgl.msaa.force.label;" />
-               <hbox align="center">
-                  <label id="pmcommander-webgl-msaa-level-label" control="pmcommander-msaa-level-menu">&pmcommander.graphics.3d.webgl.msaa.level.label;</label>
-                  <menulist id="pmcommander-layers-mode-menu" preference="pmcommander-pref-webgl-msaa-level" sizetopopup="always">
-                     <menupopup>
-                        <menuitem label="&pmcommander.graphics.3d.msaa.level.0;"    value="0" />
-                        <menuitem label="&pmcommander.graphics.3d.msaa.level.2;"    value="2" />
-                        <menuitem label="&pmcommander.graphics.3d.msaa.level.4;"    value="4" />
-                        <menuitem label="&pmcommander.graphics.3d.msaa.level.8;"    value="8" />
-                        <menuitem label="&pmcommander.graphics.3d.msaa.level.16;"   value="16" />
-                     </menupopup>
-                  </menulist>
-               </hbox>
+               <checkbox id="pmcommander-webgl-enabled-check" preference="pmcommander-pref-webgl-enabled" label="&pmcommander.graphics.3d.webgl.enabled.label;" />
+               <groupbox id="pmcommander-webgl-settings-group">
+                  <caption label="&pmcommander.graphics.3d.webglsettings.caption;" />
+                  <checkbox id="pmcommander-webgl2-enabled-check" preference="pmcommander-pref-webgl2-enabled" label="&pmcommander.graphics.3d.webgl2.enabled.label;" />
+                  <checkbox id="pmcommander-webgl-force-enabled-check" preference="pmcommander-pref-webgl-force-enabled" label="&pmcommander.graphics.3d.webgl.force-enabled.label;" />
+                  <checkbox id="pmcommander-webgl-disable-angle-check" preference="pmcommander-pref-webgl-disable-angle" label="&pmcommander.graphics.3d.webgl.disable.angle.label;" />
+                  <checkbox id="pmcommander-webgl-disable-wgl-check" preference="pmcommander-pref-webgl-disable-wgl" label="&pmcommander.graphics.3d.webgl.disable.wgl.label;" />
+                  <checkbox id="pmcommander-webgl-disable-ext-check" preference="pmcommander-pref-webgl-disable-extensions" label="&pmcommander.graphics.3d.webgl.disable.extensions.label;" />
+                  <checkbox id="pmcommander-webgl-enable-draft-check" preference="pmcommander-pref-webgl-enable-draft" label="&pmcommander.graphics.3d.webgl.enable.draft.label;" />
+                  <checkbox id="pmcommander-webgl-enable-priv-check" preference="pmcommander-pref-webgl-enable-priv" label="&pmcommander.graphics.3d.webgl.enable.privileged.label;" />
+                  <checkbox id="pmcommander-webgl-msaa-force-check" preference="pmcommander-pref-webgl-msaa-force" label="&pmcommander.graphics.3d.webgl.msaa.force.label;" />
+                  <hbox align="center">
+                     <label id="pmcommander-webgl-msaa-level-label" control="pmcommander-msaa-level-menu">&pmcommander.graphics.3d.webgl.msaa.level.label;</label>
+                     <menulist id="pmcommander-layers-mode-menu" preference="pmcommander-pref-webgl-msaa-level" sizetopopup="always">
+                        <menupopup>
+                           <menuitem label="&pmcommander.graphics.3d.msaa.level.0;"    value="0" />
+                           <menuitem label="&pmcommander.graphics.3d.msaa.level.2;"    value="2" />
+                           <menuitem label="&pmcommander.graphics.3d.msaa.level.4;"    value="4" />
+                           <menuitem label="&pmcommander.graphics.3d.msaa.level.8;"    value="8" />
+                           <menuitem label="&pmcommander.graphics.3d.msaa.level.16;"   value="16" />
+                        </menupopup>
+                     </menulist>
+                  </hbox>
+               </groupbox>
             </tabpanel>
             <tabpanel id="pmcommander-graphics-fonts" orient="vertical">
                <checkbox id="pmcommander-fonts-download-check" preference="pmcommander-pref-fonts-downloadable" label="&pmcommander.graphics.fonts.downloadable.label;" />

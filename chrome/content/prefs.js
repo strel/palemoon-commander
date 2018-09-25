@@ -32,6 +32,85 @@ var pmcommanderPrefs =
      this.d2dForcePref.disabled = (this.d2dEnabledPref.value == false);
    },
 
+   get WebGLEnabledPref()
+   {
+      delete this.WebGLEnabledPref;
+      return this.WebGLEnabledPref = document.getElementById("pmcommander-pref-webgl-enabled");
+   },
+
+   get WebGL2EnabledPref()
+   {
+      delete this.WebGL2EnabledPref;
+      return this.WebGL2EnabledPref = document.getElementById("pmcommander-pref-webgl2-enabled");
+   },
+  
+   get WebGLForceEnabledPref()
+   {
+      delete this.WebGLForceEnabledPref;
+      return this.WebGLForceEnabledPref = document.getElementById("pmcommander-pref-webgl-force-enabled");
+   },
+  
+   get WebGLANGLEDisabledPref()
+   {
+      delete this.WebGLANGLEDisabledPref;
+      return this.WebGLANGLEDisabledPref = document.getElementById("pmcommander-pref-webgl-disable-angle");
+   },
+  
+   get WebGLWGLDisabledPref()
+   {
+      delete this.WebGLWGLDisabledPref;
+      return this.WebGLWGLDisabledPref = document.getElementById("pmcommander-pref-webgl-disable-wgl");
+   },
+  
+   get WebGLExtensionsDisabledPref()
+   {
+      delete this.WebGLExtensionsDisabledPref;
+      return this.WebGLExtensionsDisabledPref = document.getElementById("pmcommander-pref-webgl-disable-extensions");
+   },
+  
+   get WebGLDraftEnabledPref()
+   {
+      delete this.WebGLDraftEnabledPref;
+      return this.WebGLDraftEnabledPref = document.getElementById("pmcommander-pref-webgl-enable-draft");
+   },
+  
+   get WebGLPrivEnabledPref()
+   {
+      delete this.WebGLPrivEnabledPref;
+      return this.WebGLPrivEnabledPref = document.getElementById("pmcommander-pref-webgl-enable-priv");
+   },
+  
+   get WebGLForceAAPref()
+   {
+      delete this.WebGLForceAAPref;
+      return this.WebGLForceAAPref = document.getElementById("pmcommander-pref-webgl-msaa-force");
+   },
+  
+   get WebGLAALevelPref()
+   {
+      delete this.WebGLAALevelPref;
+      return this.WebGLAALevelPref = document.getElementById("pmcommander-pref-webgl-msaa-level");
+   },
+  
+   WebGLGlobalChanged: function()
+   {
+     this.WebGL2EnabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLForceEnabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLANGLEDisabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLWGLDisabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLExtensionsDisabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLDraftEnabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLPrivEnabledPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLForceAAPref.disabled = (this.WebGLEnabledPref.value == false);
+     this.WebGLAALevelPref.disabled = (this.WebGLEnabledPref.value == false);
+   },     
+
+   WebGLExtensionsChanged: function()
+   {
+     this.WebGLDraftEnabledPref.disabled = (this.WebGLExtensionsDisabledPref.value == true);
+     this.WebGLPrivEnabledPref.disabled = (this.WebGLExtensionsDisabledPref.value == true);
+   },     
+
    get layeraccEnabledPref()
    {
       delete this.layeraccEnabledPref;

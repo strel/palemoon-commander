@@ -38,6 +38,15 @@
 <!ENTITY pmcommander.graphics.rendering.layers.mode.d3d9 "Prefer Direct3D 9">
 <!ENTITY pmcommander.graphics.rendering.layers.mode.opengl "Prefer OpenGL">
 
+<!ENTITY pmcommander.graphics.3d.webgl.enabled.label "Enable WebGL">
+<!ENTITY pmcommander.graphics.3d.webglsettings.caption "WebGL Settings">
+<!ENTITY pmcommander.graphics.3d.webgl2.enabled.label "Enable WebGL version 2">
+<!ENTITY pmcommander.graphics.3d.webgl.force-enabled.label "Force-enable WebGL">
+<!ENTITY pmcommander.graphics.3d.webgl.disable.angle.label "Disable ANGLE">
+<!ENTITY pmcommander.graphics.3d.webgl.disable.wgl.label "Disable WGL">
+<!ENTITY pmcommander.graphics.3d.webgl.disable.extensions.label "Disable WebGL extensions">
+<!ENTITY pmcommander.graphics.3d.webgl.enable.draft.label "Enable draft extensions">
+<!ENTITY pmcommander.graphics.3d.webgl.enable.privileged.label "Enable privileged extensions">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.force.label "Force antialising on">
 <!ENTITY pmcommander.graphics.3d.webgl.msaa.level.label "Level of antialiasing:">
 <!ENTITY pmcommander.graphics.3d.msaa.level.0 "Off">
