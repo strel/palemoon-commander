@@ -769,49 +769,39 @@
          <preference id="pmcommander-pref-sec-ssl-enable-false-start"   name="security.ssl.enable_false_start"                type="bool" />
          
          <preference id="pmcommander-pref-sec-ssl-enable-ocsp-stapling" name="security.ssl.enable_ocsp_stapling"              type="bool" />
-         <preference id="pmcommander-pref-sec-ssl-allow-ocsp-unsafe"    name="security.ssl.allow_unsafe_ocsp_response"        type="bool" />
 
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-AES-GCM-128" name="security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256"   type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-AES-GCM-128"   name="security.ssl3.ecdhe_rsa_aes_128_gcm_sha256"     type="bool" />
-         
-         <preference id="pmcommander-pref-sec-cipher-DHE-DSS-AES-128"   name="security.ssl3.dhe_dss_aes_128_sha"              type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-DSS-AES-256"   name="security.ssl3.dhe_dss_aes_256_sha"              type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-DSS-CAM-128"   name="security.ssl3.dhe_dss_camellia_128_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-DSS-CAM-256"   name="security.ssl3.dhe_dss_camellia_256_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-DSS-DES"       name="security.ssl3.dhe_dss_des_ede3_sha"             type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-AES-128"   name="security.ssl3.dhe_rsa_aes_128_sha"              type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-AES-256"   name="security.ssl3.dhe_rsa_aes_256_sha"              type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-CAM-128"   name="security.ssl3.dhe_rsa_camellia_128_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-CAM-256"   name="security.ssl3.dhe_rsa_camellia_256_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-DES"       name="security.ssl3.dhe_rsa_des_ede3_sha"             type="bool" />
-         
-         <preference id="pmcommander-pref-sec-cipher-RSA-AES-128"       name="security.ssl3.rsa_aes_128_sha"                  type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-AES-256"       name="security.ssl3.rsa_aes_256_sha"                  type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-CAM-128"       name="security.ssl3.rsa_camellia_128_sha"             type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-CAM-256"       name="security.ssl3.rsa_camellia_256_sha"             type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-DES"           name="security.ssl3.rsa_des_ede3_sha"                 type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-FIPS"          name="security.ssl3.rsa_fips_des_ede3_sha"            type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-RC4-SHA"       name="security.ssl3.rsa_rc4_128_sha"                  type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-RC4-MD5"       name="security.ssl3.rsa_rc4_128_md5"                  type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-RSA-SEED"          name="security.ssl3.rsa_seed_sha"                     type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-GCM-128" name="security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-GCM-128"   name="security.ssl3.ecdhe_rsa_aes_128_gcm_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-CHACHA20"    name="security.ssl3.ecdhe_ecdsa_chacha20_poly1305_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-CHACHA20"      name="security.ssl3.ecdhe_rsa_chacha20_poly1305_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-GCM-256" name="security.ssl3.ecdhe_ecdsa_aes_256_gcm_sha384" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-GCM-256"   name="security.ssl3.ecdhe_rsa_aes_256_gcm_sha384" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-128"     name="security.ssl3.ecdhe_ecdsa_aes_128_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-128"       name="security.ssl3.ecdhe_rsa_aes_128_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-256"     name="security.ssl3.ecdhe_ecdsa_aes_256_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-256"       name="security.ssl3.ecdhe_rsa_aes_256_sha" type="bool" />
 
-         <preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-128"   name="security.ssl3.ecdh_ecdsa_aes_128_sha"        type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-256"   name="security.ssl3.ecdh_ecdsa_aes_256_sha"        type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-DES"       name="security.ssl3.ecdh_ecdsa_des_ede3_sha"       type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-ECDSA-RC4-128"   name="security.ssl3.ecdh_ecdsa_rc4_128_sha"        type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-RSA-AES-128"     name="security.ssl3.ecdh_rsa_aes_128_sha"          type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-RSA-AES-256"     name="security.ssl3.ecdh_rsa_aes_256_sha"          type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-RSA-DES"         name="security.ssl3.ecdh_rsa_des_ede3_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDH-RSA-RC4-128"     name="security.ssl3.ecdh_rsa_rc4_128_sha"          type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-CAM-256"     name="security.ssl3.dhe_rsa_camellia_256_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-AES-256"     name="security.ssl3.dhe_rsa_aes_256_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-CAM-128"     name="security.ssl3.dhe_rsa_camellia_128_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-DHE-RSA-AES-128"     name="security.ssl3.dhe_rsa_aes_128_sha" type="bool" />
+        
+         <preference id="pmcommander-pref-sec-cipher-RSA-AES-GCM-256-384" name="security.ssl3.rsa_aes_256_gcm_sha384" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-AES-256-256"     name="security.ssl3.rsa_aes_256_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-CAM-128"         name="security.ssl3.rsa_camellia_128_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-CAM-256"         name="security.ssl3.rsa_camellia_256_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-AES-128-SHA"     name="security.ssl3.rsa_aes_128_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-AES-256-SHA"     name="security.ssl3.rsa_aes_256_sha" type="bool" />
+        
+         <preference id="pmcommander-pref-sec-cipher-TLS13-AES-GCM-128" name="security.tls13.aes_128_gcm_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-TLS13-CHACHA20"    name="security.tls13.chacha20_poly1305_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-TLS13-AES-GCM-256" name="security.tls13.aes_256_gcm_sha384" type="bool" />
          
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-128"  name="security.ssl3.ecdhe_ecdsa_aes_128_sha"       type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-256"  name="security.ssl3.ecdhe_ecdsa_aes_256_sha"       type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-DES"      name="security.ssl3.ecdhe_ecdsa_des_ede3_sha"      type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-ECDSA-RC4-128"  name="security.ssl3.ecdhe_ecdsa_rc4_128_sha"       type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-128"    name="security.ssl3.ecdhe_rsa_aes_128_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-256"    name="security.ssl3.ecdhe_rsa_aes_256_sha"         type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-DES"        name="security.ssl3.ecdhe_rsa_des_ede3_sha"        type="bool" />
-         <preference id="pmcommander-pref-sec-cipher-ECDHE-RSA-RC4-128"    name="security.ssl3.ecdhe_rsa_rc4_128_sha"         type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-AES-GCM-128" name="security.ssl3.rsa_aes_128_gcm_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-AES-128"     name="security.ssl3.rsa_aes_128_sha256" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-3DES-SHA"    name="security.ssl3.rsa_des_ede3_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-RC4-128-SHA" name="security.ssl3.rsa_rc4_128_sha" type="bool" />
+         <preference id="pmcommander-pref-sec-cipher-RSA-RC4-128-MD5" name="security.ssl3.rsa_rc4_128_md5" type="bool" />
          
          <preference id="pmcommander-pref-sec-priv-cache-ssl"           name="browser.cache.disk_cache_ssl"                type="bool" inverted="true" />
          <preference id="pmcommander-pref-sec-priv-sc-accept-always"    name="network.cookie.alwaysAcceptSessionCookies"   type="bool" />
@@ -941,68 +931,60 @@
                </groupbox>
                <checkbox id="pmcommander-sec-ssl-enable-false-start-check" preference="pmcommander-pref-sec-ssl-enable-false-start" label="&pmcommander.sec.ssl.enable.false.start.label;" />
                <checkbox id="pmcommander-sec-ssl-enable-ocsp-stapling-check" preference="pmcommander-pref-sec-ssl-enable-ocsp-stapling" label="&pmcommander.sec.ssl.enable.ocsp.stapling.label;" />
-               <checkbox id="pmcommander-sec-ssl-allow-ocsp-unsafe-check" preference="pmcommander-pref-sec-ssl-allow-ocsp-unsafe" label="&pmcommander.sec.ssl.allow.ocsp.unsafe.label;" />
             </tabpanel>
             <tabpanel id="pmcommander-sec-ciphers" orient="vertical">
-               <groupbox id="pmcommander-sec-ssl3-ciphers">
-                  <caption label="&pmcommander.sec.ciphers.caption;" />
+               <groupbox id="pmcommander-sec-tls-ciphers">
+                  <caption label="&pmcommander.sec.tls.ciphers.caption;" />
                   <hbox>
                     <vbox>
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-AES-128"  label="&pmcommander.sec.ciphers.dhe-dss-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-AES-256"  label="&pmcommander.sec.ciphers.dhe-dss-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-CAM-128"  label="&pmcommander.sec.ciphers.dhe-dss-cam-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-CAM-256"  label="&pmcommander.sec.ciphers.dhe-dss-cam-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-DSS-DES"      label="&pmcommander.sec.ciphers.dhe-dss-des;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-AES-128"  label="&pmcommander.sec.ciphers.dhe-rsa-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-AES-256"  label="&pmcommander.sec.ciphers.dhe-rsa-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-CAM-128"  label="&pmcommander.sec.ciphers.dhe-rsa-cam-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-CAM-256"  label="&pmcommander.sec.ciphers.dhe-rsa-cam-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-DES"      label="&pmcommander.sec.ciphers.dhe-rsa-des;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-GCM-128" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-gcm-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-GCM-128"   label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-gcm-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-CHACHA20"    label="&pmcommander.sec.ciphers.ecdhe-ecdsa-chacha20;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-CHACHA20"      label="&pmcommander.sec.ciphers.ecdhe-rsa-chacha20;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-GCM-256" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-gcm-256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-GCM-256"   label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-gcm-256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-128"     label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-128"       label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-256"     label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-256"       label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-256;" />
                     </vbox>
                     <vbox>
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-GCM-128"  label="&pmcommander.sec.ciphers.rsa-aes-gcm-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-128"      label="&pmcommander.sec.ciphers.rsa-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-256"      label="&pmcommander.sec.ciphers.rsa-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-CAM-128"      label="&pmcommander.sec.ciphers.rsa-cam-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-CAM-256"      label="&pmcommander.sec.ciphers.rsa-cam-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-DES"          label="&pmcommander.sec.ciphers.rsa-des;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-FIPS"         label="&pmcommander.sec.ciphers.rsa-fips;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-RC4-SHA"      label="&pmcommander.sec.ciphers.rsa-rc4-sha;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-RC4-MD5"      label="&pmcommander.sec.ciphers.rsa-rc4-md5;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-SEED"         label="&pmcommander.sec.ciphers.rsa-seed;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-CAM-256"     label="&pmcommander.sec.ciphers.dhe-rsa-cam-256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-AES-256"     label="&pmcommander.sec.ciphers.dhe-rsa-aes-256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-CAM-128"     label="&pmcommander.sec.ciphers.dhe-rsa-cam-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-DHE-RSA-AES-128"     label="&pmcommander.sec.ciphers.dhe-rsa-aes-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-GCM-256-384" label="&pmcommander.sec.ciphers.rsa-aes-gcm-256-sha384;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-256-256"     label="&pmcommander.sec.ciphers.rsa-aes-256-sha256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-CAM-128"         label="&pmcommander.sec.ciphers.rsa-cam-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-CAM-256"         label="&pmcommander.sec.ciphers.rsa-cam-256;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-128-SHA"     label="&pmcommander.sec.ciphers.rsa-aes-128-sha;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-256-SHA"     label="&pmcommander.sec.ciphers.rsa-aes-256-sha;" />
                     </vbox>
                   </hbox>
                </groupbox>
             
             </tabpanel>
             <tabpanel id="pmcommander-sec-ciphers2" orient="vertical">
-               <groupbox id="pmcommander-sec-ssl3-ciphers">
-                  <caption label="&pmcommander.sec.ciphers.caption;" />
-                  <hbox>
-                    <vbox>
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-128"  label="&pmcommander.sec.ciphers.ecdh-ecdsa-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-AES-256"  label="&pmcommander.sec.ciphers.ecdh-ecdsa-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-DES"      label="&pmcommander.sec.ciphers.ecdh-ecdsa-des;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-ECDSA-RC4-128"  label="&pmcommander.sec.ciphers.ecdh-ecdsa-rc4-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-AES-128"    label="&pmcommander.sec.ciphers.ecdh-rsa-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-AES-256"    label="&pmcommander.sec.ciphers.ecdh-rsa-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-DES"        label="&pmcommander.sec.ciphers.ecdh-rsa-des;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDH-RSA-RC4-128"    label="&pmcommander.sec.ciphers.ecdh-rsa-rc4-128;" />
-                    </vbox>
-                    <vbox>
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-AES-GCM-128"   label="&pmcommander.sec.ciphers.ecdhe-aes-gcm-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-128" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-AES-256" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-DES"     label="&pmcommander.sec.ciphers.ecdhe-ecdsa-des;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-ECDSA-RC4-128" label="&pmcommander.sec.ciphers.ecdhe-ecdsa-rc4-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-128"   label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-128;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-AES-256"   label="&pmcommander.sec.ciphers.ecdhe-rsa-aes-256;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-DES"       label="&pmcommander.sec.ciphers.ecdhe-rsa-des;" />
-                      <checkbox preference="pmcommander-pref-sec-cipher-ECDHE-RSA-RC4-128"   label="&pmcommander.sec.ciphers.ecdhe-rsa-rc4-128;" />
-                    </vbox>
-                  </hbox>
-               </groupbox>
-            
+               <hbox>
+                  <vbox>
+                    <groupbox id="pmcommander-sec-tls13-ciphers">
+                      <caption label="&pmcommander.sec.tls13.ciphers.caption;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-TLS13-AES-GCM-128" label="&pmcommander.sec.ciphers.tls13-aes-gcm-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-TLS13-CHACHA20"    label="&pmcommander.sec.ciphers.tls13-chacha20;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-TLS13-AES-GCM-256" label="&pmcommander.sec.ciphers.tls13-aes-gcm-256;" />
+                    </groupbox>
+                  </vbox>
+                  <vbox>
+                    <groupbox id="pmcommander-sec-weak-ciphers">
+                      <caption label="&pmcommander.sec.weak.ciphers.caption;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-GCM-128" label="&pmcommander.sec.ciphers.rsa-aes-gcm-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-AES-128"     label="&pmcommander.sec.ciphers.rsa-aes-128;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-3DES-SHA"    label="&pmcommander.sec.ciphers.rsa-3des-112-sha;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-RC4-128-SHA" label="&pmcommander.sec.ciphers.rsa-rc4-128-sha;" />
+                      <checkbox preference="pmcommander-pref-sec-cipher-RSA-RC4-128-MD5" label="&pmcommander.sec.ciphers.rsa-rc4-128-md5;" />
+                    </groupbox>
+                  </vbox>
+               </hbox>
             </tabpanel>
             <tabpanel id="pmcommander-sec-privacy" orient="vertical">
                <checkbox id="pmcommander-sec-priv-cache-ssl-check" preference="pmcommander-pref-sec-priv-cache-ssl" label="&pmcommander.sec.priv.cache.ssl.label;" />

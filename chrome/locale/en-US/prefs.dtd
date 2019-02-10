@@ -337,48 +337,43 @@
 <!ENTITY pmcommander.sec.ssl.enable.ocsp.stapling.label "Enable OCSP-stapling">
 <!ENTITY pmcommander.sec.ssl.allow.ocsp.unsafe.label "Allow expired stapled OCSP responses (unsafe)">
 
-<!ENTITY pmcommander.sec.ciphers.caption "Use the following SSL/TLS ciphers:">
+<!ENTITY pmcommander.sec.tls.ciphers.caption "TLS 1.0-1.2 ciphers:">
 
-<!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-128 "DHE-DSS-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-dss-aes-256 "DHE-DSS-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-dss-cam-128 "DHE-DSS-Camellia 128 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-dss-cam-256 "DHE-DSS-Camellia 256 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-dss-des "DHE-DSS-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-128 "DHE-RSA-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-256 "DHE-RSA-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-128 "DHE-RSA-Camellia 128 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-256 "DHE-RSA-Camellia 256 bit">
-<!ENTITY pmcommander.sec.ciphers.dhe-rsa-des "DHE-RSA-DES-EDE3">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-gcm-128 "ECDHE-ECDSA-AES-GCM 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-gcm-128   "ECDHE-RSA-AES-GCM 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-chacha20    "ECDHE-ECDSA-CHACHA20-POLY1305">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-chacha20      "ECDHE-RSA-CHACHA20-POLY1305">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-gcm-256 "ECDHE-ECDSA-AES-GCM 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-gcm-256   "ECDHE-RSA-AES-GCM 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128     "ECDHE-ECDSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-128       "ECDHE-RSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256     "ECDHE-ECDSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-256       "ECDHE-RSA-AES 256 bit">
 
-<!ENTITY pmcommander.sec.ciphers.rsa-aes-gcm-128 "RSA-AES-GCM 128 bit">
-<!ENTITY pmcommander.sec.ciphers.rsa-aes-128 "RSA-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.rsa-aes-256 "RSA-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.rsa-cam-128 "RSA-Camellia 128 bit">
-<!ENTITY pmcommander.sec.ciphers.rsa-cam-256 "RSA-Camellia 256 bit">
-<!ENTITY pmcommander.sec.ciphers.rsa-des "RSA-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.rsa-fips "RSA-FIPS-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.rsa-rc4-sha "RSA-RC4-SHA">
-<!ENTITY pmcommander.sec.ciphers.rsa-rc4-md5 "RSA-RC4-MD5">
-<!ENTITY pmcommander.sec.ciphers.rsa-seed "RSA-SEED">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-256         "DHE-RSA-CAMELLIA 256 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-256         "DHE-RSA-AES 256 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-cam-128         "DHE-RSA-CAMELLIA 128 bit">
+<!ENTITY pmcommander.sec.ciphers.dhe-rsa-aes-128         "DHE-RSA-AES 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-gcm-256-sha384  "RSA-AES-GCM-SHA384 256 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-256-sha256      "RSA-AES-SHA256 256 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-cam-128             "RSA-CAMELLIA 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-cam-256             "RSA-CAMELLIA 256 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-128-sha         "RSA-AES-SHA1 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-256-sha         "RSA-AES-SHA1 256 bit">
 
-<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-aes-128 "ECDH-ECDSA-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-aes-256 "ECDH-ECDSA-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-des "ECDH-ECDSA-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.ecdh-ecdsa-rc4-128 "ECDH-ECDSA-RC4 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-aes-128 "ECDH-RSA-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-aes-256 "ECDH-RSA-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-des "ECDH-RSA-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.ecdh-rsa-rc4-128 "ECDH-RSA-RC4 128 bit">
+<!ENTITY pmcommander.sec.tls13.ciphers.caption "TLS 1.3 ciphers:">
 
-<!ENTITY pmcommander.sec.ciphers.ecdhe-aes-gcm-128 "ECDHE-AES-GCM 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-128 "ECDHE-ECDSA-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-aes-256 "ECDHE-ECDSA-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-des "ECDHE-ECDSA-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-ecdsa-rc4-128 "ECDHE-ECDSA-RC4 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-128 "ECDHE-RSA-AES 128 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-aes-256 "ECDHE-RSA-AES 256 bit">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-des "ECDHE-RSA-DES-EDE3">
-<!ENTITY pmcommander.sec.ciphers.ecdhe-rsa-rc4-128 "ECDHE-RSA-RC4 128 bit">
+<!ENTITY pmcommander.sec.ciphers.tls13-aes-gcm-128       "AES-GCM 128 bit">
+<!ENTITY pmcommander.sec.ciphers.tls13-chacha20          "CHACHA20-POLY1305">
+<!ENTITY pmcommander.sec.ciphers.tls13-aes-gcm-256       "AES-GCM 256 bit">
+
+<!ENTITY pmcommander.sec.weak.ciphers.caption "Deprecated/weak/broken ciphers:">
+
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-gcm-128         "RSA-AES-GCM-SHA256 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-aes-128             "RSA-AES-SHA256 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-3des-112-sha        "RSA-3DES-SHA1 112 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-rc4-128-sha         "RSA-RC4-SHA1 128 bit">
+<!ENTITY pmcommander.sec.ciphers.rsa-rc4-128-md5         "RSA-RC4-MD5 128 bit">
 
 <!ENTITY pmcommander.sec.priv.cache.ssl.label "Do not cache pages received over secure connections">
 <!ENTITY pmcommander.sec.priv.cache.ssl.info "Note that caching only occurs when the site allows it. This option only enforces that pages received over secure connections are never cached to disk, regardless if the site allows caching or not.">
