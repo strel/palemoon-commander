@@ -413,6 +413,8 @@
          <preference id="pmcommander-pref-js-baselinejit"         name="javascript.options.baselinejit"           type="bool" />
          <preference id="pmcommander-pref-js-ionmonkey"           name="javascript.options.ion"                   type="bool" />
          <preference id="pmcommander-pref-js-odinmonkey"          name="javascript.options.asmjs"                 type="bool" />
+         <preference id="pmcommander-pref-js-wasm"                name="javascript.options.wasm"                  type="bool" /> 
+         <preference id="pmcommander-pref-js-wasmjit"             name="javascript.options.wasm_baselinejit"      type="bool" />
          <!-- JS GC -->
          <preference id="pmcommander-pref-js-gc-onmempressure"    name="javascript.options.gc_on_memory_pressure" type="bool" />
          <preference id="pmcommander-pref-js-gc-per-compartment"  name="javascript.options.mem.gc_per_compartment" type="bool" />
@@ -467,6 +469,8 @@
                   <checkbox id="pmcommander-js-baselinejit-check" preference="pmcommander-pref-js-baselinejit" label="&pmcommander.perf.js.baselinejit.label;" />
                   <checkbox id="pmcommander-js-ionmonkey-check" preference="pmcommander-pref-js-ionmonkey" label="&pmcommander.perf.js.ionmonkey.label;" />
                   <checkbox id="pmcommander-js-odinmonkey-check" preference="pmcommander-pref-js-odinmonkey" label="&pmcommander.perf.js.odinmonkey.label;" />
+                  <checkbox id="pmcommander-js-wasm-check" preference="pmcommander-pref-js-wasm" label="&pmcommander.perf.js.wasm.label;" />
+                  <checkbox id="pmcommander-js-wasmjit-check" preference="pmcommander-pref-js-wasmjit" label="&pmcommander.perf.js.wasmjit.label;" />
                </groupbox>
             </tabpanel>
             <tabpanel id="pmcommander-perf-js-gc" orient="vertical">

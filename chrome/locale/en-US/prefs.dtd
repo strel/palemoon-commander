@@ -158,6 +158,8 @@
 <!ENTITY pmcommander.perf.js.baselinejit.label "Enable Baseline JIT compiler for web pages">
 <!ENTITY pmcommander.perf.js.ionmonkey.label "Enable IonMonkey">
 <!ENTITY pmcommander.perf.js.odinmonkey.label "Enable OdinMonkey (asm.js optimizations)">
+<!ENTITY pmcommander.perf.js.wasm.label "Enable WASM (WebAssembly)">
+<!ENTITY pmcommander.perf.js.wasmjit.label "Enable Baseline JIT compiler for WASM">
 
 <!ENTITY pmcommander.perf.js.gc.onmempressure.label "Perform GC on memory pressure">
 <!ENTITY pmcommander.perf.js.gc.per.compartment.label "Perform GC per compartment">
