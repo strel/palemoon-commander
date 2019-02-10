@@ -232,6 +232,9 @@
 
    <prefpane id="pmcommander-pane-network" label="&pmcommander.pane.network;">
       <preferences>
+         <preference id="pmcommander-pref-predictor-enabled"      name="network.predictor.enabled"                type="bool" />
+         <preference id="pmcommander-pref-predictor-prefetch"     name="network.predictor.enable-prefetch"        type="bool" />
+         
          <preference id="pmcommander-pref-net-buffercount"        name="network.buffer.cache.count"               type="int" />
          <preference id="pmcommander-pref-net-buffersize"         name="network.buffer.cache.size"                type="int" />
          <preference id="pmcommander-pref-net-spdy"               name="network.http.spdy.enabled"                type="bool" />
@@ -269,7 +272,7 @@
       </preferences>
       <tabbox id="pmcommander-tabbox-net" flex="1">
          <tabs id="pmcommander-tabs-net">
-<!--           <tab id="pmcommander-tab-net-general" label="&pmcommander.tab.general;" /> -->
+            <tab id="pmcommander-tab-net-general" label="&pmcommander.tab.general;" />
             <tab id="pmcommander-tab-net-dnslookups"  label="&pmcommander.tab.net.dnslookups;" />
             <tab id="pmcommander-tab-net-http"  label="&pmcommander.tab.net.http;" />
             <tab id="pmcommander-tab-net-pipelining"  label="&pmcommander.tab.net.pipelining;" />
@@ -277,6 +280,13 @@
          </tabs>
          
          <tabpanels flex="1">
+            <tabpanel id="pmcommander-net-general" orient="vertical">
+               <groupbox id="pmcommander-net-predictor">
+                  <caption label="&pmcommander.net.predictor.caption;" />
+                  <checkbox id="pmcommander-net-predictor-check" preference="pmcommander-pref-predictor-enabled" label="&pmcommander.net.predictor.enabled.label;" />
+                  <checkbox id="pmcommander-net-predictor-prefetch" preference="pmcommander-pref-predictor-prefetch" label="&pmcommander.net.predictor.prefetch.label;" />
+               </groupbox>
+            </tabpanel>
             <tabpanel id="pmcommander-net-dnslookups" orient="vertical">
                <checkbox id="pmcommander-dns-urlfixup-check" preference="pmcommander-pref-dns-urlfixup" label="&pmcommander.net.dns.urlfixup.label;" />
                <hbox align="center" class="indent">

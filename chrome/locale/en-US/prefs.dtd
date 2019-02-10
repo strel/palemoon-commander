@@ -95,6 +95,9 @@
 <!ENTITY pmcommander.graphics.color.ICCintent.absolute "Absolute colorimetric">
 
 <!-- Networking category -->
+<!ENTITY pmcommander.net.predictor.caption "Network prediction">
+<!ENTITY pmcommander.net.predictor.enabled.label "Enable the predictive service">
+<!ENTITY pmcommander.net.predictor.prefetch.label "Pre-fetch predicted network traffic">
 
 <!ENTITY pmcommander.tab.net.dnslookups "Domain Names">
 <!ENTITY pmcommander.tab.net.http "HTTP">
