@@ -1,3 +1,3 @@
 Initial developer:
 Mark Straver <moonchild@palemoon.org>
-Copyright holder to Original Code up to and including v2.0.0.
+Copyright holder to Original Code up to and including v3.0.0.
