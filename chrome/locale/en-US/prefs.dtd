@@ -27,7 +27,6 @@
 <!ENTITY pmcommander.graphics.rendering.d2d.caption "Direct2D">
 <!ENTITY pmcommander.graphics.rendering.d2d.enabled.label "Enable Direct2D acceleration">
 <!ENTITY pmcommander.graphics.rendering.d2d.force.label "Force use of Direct2D">
-<!ENTITY pmcommander.graphics.rendering.d2d.1_1.label "Use Direct2D v1.1 when available">
 
 <!ENTITY pmcommander.graphics.rendering.layers.caption "Layers acceleration">
 <!ENTITY pmcommander.graphics.rendering.layers.enabled.label "Layers acceleration enabled">
@@ -162,7 +161,6 @@
 <!ENTITY pmcommander.perf.js.wasmjit.label "Enable Baseline JIT compiler for WASM">
 
 <!ENTITY pmcommander.perf.js.gc.onmempressure.label "Perform GC on memory pressure">
-<!ENTITY pmcommander.perf.js.gc.per.compartment.label "Perform GC per compartment">
 <!ENTITY pmcommander.perf.js.gc.dynamic.heap.label "Use dynamic GC memory heap">
 <!ENTITY pmcommander.perf.js.gc.dynamic.slice.label "Use dynamic GC memory slices">
 <!ENTITY pmcommander.perf.js.gc.incremental.label "Enable incremental GC">
@@ -262,7 +260,6 @@
 <!ENTITY pmcommander.ui.fullscreen.autohide.animation.always "Always">
 <!ENTITY pmcommander.ui.fullscreen.html5.caption "HTML5 Full Screen">
 <!ENTITY pmcommander.ui.fullscreen.html5.enabled.label "Enable full screen mode for HTML5 applications">
-<!ENTITY pmcommander.ui.fullscreen.html5.approval.label "Require per-site approval for full screen">
 <!ENTITY pmcommander.ui.fullscreen.html5.exit.on.deactivate.label "Exit full screen when the application deactivates">
 <!ENTITY pmcommander.ui.fullscreen.html5.pointerlock.label "Lock the pointer to the full screen window">
 <!ENTITY pmcommander.ui.fullscreen.html5.security.label "Only allow user interaction to switch to full screen">

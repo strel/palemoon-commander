@@ -47,7 +47,6 @@
          <preference id="pmcommander-pref-d2d-enabled"                name="gfx.direct2d.disabled"                  type="bool" inverted="true" 
            onchange="pmcommanderPrefs.d2dGlobalChanged();" />
          <preference id="pmcommander-pref-d2d-force"                  name="gfx.direct2d.force-enabled"             type="bool" />
-         <preference id="pmcommander-pref-d2d-1_1"                    name="gfx.direct2d.use1_1"                    type="bool" />
          <preference id="pmcommander-pref-layers-enabled"             name="layers.acceleration.disabled"           type="bool" inverted="true" 
            onchange="pmcommanderPrefs.layeraccGlobalChanged();" />
          <preference id="pmcommander-pref-layers-force"               name="layers.acceleration.force-enabled"      type="bool" />
@@ -101,7 +100,6 @@
                   <caption label="&pmcommander.graphics.rendering.d2d.caption;" />
                   <checkbox id="pmcommander-d2d-enabled-check" preference="pmcommander-pref-d2d-enabled" label="&pmcommander.graphics.rendering.d2d.enabled.label;" />
                   <checkbox id="pmcommander-d2d-force-check" preference="pmcommander-pref-d2d-force" label="&pmcommander.graphics.rendering.d2d.force.label;" />
-                  <checkbox id="pmcommander-d2d-1_1-check" preference="pmcommander-pref-d2d-1_1" label="&pmcommander.graphics.rendering.d2d.1_1.label;" />
                </groupbox>
                <groupbox id="pmcommander-graphics-rendering-layers">
                   <caption label="&pmcommander.graphics.rendering.layers.caption;" />
@@ -417,7 +415,6 @@
          <preference id="pmcommander-pref-js-wasmjit"             name="javascript.options.wasm_baselinejit"      type="bool" />
          <!-- JS GC -->
          <preference id="pmcommander-pref-js-gc-onmempressure"    name="javascript.options.gc_on_memory_pressure" type="bool" />
-         <preference id="pmcommander-pref-js-gc-per-compartment"  name="javascript.options.mem.gc_per_compartment" type="bool" />
          <preference id="pmcommander-pref-js-gc-dynamic-heap"     name="javascript.options.mem.gc_dynamic_heap_growth" type="bool" />
          <preference id="pmcommander-pref-js-gc-dynamic-slice"          name="javascript.options.mem.gc_dynamic_mark_slice" type="bool" />
          <preference id="pmcommander-pref-js-gc-incremental"      name="javascript.options.mem.gc_incremental"    type="bool" />
@@ -475,7 +472,6 @@
             </tabpanel>
             <tabpanel id="pmcommander-perf-js-gc" orient="vertical">
                <checkbox id="pmcommander-js-gc-onmempressure-check" preference="pmcommander-pref-js-gc-onmempressure" label="&pmcommander.perf.js.gc.onmempressure.label;" />
-               <checkbox id="pmcommander-js-gc-per-compartment-check" preference="pmcommander-pref-js-gc-per-compartment" label="&pmcommander.perf.js.gc.per.compartment.label;" />
                <checkbox id="pmcommander-js-gc-dynamic-heap-check" preference="pmcommander-pref-js-gc-dynamic-heap" label="&pmcommander.perf.js.gc.dynamic.heap.label;" />
                <checkbox id="pmcommander-js-gc-dynamic-slice-check" preference="pmcommander-pref-js-gc-dynamic-slice" label="&pmcommander.perf.js.gc.dynamic.slice.label;" />
                <checkbox id="pmcommander-js-gc-incremental-check" preference="pmcommander-pref-js-gc-incremental" label="&pmcommander.perf.js.gc.incremental.label;" />
@@ -623,7 +619,6 @@
          <preference id="pmcommander-pref-fullscreen-autohide-animation"      name="browser.fullscreen.animateUp"                type="int" />
          <preference id="pmcommander-pref-fullscreen-api-enabled"             name="full-screen-api.enabled"                     type="bool" 
             onchange="pmcommanderPrefs.fullscreenAPIGlobalChanged();" />
-         <preference id="pmcommander-pref-fullscreen-api-approval"            name="full-screen-api.approval-required"           type="bool" />
          <preference id="pmcommander-pref-fullscreen-api-exit-on-deactivate"  name="full-screen-api.exit-on-deactivate"          type="bool" />
          <preference id="pmcommander-pref-fullscreen-api-pointerlock"         name="full-screen-api.pointer-lock.enabled"        type="bool" />
          <preference id="pmcommander-pref-fullscreen-api-security"            name="full-screen-api.allow-trusted-requests-only" type="bool" />
@@ -722,7 +717,6 @@
                <groupbox id="pmcommander-ui-fullscreen-html5">
                   <caption label="&pmcommander.ui.fullscreen.html5.caption;" />
                   <checkbox id="pmcommander-ui-fullscreen-api-enabled-check" preference="pmcommander-pref-fullscreen-api-enabled" label="&pmcommander.ui.fullscreen.html5.enabled.label;" />
-                  <checkbox id="pmcommander-ui-fullscreen-api-approval-check" preference="pmcommander-pref-fullscreen-api-approval" label="&pmcommander.ui.fullscreen.html5.approval.label;" />
                   <checkbox id="pmcommander-ui-fullscreen-api-exit-on-deactivate-check" preference="pmcommander-pref-fullscreen-api-exit-on-deactivate" label="&pmcommander.ui.fullscreen.html5.exit.on.deactivate.label;" />
                   <checkbox id="pmcommander-ui-fullscreen-api-pointerlock-check" preference="pmcommander-pref-fullscreen-api-pointerlock" label="&pmcommander.ui.fullscreen.html5.pointerlock.label;" />
                   <checkbox id="pmcommander-ui-fullscreen-api-security-check" preference="pmcommander-pref-fullscreen-api-security" label="&pmcommander.ui.fullscreen.html5.security.label;" />
