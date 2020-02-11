@@ -611,7 +611,7 @@ var pmcommanderPrefs =
                             'security.ssl.enable_false_start',
                             'security.ssl.enable_ocsp_stapling',
                             'security.tls13.aes_128_gcm_sha256',
-                            'security.tls13.chacha20_poly1305_sha256'
+                            'security.tls13.chacha20_poly1305_sha256',
                             'security.tls13.aes_256_gcm_sha384',
                             'security.ssl3.ecdhe_rsa_aes_128_gcm_sha256',
                             'security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256',
